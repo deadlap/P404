@@ -11,6 +11,7 @@ TagManager:
   - Water
   - Wind
   - NonDominantHand
+  - MovingTouchPoint
   layers:
   - Default
   - TransparentFX

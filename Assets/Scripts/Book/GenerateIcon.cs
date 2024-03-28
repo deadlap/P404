@@ -4,7 +4,7 @@ using UnityEngine;
 public class GenerateIcon : MonoBehaviour
 {
     [SerializeField] List<GameObject> iconList;
-    void Start()
+    void Awake()
     {
         Generate();
     }
@@ -13,7 +13,9 @@ public class GenerateIcon : MonoBehaviour
     {
         for (int i = 0; i < iconList.Count; i++)
         {
-            GameObject icon = Instantiate(iconList[i], gameObject.transform, false);
+            //Undskyld olga
+            GameObject page = GameObject.Find($"Left Page ({i + 1})");
+            GameObject icon = Instantiate(iconList[i], page.transform, false);
         }
     }
 }

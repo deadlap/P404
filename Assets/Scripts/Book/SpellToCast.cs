@@ -8,12 +8,12 @@ public class SpellToCast : MonoBehaviour
     
     void OnEnable()
     {
-        SpellChosenEvent.SpellChosen += ChosenSpell;
+        BookEvents.SpellChosen += ChosenSpell;
     }
 
     void OnDisable()
     {
-        SpellChosenEvent.SpellChosen -= ChosenSpell;
+        BookEvents.SpellChosen -= ChosenSpell;
     }
 
     void ChosenSpell(string element)

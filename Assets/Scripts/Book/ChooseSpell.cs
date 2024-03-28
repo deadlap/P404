@@ -3,39 +3,28 @@ using UnityEngine;
 
 public class ChooseSpell : MonoBehaviour
 {
-    public string elementType;
-    bool hasChosen;
+    string elementType;
+    bool onCooldown;
 
-    [SerializeField] float cooldownTime = 1f;
+    [SerializeField] float cooldownTime;
 
     void Start()
     {
         elementType = gameObject.tag;
     }
 
-    void Update()
+    void ResetCooldown()
     {
-        if (!hasChosen) return;
-        SelectionCooldown();
-    }
-
-    void SelectionCooldown()
-    {
-        var resetTime = cooldownTime;
-        cooldownTime -= Time.deltaTime;
-        if (cooldownTime < 0)
-        {
-            hasChosen = false;
-            cooldownTime = resetTime;
-        }
+        onCooldown = false;
     }
     
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("DominantHand") && !hasChosen)
+        if (other.CompareTag("DominantHand") && !onCooldown)
         {
-            hasChosen = true;
-            SpellChosenEvent.OnSpellChosen(elementType);
+            BookEvents.OnSpellChosen(elementType);
+            onCooldown = true;
+            Invoke(nameof(ResetCooldown), cooldownTime);
         }
     }
 }

@@ -59,11 +59,11 @@ namespace UnityEngine.XR.Hands.Samples.VisualizerSample
         [Header("Smoothing parameters")]
         [SerializeField]
         [Tooltip("The smoothing factor to use when smoothing the root of the left hand in the sample processor. Use 0 for no smoothing.")]
-        float m_LeftHandSmoothingFactor = 16f;
+        float m_LeftHandSmoothingFactor = 0f;
 
         [SerializeField]
         [Tooltip("The smoothing factor to use when smoothing the root of the right hand in the sample processor. Use 0 for no smoothing.")]
-        float m_RightHandSmoothingFactor = 16f;
+        float m_RightHandSmoothingFactor = 0f;
 
         /// <inheritdoc />
         public void ProcessJoints(XRHandSubsystem subsystem, XRHandSubsystem.UpdateSuccessFlags successFlags, XRHandSubsystem.UpdateType updateType)

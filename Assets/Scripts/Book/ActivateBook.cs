@@ -2,16 +2,18 @@ using UnityEngine;
 
 public class ActivateBook : MonoBehaviour
 {
-    GameObject nonDominantHand;
     [SerializeField] bool toggleFollow;
+    
+    GameObject nonDominantHand;
     Vector3 initialPos; 
     Quaternion initialRot;
     
     void Start()
     {
-        initialPos = transform.position;
-        initialRot = transform.rotation;
-        nonDominantHand = GameObject.FindGameObjectWithTag("NonDominantHand");
+        var tf = transform;
+        initialPos = tf.position;
+        initialRot = tf.rotation;
+        nonDominantHand = GameObject.Find("Non-Dominant Hand Book Slot");
     }
 
     void Update()
@@ -29,13 +31,15 @@ public class ActivateBook : MonoBehaviour
 
     void FollowHand()
     {
-        transform.position = nonDominantHand.transform.position;
-        transform.rotation = nonDominantHand.transform.rotation;
+        var tf = transform;
+        tf.position = nonDominantHand.transform.position;
+        tf.rotation = nonDominantHand.transform.rotation;
     }
 
     void IdleState()
     {
-        transform.position = initialPos;
-        transform.rotation = initialRot;
+        var tf = transform;
+        tf.position = initialPos;
+        tf.rotation = initialRot;
     }
 }

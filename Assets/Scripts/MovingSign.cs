@@ -87,17 +87,13 @@ public class MovingSign : MonoBehaviour
         {
             ClearPatternCheckpoint();
         }
+        //please dont look, im sorry
         if (other.gameObject.name == (checkPointReached + 1).ToString())
         {
             MovingSignFailed();
         }
         //please dont look, im sorry
         if (other.gameObject.name == (checkPointReached + 2).ToString())
-        {
-            MovingSignFailed();
-        }
-        //please dont look, im sorry
-        if (other.gameObject.name == (checkPointReached + 3).ToString())
         {
             MovingSignFailed();
         }

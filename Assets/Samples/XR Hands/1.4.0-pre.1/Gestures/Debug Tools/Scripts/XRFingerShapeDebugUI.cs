@@ -34,7 +34,7 @@ namespace UnityEngine.XR.Hands.Samples.Gestures.DebugTools
         /// <param name="value">The value for the given bar.</param>
         public void SetFingerShape(int barIndex, float value)
         {
-            value = Mathf.Clamp(value, -0.5f, 1f);
+            value = Mathf.Clamp(value, 0f, 1f);
             m_Bars[barIndex].SetValue(value);
         }
 

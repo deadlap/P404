@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2298019110196338500}
   - component: {fileID: 6997113816054692641}
   m_Layer: 0
-  m_Name: Spell_ Earth
+  m_Name: Earth_Page
   m_TagString: Earth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

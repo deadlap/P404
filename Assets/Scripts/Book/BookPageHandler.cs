@@ -1,16 +1,21 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BookPageHandler : MonoBehaviour
 {
-    [SerializeField] List<GameObject> bookLeftPages;
+    public static BookPageHandler Instance; 
+    [SerializeField] public List<GameObject> bookLeftPages;
     [SerializeField] List<GameObject> bookRightPages;
 
-    int firstPageIndex = 0;
+    public int firstPageIndex = 0;
 
-    int currentPageIndex;
+    public int currentPageIndex;
+
+
+    void Awake()
+    {
+        Instance = this;
+    }
 
     void OnEnable()
     {
@@ -40,7 +45,8 @@ public class BookPageHandler : MonoBehaviour
     void NextPage()
     {
         print("NEXT PAGE");
-        if(currentPageIndex + 1 == bookLeftPages.Count) return;
+        var indexCorrection = 1;
+        if (currentPageIndex + indexCorrection == bookLeftPages.Count) return;
         bookLeftPages[currentPageIndex].SetActive(false);
         bookRightPages[currentPageIndex].SetActive(false);
         currentPageIndex++;

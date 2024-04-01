@@ -13,11 +13,16 @@ public class ActivateBook : MonoBehaviour
         var tf = transform;
         initialPos = tf.position;
         initialRot = tf.rotation;
-        nonDominantHand = GameObject.Find("Non-Dominant Hand Book Slot");
     }
 
     void Update()
     {
+        if (!GameObject.Find("Non-Dominant Hand Book Slot(Clone)")) return;
+        if (!nonDominantHand)
+        {
+            nonDominantHand = GameObject.Find("Non-Dominant Hand Book Slot(Clone)");
+        }
+        
         if (toggleFollow)
         {
             FollowHand();

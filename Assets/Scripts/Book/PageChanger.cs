@@ -25,32 +25,30 @@ public class PageChanger : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("DominantHand") && !onCooldown)
+        if (!other.CompareTag("DominantHand") || onCooldown) return;
+        switch (pageType)
         {
-            switch (pageType)
-            {
-                case "next":
-                    var indexCorrection = 1;
-                    if (BookPageHandler.Instance.currentPageIndex + indexCorrection == BookPageHandler.Instance.bookLeftPages.Count)
-                    {
-                        print("on last page");
-                        onCooldown = false;
-                        break;
-                    }
-                    BookEvents.OnPageTurning();
-                    Invoke(nameof(NextPage), durationTime);
+            case "next":
+                var indexCorrection = 1;
+                if (BookPageHandler.Instance.currentPageIndex + indexCorrection == BookPageHandler.Instance.bookLeftPages.Count)
+                {
+                    print("on last page");
+                    onCooldown = false;
                     break;
-                case "prev":
-                    if (BookPageHandler.Instance.currentPageIndex == BookPageHandler.Instance.firstPageIndex)
-                    {
-                        print("on first page");
-                        onCooldown = false;
-                        break;
-                    }
-                    BookEvents.OnPageTurning();
-                    Invoke(nameof(PrevPage), durationTime);
+                }
+                BookEvents.OnPageTurning();
+                Invoke(nameof(NextPage), durationTime);
+                break;
+            case "prev":
+                if (BookPageHandler.Instance.currentPageIndex == BookPageHandler.Instance.firstPageIndex)
+                {
+                    print("on first page");
+                    onCooldown = false;
                     break;
-            }
+                }
+                BookEvents.OnPageTurning();
+                Invoke(nameof(PrevPage), durationTime);
+                break;
         }
     }
 

@@ -17,13 +17,13 @@ MonoBehaviour:
     m_Targets:
     - m_ShapeType: 0
       m_Desired: 1
-      m_Tolerance: 0.6
+      m_Tolerance: 0.7
     - m_ShapeType: 1
       m_Desired: 1
-      m_Tolerance: 0.6
+      m_Tolerance: 0.9
     - m_ShapeType: 2
       m_Desired: 1
-      m_Tolerance: 0.6
+      m_Tolerance: 0.7
   - m_FingerID: 1
     m_Targets:
     - m_ShapeType: 0
@@ -44,21 +44,21 @@ MonoBehaviour:
     m_Targets:
     - m_ShapeType: 0
       m_Desired: 1
-      m_Tolerance: 0.6
+      m_Tolerance: 0.5
     - m_ShapeType: 1
       m_Desired: 1
-      m_Tolerance: 0.6
+      m_Tolerance: 0.5
     - m_ShapeType: 2
       m_Desired: 1
-      m_Tolerance: 0.6
+      m_Tolerance: 0.5
   - m_FingerID: 4
     m_Targets:
     - m_ShapeType: 0
       m_Desired: 1
-      m_Tolerance: 0.6
+      m_Tolerance: 0.5
     - m_ShapeType: 1
       m_Desired: 1
-      m_Tolerance: 0.6
+      m_Tolerance: 0.5
     - m_ShapeType: 2
       m_Desired: 1
-      m_Tolerance: 0.6
+      m_Tolerance: 0.5

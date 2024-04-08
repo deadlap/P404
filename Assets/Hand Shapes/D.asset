@@ -19,11 +19,11 @@ MonoBehaviour:
       m_Desired: 0.8
       m_Tolerance: 0.3
     - m_ShapeType: 0
-      m_Desired: 0.8
-      m_Tolerance: 0.3
+      m_Desired: 1
+      m_Tolerance: 0.8
     - m_ShapeType: 2
-      m_Desired: 0.8
-      m_Tolerance: 0.3
+      m_Desired: 1
+      m_Tolerance: 0.8
   - m_FingerID: 1
     m_Targets:
     - m_ShapeType: 0
@@ -36,7 +36,7 @@ MonoBehaviour:
     m_Targets:
     - m_ShapeType: 3
       m_Desired: 0.7
-      m_Tolerance: 0.4
+      m_Tolerance: 0.6
   - m_FingerID: 3
     m_Targets:
     - m_ShapeType: 2

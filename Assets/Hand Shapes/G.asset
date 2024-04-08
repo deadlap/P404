@@ -36,32 +36,32 @@ MonoBehaviour:
     m_Targets:
     - m_ShapeType: 0
       m_Desired: 1
-      m_Tolerance: 0.2
+      m_Tolerance: 0.3
     - m_ShapeType: 1
       m_Desired: 1
-      m_Tolerance: 0.2
+      m_Tolerance: 0.3
     - m_ShapeType: 2
       m_Desired: 1
-      m_Tolerance: 0.2
+      m_Tolerance: 0.3
   - m_FingerID: 2
     m_Targets:
     - m_ShapeType: 0
       m_Desired: 1
-      m_Tolerance: 0.2
+      m_Tolerance: 0.3
     - m_ShapeType: 1
       m_Desired: 1
-      m_Tolerance: 0.2
+      m_Tolerance: 0.3
     - m_ShapeType: 2
       m_Desired: 1
-      m_Tolerance: 0.2
+      m_Tolerance: 0.3
   - m_FingerID: 4
     m_Targets:
     - m_ShapeType: 0
       m_Desired: 1
-      m_Tolerance: 0.2
+      m_Tolerance: 0.3
     - m_ShapeType: 1
       m_Desired: 1
-      m_Tolerance: 0.2
+      m_Tolerance: 0.3
     - m_ShapeType: 2
       m_Desired: 1
-      m_Tolerance: 0.2
+      m_Tolerance: 0.3

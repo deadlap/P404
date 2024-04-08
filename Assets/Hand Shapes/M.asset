@@ -61,10 +61,10 @@ MonoBehaviour:
     m_Targets:
     - m_ShapeType: 0
       m_Desired: 0
-      m_Tolerance: 0.5
+      m_Tolerance: 0.7
     - m_ShapeType: 1
       m_Desired: 0
       m_Tolerance: 0.5
     - m_ShapeType: 2
       m_Desired: 0
-      m_Tolerance: 0.5
+      m_Tolerance: 0.6

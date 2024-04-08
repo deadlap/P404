@@ -20,7 +20,7 @@ MonoBehaviour:
       m_Tolerance: 0.2
     - m_ShapeType: 1
       m_Desired: 0
-      m_Tolerance: 0.2
+      m_Tolerance: 0.7
     - m_ShapeType: 2
       m_Desired: 0
       m_Tolerance: 0.2

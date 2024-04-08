@@ -35,28 +35,28 @@ public class ChooseHand : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name != "LeftHand" && other.gameObject.name != "RightHand") return;
+        if (other.gameObject.name != "L_Palm" && other.gameObject.name != "R_Palm") return;
         isChoosingHand = true;
         hasChosenHand = false;
     }
 
     void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.name != "LeftHand" && other.gameObject.name != "RightHand") return;
+        if (other.gameObject.name != "L_Palm" && other.gameObject.name != "R_Palm") return;
         switch (other.gameObject.name)
         {
-            case "LeftHand":
-                HandChosen(other.gameObject, "RightHand");
+            case "L_Palm":
+                HandChosen(other.gameObject, "R_Palm");
                 break;
-            case "RightHand":
-                HandChosen(other.gameObject, "LeftHand");
+            case "R_Palm":
+                HandChosen(other.gameObject, "L_Palm");
                 break;
         }
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.name is "LeftHand" or "RightHand")
+        if (other.gameObject.name is "L_Palm" or "R_Palm")
         {
             print("FUCK");
             isChoosingHand = false;
@@ -87,9 +87,9 @@ public class ChooseHand : MonoBehaviour
     {
         switch (hand)
         {
-            case "LeftHand":
+            case "L_Palm":
                 return leftPos;
-            case "RightHand":
+            case "R_Palm":
                 return rightPos;
         }
         return new Vector3();

@@ -25,7 +25,7 @@ public class PageChanger : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (!other.CompareTag("DominantHand") || onCooldown) return;
+        if (!other.CompareTag("FingerTip") || onCooldown) return;
         switch (pageType)
         {
             case "next":

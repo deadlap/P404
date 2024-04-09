@@ -12,6 +12,7 @@ TagManager:
   - Wind
   - NonDominantHand
   - MovingTouchPoint
+  - FingerTip
   layers:
   - Default
   - TransparentFX

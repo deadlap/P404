@@ -85,9 +85,11 @@ public class ChooseHand : MonoBehaviour
         handedness = handednessString;
         dominantHandGO.gameObject.tag = "DominantHand";
         dominantHand = dominantHandGO;
+        dominantHand.GetComponent<BoxCollider>().enabled = true;
         SpawnTouchPointManager();
         
-        nonDominantHand = GameObject.Find($"{nonDomHandString}"); 
+        nonDominantHand = GameObject.Find($"{nonDomHandString}");
+        nonDominantHand.GetComponent<BoxCollider>().enabled = false;
         nonDominantHand.tag = "NonDominantHand";
         
         SpawnBook(nonDomHandString);
@@ -111,11 +113,11 @@ public class ChooseHand : MonoBehaviour
         if (bookFollowPoint)
         {
             Destroy(bookFollowPoint);
-            bookFollowPoint = Instantiate(bookFollowPointPrefab, nonDominantHand.transform.position, Quaternion.identity * Quaternion.Euler(BookFollowPointPos(nonDomHand)), nonDominantHand.transform);
+            bookFollowPoint = Instantiate(bookFollowPointPrefab, nonDominantHand.transform.position + Vector3.right * .5f, nonDominantHand.transform.rotation * Quaternion.Euler(BookFollowPointPos(nonDomHand)), nonDominantHand.transform);
         }
         else
         {
-            bookFollowPoint = Instantiate(bookFollowPointPrefab, nonDominantHand.transform.position, Quaternion.identity * Quaternion.Euler(BookFollowPointPos(nonDomHand)), nonDominantHand.transform);
+            bookFollowPoint = Instantiate(bookFollowPointPrefab, nonDominantHand.transform.position, nonDominantHand.transform.rotation * Quaternion.Euler(BookFollowPointPos(nonDomHand)), nonDominantHand.transform);
         }
     }
     Vector3 BookFollowPointPos(string hand)

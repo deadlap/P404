@@ -24,6 +24,9 @@ MonoBehaviour:
     - m_ShapeType: 2
       m_Desired: 0
       m_Tolerance: 0.35
+    - m_ShapeType: 4
+      m_Desired: 0
+      m_Tolerance: 0.45
   - m_FingerID: 1
     m_Targets:
     - m_ShapeType: 0

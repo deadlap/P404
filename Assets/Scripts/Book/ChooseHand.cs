@@ -1,12 +1,21 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.XR.Hands;
 
 public class ChooseHand : MonoBehaviour
 {
+    public static ChooseHand Instance;
+    GameObject dominantHand; 
+    [SerializeField] GameObject touchPointManagerPrefab; 
+    GameObject touchPointManager;
+    
+    GameObject nonDominantHand;
     [SerializeField] GameObject bookFollowPointPrefab;
     GameObject bookFollowPoint;
 
+    public string handedness;
+    
     [SerializeField] Image chargeAnimation;
     [SerializeField] float choosingDuration;
     
@@ -15,6 +24,11 @@ public class ChooseHand : MonoBehaviour
     
     [SerializeField] Vector3 leftPos;
     [SerializeField] Vector3 rightPos;
+
+    void Awake()
+    {
+        Instance = this;
+    }
 
     void Update()
     {
@@ -46,10 +60,10 @@ public class ChooseHand : MonoBehaviour
         switch (other.gameObject.name)
         {
             case "L_Palm":
-                HandChosen(other.gameObject, "R_Palm");
+                HandChosen(other.gameObject, "L","R_Palm");
                 break;
             case "R_Palm":
-                HandChosen(other.gameObject, "L_Palm");
+                HandChosen(other.gameObject, "R", "L_Palm");
                 break;
         }
     }
@@ -58,31 +72,52 @@ public class ChooseHand : MonoBehaviour
     {
         if (other.gameObject.name is "L_Palm" or "R_Palm")
         {
-            print("FUCK");
+            print("du gik ud");
             isChoosingHand = false;
         }
     }
 
-    void HandChosen(GameObject dominantHand, string nonDomHandString)
+    void HandChosen(GameObject dominantHandGO, string handednessString, string nonDomHandString)
     {
         if(!hasChosenHand) return;
         
-        print($"{dominantHand} valgt");
+        print($"{dominantHandGO} valgt");
+        handedness = handednessString;
+        dominantHandGO.gameObject.tag = "DominantHand";
+        dominantHand = dominantHandGO;
+        SpawnTouchPointManager();
         
-        dominantHand.gameObject.tag = "DominantHand";
-        GameObject nonDominantHand = GameObject.Find($"{nonDomHandString}"); 
+        nonDominantHand = GameObject.Find($"{nonDomHandString}"); 
         nonDominantHand.tag = "NonDominantHand";
-        if (bookFollowPoint)
+        
+        SpawnBook(nonDomHandString);
+    }
+
+    void SpawnTouchPointManager()
+    {
+        if (touchPointManager)
         {
-            Destroy(bookFollowPoint);
-            bookFollowPoint = Instantiate(bookFollowPointPrefab, nonDominantHand.transform.position, Quaternion.Euler(BookFollowPointPos(nonDomHandString)), nonDominantHand.transform);
+            Destroy(touchPointManager);
+            touchPointManager = Instantiate(touchPointManagerPrefab, dominantHand.transform.position, Quaternion.identity, dominantHand.transform);
         }
         else
         {
-            bookFollowPoint = Instantiate(bookFollowPointPrefab, nonDominantHand.transform.position, Quaternion.Euler(BookFollowPointPos(nonDomHandString)), nonDominantHand.transform);
+            touchPointManager = Instantiate(touchPointManagerPrefab, dominantHand.transform.position, Quaternion.identity, dominantHand.transform);
         }
     }
-
+    void SpawnBook(string nonDomHand)
+    {
+        
+        if (bookFollowPoint)
+        {
+            Destroy(bookFollowPoint);
+            bookFollowPoint = Instantiate(bookFollowPointPrefab, nonDominantHand.transform.position, Quaternion.identity * Quaternion.Euler(BookFollowPointPos(nonDomHand)), nonDominantHand.transform);
+        }
+        else
+        {
+            bookFollowPoint = Instantiate(bookFollowPointPrefab, nonDominantHand.transform.position, Quaternion.identity * Quaternion.Euler(BookFollowPointPos(nonDomHand)), nonDominantHand.transform);
+        }
+    }
     Vector3 BookFollowPointPos(string hand)
     {
         switch (hand)

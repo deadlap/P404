@@ -1,12 +1,14 @@
 using System;
 using System.Collections.Generic;
-using Unity.Mathematics;
+using TMPro;
 using UnityEngine;
 
 public class MovingSign : MonoBehaviour
 {
     [SerializeField] List<GameObject> signPatterns;
 
+    [SerializeField] TMP_Text currentSign;
+    
     GameObject åPattern;
     GameObject jPattern;
     GameObject øPattern;
@@ -20,57 +22,69 @@ public class MovingSign : MonoBehaviour
     readonly int startForCheckPoints = 1;
     int checkPointReached;
     int patternChildCount;
-    
+
+    string handedness;
     void Start()
     {
-        
+        handedness = ChooseHand.Instance.handedness;
+        switch (handedness)
+        {
+            case "L":
+                currentSign = GameObject.Find("LeftText").GetComponent<TMP_Text>();
+                break;
+            case "R":
+                currentSign = GameObject.Find("RightText").GetComponent<TMP_Text>();
+                break;
+        }
     }
-    
+
     void Update()
     {
         if(prevRecognisedSign == recognisedSign) return;
         SpawnSignPattern(recognisedSign);
     }
 
-    public void SpawnSignPattern(string sign)
+    void SpawnSignPattern(string sign)
     {
         prevRecognisedSign = recognisedSign;
         checkPointReached = startForCheckPoints;
         switch (sign)
         {
-            case "a":
+            case "A":
                 if (!åPattern)
                 {
-                    recognisedMovingSign = "å"; 
+                    recognisedMovingSign = "Å"; 
                     DestroyAllPatterns();
                     åPattern = Instantiate(signPatterns[0], gameObject.transform.position, Quaternion.identity);
                     patternChildCount = signPatterns[0].transform.childCount;
                 }
                 break;
-            case "i":
+            case "I":
                 if (!jPattern)
                 {
-                    recognisedMovingSign = "j";
+                    recognisedMovingSign = "J";
                     DestroyAllPatterns();
-                    jPattern = Instantiate(signPatterns[1], gameObject.transform.position, Quaternion.identity);
+                    GameObject spawnpoint = GameObject.Find($"{handedness}_LittleTip");
+                    jPattern = Instantiate(signPatterns[1], spawnpoint.transform.position, Quaternion.identity, spawnpoint.transform);
                     patternChildCount = signPatterns[1].transform.childCount;
                 }
                 break;
-            case "o":
+            case "O":
                 if (!øPattern)
                 {
-                    recognisedMovingSign = "ø";
+                    recognisedMovingSign = "Ø";
                     DestroyAllPatterns();
                     øPattern = Instantiate(signPatterns[2], gameObject.transform.position, Quaternion.identity);
                     patternChildCount = signPatterns[2].transform.childCount;
                 }
                 break;
-            case "x":
+            case "X":
                 if (!zPattern)
                 {
-                    recognisedMovingSign = "z";
+                    recognisedMovingSign = "Z";
                     DestroyAllPatterns();
-                    zPattern = Instantiate(signPatterns[3], gameObject.transform.position, Quaternion.identity);
+                    GameObject spawnpoint = GameObject.Find($"{handedness}_IndexTip");
+                    zPattern = Instantiate(signPatterns[3], spawnpoint.transform.position, Quaternion.identity, spawnpoint.transform);
                     patternChildCount = signPatterns[3].transform.childCount;
                 }
                 break;
@@ -85,7 +99,7 @@ public class MovingSign : MonoBehaviour
     {
         if (other.gameObject.name == checkPointReached.ToString())
         {
-            ClearPatternCheckpoint();
+            SignCompleted();
         }
         //please dont look, im sorry
         if (other.gameObject.name == (checkPointReached + 1).ToString())
@@ -99,11 +113,12 @@ public class MovingSign : MonoBehaviour
         }
     }
 
-    void ClearPatternCheckpoint()
+    void SignCompleted()
     {
         Destroy(GameObject.Find(checkPointReached.ToString()));
         if (checkPointReached == patternChildCount)
         {
+            currentSign.text = recognisedSign;
             print($"{recognisedMovingSign}");
             DestroyAllPatterns();
         }

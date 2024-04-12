@@ -15,6 +15,8 @@ public class MovingSignManager : MonoBehaviour
     GameObject jPattern;
     GameObject øPattern;
     GameObject zPattern;
+    
+    GameObject signPattern;
 
     float timeLimit = 2f;
 
@@ -49,105 +51,33 @@ public class MovingSignManager : MonoBehaviour
     {
         if(recognisedSign == null) return;
         if(prevRecognisedSign == recognisedSign.text) return;
-        SpawnSignPattern(recognisedSign.text);
+        DetectSign(recognisedSign.text);
     }
 
-    void SpawnSignPattern(string sign)
+    void DetectSign(string sign)
     {
         prevRecognisedSign = recognisedSign.text;
         switch (sign)
         {
             case "A":
-                if (!åPattern)
-                {
-                    checkPointReached = startForCheckPoints;
-                    DestroyAllPatterns();
-                    recognisedMovingSign = "Å"; 
-                    
-                    GameObject spawnpoint = GameObject.Find($"{handedness}_Palm");
-                    transform.parent = spawnpoint.transform;
-                    transform.position = spawnpoint.transform.position;
-
-                    switch (handedness)
-                    {
-                        case "L":
-                            åPattern = Instantiate(signPatterns[0], transform.position, Quaternion.Euler(leftHandedRotation));
-                            break;
-                        case "R":
-                            åPattern = Instantiate(signPatterns[0], transform.position, Quaternion.identity);
-                            break;
-                    }
-                    patternChildCount = signPatterns[0].transform.childCount;
-                }
+                if (signPattern)
+                    DestroyPattern();
+                SpawnPattern("Å", "Palm", 0); 
                 break;
             case "I":
-                if (!jPattern)
-                {
-                    checkPointReached = startForCheckPoints;
-                    DestroyAllPatterns();
-                    recognisedMovingSign = "J";
-                    
-                    GameObject spawnpoint = GameObject.Find($"{handedness}_LittleTip");
-                    transform.parent = spawnpoint.transform;
-                    transform.position = spawnpoint.transform.position;
-                    
-                    switch (handedness)
-                    {
-                        case "L":
-                            jPattern = Instantiate(signPatterns[1], spawnpoint.transform.position, Quaternion.Euler(leftHandedRotation));
-                            break;
-                        case "R":
-                            jPattern = Instantiate(signPatterns[1], spawnpoint.transform.position, Quaternion.identity);
-                            break;
-                    }
-                    patternChildCount = signPatterns[1].transform.childCount;
-                }
+                if (signPattern)
+                    DestroyPattern();
+                SpawnPattern("J", "LittleTip", 1);
                 break;
             case "O":
-                if (!øPattern)
-                {
-                    checkPointReached = startForCheckPoints;
-                    DestroyAllPatterns();
-                    recognisedMovingSign = "Ø";
-                    
-                    GameObject spawnpoint = GameObject.Find($"{handedness}_Palm");
-                    transform.parent = spawnpoint.transform;
-                    transform.position = spawnpoint.transform.position;
-                    
-                    switch (handedness)
-                    {
-                        case "L":
-                            øPattern = Instantiate(signPatterns[2], gameObject.transform.position, Quaternion.Euler(leftHandedRotation));
-                            break;
-                        case "R":
-                            øPattern = Instantiate(signPatterns[2], gameObject.transform.position, Quaternion.identity);
-                            break;
-                    }
-                    patternChildCount = signPatterns[2].transform.childCount;
-                }
+                if (signPattern)
+                    DestroyPattern();
+                SpawnPattern("Ø", "Palm", 2);
                 break;
             case "X":
-                if (!zPattern)
-                {
-                    checkPointReached = startForCheckPoints;
-                    DestroyAllPatterns();
-                    recognisedMovingSign = "Z";
-                    
-                    GameObject spawnpoint = GameObject.Find($"{handedness}_IndexTip");
-                    transform.parent = spawnpoint.transform;
-                    transform.position = spawnpoint.transform.position;
-                    
-                    switch (handedness)
-                    {
-                        case "L":
-                            zPattern = Instantiate(signPatterns[3], spawnpoint.transform.position, Quaternion.Euler(leftHandedRotation));
-                            break;
-                        case "R":
-                            zPattern = Instantiate(signPatterns[3], spawnpoint.transform.position, Quaternion.identity);
-                            break;
-                    }
-                    patternChildCount = signPatterns[3].transform.childCount;
-                }
+                if (signPattern)
+                    DestroyPattern();
+                SpawnPattern("Z", "IndexTip", 3);
                 break;
             default:
                 prevRecognisedSign = "";
@@ -155,33 +85,45 @@ public class MovingSignManager : MonoBehaviour
         }
     }
 
+    void SpawnPattern(string sign, string spawnpointString, int patternIndex)
+    {
+        checkPointReached = startForCheckPoints;
+        recognisedMovingSign = sign;
+
+        var spawnpoint = GameObject.Find($"{handedness}_{spawnpointString}");
+        transform.parent = spawnpoint.transform;
+        transform.position = spawnpoint.transform.position;
+                    
+        switch (handedness)
+        {
+            case "L":
+                signPattern = Instantiate(signPatterns[patternIndex], spawnpoint.transform.position, Quaternion.Euler(leftHandedRotation));
+                break;
+            case "R":
+                signPattern = Instantiate(signPatterns[patternIndex], spawnpoint.transform.position, Quaternion.identity);
+                break;
+        }
+        patternChildCount = signPatterns[patternIndex].transform.childCount;
+    }
+    
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name == checkPointReached.ToString())
         {
             SignCompleted();
         }
-
-        if(recognisedMovingSign == "Å" || checkPointReached == 2) return;
+        
+        //Avoid fail when signing "Å", since the last checkpoint is at the start as well.
+        if(recognisedMovingSign == "Å" || checkPointReached == 2) return; 
         if (int.TryParse(other.gameObject.name, out var checkPointName) && checkPointName > checkPointReached)
         {
             MovingSignFailed();
         }
-        
-    //     //please dont look, im sorry
-    //     if (other.gameObject.name == (checkPointReached + 1).ToString())
-    //     {
-    //         MovingSignFailed();
-    //     }
-    //     //please dont look, im sorry
-    //     if (other.gameObject.name == (checkPointReached + 2).ToString())
-    //     {
-    //         MovingSignFailed();
-    //     }
     }
 
     void StartTimer(float time)
     {
+        //Avoid having multiple coroutines running and deleting patterns all the time.
         if(coroutineTimer != null)
             StopCoroutine(coroutineTimer);
         coroutineTimer = StartCoroutine(TimeLimit(time));
@@ -190,8 +132,7 @@ public class MovingSignManager : MonoBehaviour
     IEnumerator TimeLimit(float time)
     {
         yield return new WaitForSeconds(time);
-        print("time up");
-        DestroyAllPatterns();
+        DestroyPattern();
     }
     
     void SignCompleted()
@@ -202,25 +143,24 @@ public class MovingSignManager : MonoBehaviour
         {
             recognisedSign.text = recognisedMovingSign;
             print($"{recognisedMovingSign}");
-            DestroyAllPatterns();
+            DestroyPattern();
         }
         checkPointReached++;
     }
 
+    //debug funktion - ersat med DestroyPattern()
     void MovingSignFailed()
     {
-        DestroyAllPatterns();
+        DestroyPattern();
         print("YOU FAILED BITCH");
     }
     
-    void DestroyAllPatterns()
+    void DestroyPattern()
     {
+        
         if(coroutineTimer != null)
             StopCoroutine(coroutineTimer);
         coroutineTimer = null;
-        Destroy(åPattern);
-        Destroy(jPattern);
-        Destroy(øPattern);
-        Destroy(zPattern);
+        Destroy(signPattern);
     }
 }

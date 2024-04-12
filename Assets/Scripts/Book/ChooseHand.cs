@@ -103,11 +103,11 @@ public class ChooseHand : MonoBehaviour
         GameObject.Find($"{nonDomHandString}_ThumbMetacarpal").tag = "Untagged";
         GameObject.Find($"{nonDomHandString}_Hand").GetComponent<SkinnedMeshRenderer>().enabled = false;
         
-        GameObject.Find($"{nonDomHandString}_IndexMetacarpal").tag = "FingerTip";
-        GameObject.Find($"{nonDomHandString}_MiddleMetacarpal").tag = "FingerTip";
-        GameObject.Find($"{nonDomHandString}_RingMetacarpal").tag = "FingerTip";
-        GameObject.Find($"{nonDomHandString}_LittleMetacarpal").tag = "FingerTip";
-        GameObject.Find($"{nonDomHandString}_ThumbMetacarpal").tag = "FingerTip";
+        GameObject.Find($"{domHandString}_IndexMetacarpal").tag = "FingerTip";
+        GameObject.Find($"{domHandString}_MiddleMetacarpal").tag = "FingerTip";
+        GameObject.Find($"{domHandString}_RingMetacarpal").tag = "FingerTip";
+        GameObject.Find($"{domHandString}_LittleMetacarpal").tag = "FingerTip";
+        GameObject.Find($"{domHandString}_ThumbMetacarpal").tag = "FingerTip";
         GameObject.Find($"{domHandString}_Hand").GetComponent<SkinnedMeshRenderer>().enabled = true;
     }
     

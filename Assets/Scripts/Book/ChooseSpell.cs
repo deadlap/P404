@@ -20,8 +20,9 @@ public class ChooseSpell : MonoBehaviour
     
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("DominantHand") && !onCooldown)
+        if (other.CompareTag("FingerTip") && !onCooldown)
         {
+            print("spell");
             BookEvents.OnSpellChosen(elementType);
             onCooldown = true;
             Invoke(nameof(ResetCooldown), cooldownTime);

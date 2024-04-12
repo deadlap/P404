@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -15,12 +16,11 @@ public class MovingSignManager : MonoBehaviour
     GameObject øPattern;
     GameObject zPattern;
 
-    float timeLimit = 5f;
-    float time = 0;
+    float timeLimit = 2f;
 
     Vector3 leftHandedRotation = new (0, 180, 0);
-    
-    [SerializeField] TMP_Text recognisedSign;
+
+    TMP_Text recognisedSign;
     string prevRecognisedSign;
 
     string recognisedMovingSign;
@@ -31,6 +31,9 @@ public class MovingSignManager : MonoBehaviour
 
     string handedness;
 
+
+    Coroutine coroutineTimer;
+
     void Awake()
     {
         Instance = this;
@@ -38,16 +41,8 @@ public class MovingSignManager : MonoBehaviour
 
     void Start()
     {
+        recognisedSign = GameObject.Find("SignText").GetComponent<TMP_Text>();
         handedness = ChooseHand.Instance.handedness;
-        switch (handedness)
-        {
-            case "L":
-                recognisedSign = GameObject.Find("LeftText").GetComponent<TMP_Text>();
-                break;
-            case "R":
-                recognisedSign = GameObject.Find("RightText").GetComponent<TMP_Text>();
-                break;
-        }
     }
 
     void Update()
@@ -60,18 +55,18 @@ public class MovingSignManager : MonoBehaviour
     void SpawnSignPattern(string sign)
     {
         prevRecognisedSign = recognisedSign.text;
-        checkPointReached = startForCheckPoints;
         switch (sign)
         {
             case "A":
                 if (!åPattern)
                 {
-                    time = 0;
+                    checkPointReached = startForCheckPoints;
                     DestroyAllPatterns();
                     recognisedMovingSign = "Å"; 
                     
-                    transform.parent = GameObject.Find($"{handedness}_Palm").transform;
-                    transform.position = GameObject.Find($"{handedness}_Palm").transform.position;
+                    GameObject spawnpoint = GameObject.Find($"{handedness}_Palm");
+                    transform.parent = spawnpoint.transform;
+                    transform.position = spawnpoint.transform.position;
 
                     switch (handedness)
                     {
@@ -88,11 +83,11 @@ public class MovingSignManager : MonoBehaviour
             case "I":
                 if (!jPattern)
                 {
-                    time = 0;
+                    checkPointReached = startForCheckPoints;
                     DestroyAllPatterns();
                     recognisedMovingSign = "J";
-                    GameObject spawnpoint = GameObject.Find($"{handedness}_LittleTip");
                     
+                    GameObject spawnpoint = GameObject.Find($"{handedness}_LittleTip");
                     transform.parent = spawnpoint.transform;
                     transform.position = spawnpoint.transform.position;
                     
@@ -111,12 +106,13 @@ public class MovingSignManager : MonoBehaviour
             case "O":
                 if (!øPattern)
                 {
-                    time = 0;
+                    checkPointReached = startForCheckPoints;
                     DestroyAllPatterns();
                     recognisedMovingSign = "Ø";
                     
-                    transform.parent = GameObject.Find($"{handedness}_Palm").transform;
-                    transform.position = GameObject.Find($"{handedness}_Palm").transform.position;
+                    GameObject spawnpoint = GameObject.Find($"{handedness}_Palm");
+                    transform.parent = spawnpoint.transform;
+                    transform.position = spawnpoint.transform.position;
                     
                     switch (handedness)
                     {
@@ -133,11 +129,11 @@ public class MovingSignManager : MonoBehaviour
             case "X":
                 if (!zPattern)
                 {
-                    time = 0;
+                    checkPointReached = startForCheckPoints;
                     DestroyAllPatterns();
                     recognisedMovingSign = "Z";
-                    GameObject spawnpoint = GameObject.Find($"{handedness}_IndexTip");
                     
+                    GameObject spawnpoint = GameObject.Find($"{handedness}_IndexTip");
                     transform.parent = spawnpoint.transform;
                     transform.position = spawnpoint.transform.position;
                     
@@ -154,7 +150,6 @@ public class MovingSignManager : MonoBehaviour
                 }
                 break;
             default:
-                DestroyAllPatterns();
                 prevRecognisedSign = "";
                 break;
         }
@@ -166,22 +161,44 @@ public class MovingSignManager : MonoBehaviour
         {
             SignCompleted();
         }
-        //please dont look, im sorry
-        if (other.gameObject.name == (checkPointReached + 1).ToString())
+
+        if(recognisedMovingSign == "Å" || checkPointReached == 2) return;
+        if (int.TryParse(other.gameObject.name, out var checkPointName) && checkPointName > checkPointReached)
         {
             MovingSignFailed();
         }
-        //please dont look, im sorry
-        if (other.gameObject.name == (checkPointReached + 2).ToString())
-        {
-            MovingSignFailed();
-        }
+        
+    //     //please dont look, im sorry
+    //     if (other.gameObject.name == (checkPointReached + 1).ToString())
+    //     {
+    //         MovingSignFailed();
+    //     }
+    //     //please dont look, im sorry
+    //     if (other.gameObject.name == (checkPointReached + 2).ToString())
+    //     {
+    //         MovingSignFailed();
+    //     }
     }
 
+    void StartTimer(float time)
+    {
+        if(coroutineTimer != null)
+            StopCoroutine(coroutineTimer);
+        coroutineTimer = StartCoroutine(TimeLimit(time));
+    }
+    
+    IEnumerator TimeLimit(float time)
+    {
+        yield return new WaitForSeconds(time);
+        print("time up");
+        DestroyAllPatterns();
+    }
+    
     void SignCompleted()
     {
         Destroy(GameObject.Find(checkPointReached.ToString()));
-        if (checkPointReached == patternChildCount)
+        StartTimer(timeLimit);
+        if (checkPointReached >= patternChildCount)
         {
             recognisedSign.text = recognisedMovingSign;
             print($"{recognisedMovingSign}");
@@ -198,6 +215,9 @@ public class MovingSignManager : MonoBehaviour
     
     void DestroyAllPatterns()
     {
+        if(coroutineTimer != null)
+            StopCoroutine(coroutineTimer);
+        coroutineTimer = null;
         Destroy(åPattern);
         Destroy(jPattern);
         Destroy(øPattern);

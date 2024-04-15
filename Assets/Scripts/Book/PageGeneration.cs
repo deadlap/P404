@@ -16,7 +16,7 @@ public class PageGeneration : MonoBehaviour
         {
             //Undskyld olga
             GameObject bookPage = GameObject.Find($"Left Page ({i + 1})");
-            GameObject pageContent = Instantiate(leftPageContentList[i], bookPage.transform.position, Quaternion.identity, bookPage.transform);
+            GameObject pageContent = Instantiate(leftPageContentList[i], bookPage.transform.position, bookPage.transform.rotation * Quaternion.identity, bookPage.transform);
         }
     }
 }

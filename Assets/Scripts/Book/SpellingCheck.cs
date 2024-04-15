@@ -17,7 +17,7 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
 
     public void SignedLetterInput(string sign) {
         if (CheckIncomingLetter(sign)) {
-            //kode der genererer det næste sign og giver positiv feedback ting            
+            //kode der genererer det næste sign og giver positiv feedback ting
             if (letterIndex < currentWord.Length) {
                 SetWord("");
                 //Kode der caster spellen
@@ -27,7 +27,6 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
         } else {
             //Kode der giver error besked fordi brugeren har signed forkert bogstav
         }
-
         //hvad end du skal bruge mr nikolaj
     }
 

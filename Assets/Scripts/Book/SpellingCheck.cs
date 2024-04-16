@@ -7,6 +7,14 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
     [SerializeField] string currentWord;
     [SerializeField] int letterIndex;
 
+
+    void OnEnable() {
+        BookEvents.SpellChosen += SetWord;
+    }
+
+    void OnDisable() {
+        BookEvents.SpellChosen -= SetWord;
+    }
     // Update is called once per frame
     void Update() {
         if (currentWord.Length == 0) {
@@ -41,6 +49,9 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
     public void SetWord(string newWord){
         currentWord = newWord;
         letterIndex = 0;
+        if (newWord.Length > 0) {
+            GenerateHandModel(newWord[0]);
+        }
     }
 
     public void GenerateHandModel(char letter) {

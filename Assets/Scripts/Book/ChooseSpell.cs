@@ -3,15 +3,10 @@ using UnityEngine;
 
 public class ChooseSpell : MonoBehaviour
 {
-    string elementType;
+    [SerializeField] string elementType;
     bool onCooldown;
-
+    
     [SerializeField] float cooldownTime;
-
-    void Start()
-    {
-        elementType = gameObject.tag;
-    }
 
     void ResetCooldown()
     {
@@ -22,7 +17,6 @@ public class ChooseSpell : MonoBehaviour
     {
         if (other.CompareTag("FingerTip") && !onCooldown)
         {
-            print("spell");
             BookEvents.OnSpellChosen(elementType);
             onCooldown = true;
             Invoke(nameof(ResetCooldown), cooldownTime);

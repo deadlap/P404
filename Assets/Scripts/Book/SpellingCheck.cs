@@ -1,12 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class SpellingCheck : MonoBehaviour { //ændre dens navn?
 
     [SerializeField] string currentWord;
     [SerializeField] int letterIndex;
 
+    [SerializeField] TMP_Text spellFloatingText;
+    [SerializeField] TMP_Text playerProgress;
 
     void OnEnable() {
         BookEvents.SpellChosen += SetWord;
@@ -24,7 +25,9 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
 
 
     public void SignedLetterInput(string sign) {
+        
         if (CheckIncomingLetter(sign)) {
+            playerProgress.text += sign;
             //kode der genererer det næste sign og giver positiv feedback ting
             if (letterIndex < currentWord.Length) {
                 SetWord("");
@@ -40,15 +43,18 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
 
     bool CheckIncomingLetter(string letter) { //input fra hvilket bogstav brugeren tegner
         if (letter[0] == currentWord[letterIndex]){
-            letterIndex += 1;
+            letterIndex++;
             return true;
         }
         return false;
     }
 
-    public void SetWord(string newWord){
+    void SetWord(string newWord){
         currentWord = newWord;
         letterIndex = 0;
+        spellFloatingText.text = currentWord;
+        
+                
         if (newWord.Length > 0) {
             GenerateHandModel(newWord[0]);
         }

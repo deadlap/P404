@@ -20,7 +20,6 @@ public class PageChanger : MonoBehaviour
     void OnDisable()
     {
         BookEvents.PageTurning -= PageTurning;
-
     }
 
     void OnTriggerEnter(Collider other)
@@ -37,6 +36,7 @@ public class PageChanger : MonoBehaviour
                     break;
                 }
                 BookEvents.OnPageTurning();
+                BookEvents.OnSpellChosen("");
                 Invoke(nameof(NextPage), durationTime);
                 break;
             case "prev":
@@ -47,6 +47,7 @@ public class PageChanger : MonoBehaviour
                     break;
                 }
                 BookEvents.OnPageTurning();
+                BookEvents.OnSpellChosen("");
                 Invoke(nameof(PrevPage), durationTime);
                 break;
         }

@@ -7751,17 +7751,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &552955156 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2717816281878531191, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-  m_PrefabInstance: {fileID: 1965078995}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &582173016 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7382346719239079980, guid: 47e492fec7d311f48b7eabcbb4e2e47d, type: 3}
@@ -8453,17 +8442,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 098454c304f89654e8ac01b04fe6ab5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1468430373 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3491088556313874555, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-  m_PrefabInstance: {fileID: 1965078995}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1541608783 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2396294369864616801, guid: 3f7511fbc40ae7a4b89c3298a3de199d, type: 3}
@@ -8732,7 +8710,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Nothing
+  m_text: SignText
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9300,24 +9278,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1599921984}
     - target: {fileID: 1370159007236366452, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-      propertyPath: playerProgress
+      propertyPath: gestures
       value: 
-      objectReference: {fileID: 552955156}
+      objectReference: {fileID: 1965078996}
     - target: {fileID: 1370159007236366452, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-      propertyPath: spellFloatingText
-      value: 
-      objectReference: {fileID: 1468430373}
-    - target: {fileID: 2717816281878531191, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-      propertyPath: m_fontColor.b
-      value: 0.84516203
-      objectReference: {fileID: 0}
-    - target: {fileID: 2717816281878531191, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-      propertyPath: m_fontColor.g
-      value: 0.8867924
-      objectReference: {fileID: 0}
-    - target: {fileID: 2717816281878531191, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-      propertyPath: m_fontColor.r
-      value: 0.3890174
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2820246628681316938, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_RootOrder
@@ -9367,24 +9333,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Book
       objectReference: {fileID: 0}
-    - target: {fileID: 3491088556313874555, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-      propertyPath: m_fontColor.a
-      value: 0.6509804
+    - target: {fileID: 7987047562258346661, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3491088556313874555, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-      propertyPath: m_fontColor.b
-      value: 0.5471698
-      objectReference: {fileID: 0}
-    - target: {fileID: 3491088556313874555, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-      propertyPath: m_fontColor.g
-      value: 0.5471698
-      objectReference: {fileID: 0}
-    - target: {fileID: 3491088556313874555, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-      propertyPath: m_fontColor.r
-      value: 0.5471698
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1061376307, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+--- !u!1 &1965078996 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7987047562258346661, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+  m_PrefabInstance: {fileID: 1965078995}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2008689270
 GameObject:
   m_ObjectHideFlags: 0

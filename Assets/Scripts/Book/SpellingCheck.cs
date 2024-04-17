@@ -1,10 +1,12 @@
+using System;
 using UnityEngine;
 using TMPro;
 
 public class SpellingCheck : MonoBehaviour { //ændre dens navn?
 
-    [SerializeField] string currentWord;
-    [SerializeField] int letterIndex;
+    [SerializeField] GameObject gestures;
+    string currentWord;
+    int letterIndex;
 
     [SerializeField] TMP_Text spellFloatingText;
     [SerializeField] TMP_Text playerProgress;
@@ -16,20 +18,22 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
     void OnDisable() {
         BookEvents.SpellChosen -= SetWord;
     }
-    // Update is called once per frame
-    void Update() {
-        if (currentWord.Length == 0) {
-            letterIndex = 0;
-        }
-    }
+    
+    // void Update() {
+    //     if (currentWord.Length == 0) {
+    //         letterIndex = 0;
+    //     }
+    // }
 
 
     public void SignedLetterInput(string sign) {
-        
-        if (CheckIncomingLetter(sign)) {
-            playerProgress.text += sign;
+        //char letter = char.Parse(sign);
+        print("johnny bravo er et firben" + spellFloatingText.text);
+        if (sign == currentWord[letterIndex].ToString()){
+            letterIndex++;
             //kode der genererer det næste sign og giver positiv feedback ting
-            if (letterIndex < currentWord.Length) {
+            playerProgress.text = sign;
+            if (letterIndex > currentWord.Length) {
                 SetWord("");
                 //Kode der caster spellen
             } else {
@@ -41,22 +45,28 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
         //hvad end du skal bruge mr nikolaj
     }
 
-    bool CheckIncomingLetter(string letter) { //input fra hvilket bogstav brugeren tegner
-        if (letter[0] == currentWord[letterIndex]){
-            letterIndex++;
-            return true;
-        }
+    bool CheckIncomingLetter(string letter, string word) { //input fra hvilket bogstav brugeren tegner
+        print(letterIndex);
+        print("letter: " + letter);
+        print("word: " + word);
+        
+        
         return false;
     }
 
     void SetWord(string newWord){
         currentWord = newWord;
         letterIndex = 0;
-        spellFloatingText.text = currentWord;
+        spellFloatingText.text = newWord;
         
+        print("DR EGGMAN LEVER " + currentWord);
                 
         if (newWord.Length > 0) {
             GenerateHandModel(newWord[0]);
+            gestures.SetActive(true);
+        }
+        else {
+            gestures.SetActive(false);
         }
     }
 

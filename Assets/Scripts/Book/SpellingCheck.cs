@@ -8,6 +8,7 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
     string currentWord;
     int letterIndex;
 
+    [SerializeField] GameObject handModelParent;
     [SerializeField] TMP_Text spellFloatingText;
     [SerializeField] TMP_Text playerProgress;
 
@@ -39,7 +40,7 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
                 DeleteHandModels();
             } else {
                 playerProgress.text = currentWord[letterIndex].ToString().ToUpper();
-                GenerateHandModel(currentWord[letterIndex].ToString().ToUpper());
+                GenerateHandModel(currentWord[letterIndex].ToString());
             }
         } else {
             //Kode der giver error besked fordi brugeren har signed forkert bogstav
@@ -51,7 +52,7 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
         currentWord = newWord;
         letterIndex = 0;
         spellFloatingText.text = newWord;
-        playerProgress.text = newWord[0].ToString();
+        playerProgress.text = newWord[0].ToString().ToUpper();
         if (newWord.Length > 0) {
             GenerateHandModel(newWord[0].ToString());
             gestures.SetActive(true);
@@ -62,11 +63,13 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
     }
 
     public void GenerateHandModel(string letter) {
-        
+        GameObject handModel = Instantiate(Resources.Load("Hands/"+letter.ToUpper()), handModelParent.transform) as GameObject;
     }
 
     void DeleteHandModels(){
-
+        foreach (Transform child in handModelParent.transform) {
+	        GameObject.Destroy(child.gameObject);
+        }
     }
 
 }

@@ -25,19 +25,21 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
     //     }
     // }
 
-
     public void SignedLetterInput(string sign) {
-        //char letter = char.Parse(sign);
-        print("johnny bravo er et firben" + spellFloatingText.text);
-        if (sign == currentWord[letterIndex].ToString()){
+        // print("letterindex: "+ letterIndex);
+        // print("Det den tror er ordet: " + spellFloatingText.text); 
+        // print("sign: " + sign);
+        // print("current letter: "+ currentWord[letterIndex].ToString());
+        // print("virker det?:" + (sign == currentWord[letterIndex].ToString().ToUpper()));
+        if (sign == currentWord[letterIndex].ToString().ToUpper()){
             letterIndex++;
             //kode der genererer det næste sign og giver positiv feedback ting
-            playerProgress.text = sign;
-            if (letterIndex > currentWord.Length) {
+            if (letterIndex >= currentWord.Length) {
                 SetWord("");
-                //Kode der caster spellen
+                DeleteHandModels();
             } else {
-                GenerateHandModel(currentWord[letterIndex]);
+                playerProgress.text = currentWord[letterIndex].ToString().ToUpper();
+                GenerateHandModel(currentWord[letterIndex].ToString().ToUpper());
             }
         } else {
             //Kode der giver error besked fordi brugeren har signed forkert bogstav
@@ -45,24 +47,13 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
         //hvad end du skal bruge mr nikolaj
     }
 
-    bool CheckIncomingLetter(string letter, string word) { //input fra hvilket bogstav brugeren tegner
-        print(letterIndex);
-        print("letter: " + letter);
-        print("word: " + word);
-        
-        
-        return false;
-    }
-
-    void SetWord(string newWord){
+    public void SetWord(string newWord){
         currentWord = newWord;
         letterIndex = 0;
         spellFloatingText.text = newWord;
-        
-        print("DR EGGMAN LEVER " + currentWord);
-                
+        playerProgress.text = newWord[0].ToString();
         if (newWord.Length > 0) {
-            GenerateHandModel(newWord[0]);
+            GenerateHandModel(newWord[0].ToString());
             gestures.SetActive(true);
         }
         else {
@@ -70,8 +61,12 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
         }
     }
 
-    public void GenerateHandModel(char letter) {
+    public void GenerateHandModel(string letter) {
         
+    }
+
+    void DeleteHandModels(){
+
     }
 
 }

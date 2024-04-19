@@ -8,10 +8,10 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
     [SerializeField] GameObject gestures;
     string currentWord;
     int letterIndex;
-
     [SerializeField] GameObject handModelParent;
     [SerializeField] TMP_Text spellFloatingText;
     [SerializeField] TMP_Text playerProgress;
+    [SerializeField] TMP_Text currentSign;
 
     void OnEnable() {
         BookEvents.SpellChosen += SetWord;
@@ -21,6 +21,11 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
         BookEvents.SpellChosen -= SetWord;
     }
 
+    void Update()
+    {
+        SignedLetterInput(currentSign.text);
+    }
+
     public void SignedLetterInput(string sign) {
         // Temporary testing ting
         // print("letterindex: "+ letterIndex);
@@ -28,7 +33,7 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
         // print("sign: " + sign);
         // print("current letter: "+ currentWord[letterIndex].ToString());
         // print("virker det?:" + (sign == currentWord[letterIndex].ToString().ToUpper()));
-        
+        if(currentSign.text.Length == 0 || currentWord.Length == 0) return;
         if (sign == currentWord[letterIndex].ToString().ToUpper()){
             letterIndex++;
             //kode der genererer det næste sign og giver positiv feedback ting
@@ -38,7 +43,7 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
                 // Skal enables når alle hand models virker
                 // DeleteHandModels();
             } else {
-                playerProgress.text = currentWord[letterIndex].ToString().ToUpper();
+                playerProgress.text += currentWord[letterIndex].ToString().ToUpper();
                 
                 // Skal enables når alle hand models virker
                 // GenerateHandModel(currentWord[letterIndex].ToString());

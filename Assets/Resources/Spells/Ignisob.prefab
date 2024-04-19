@@ -120,6 +120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3256049021724201533}
   - component: {fileID: 1175542935446469184}
+  - component: {fileID: 2358084288289969963}
   m_Layer: 0
   m_Name: Ignisob
   m_TagString: Fire
@@ -156,3 +157,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   element: 0
+--- !u!114 &2358084288289969963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4279082772282803082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87fa6fbe73770124e8ee52da54756a1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleRatio: 0.99
+  deletionTime: 15
+  scaleTime: 10

@@ -8202,6 +8202,7 @@ MonoBehaviour:
   touchPointManagerPrefab: {fileID: 1223355069409145455, guid: f31c9546e07ae4b4884827f59508019f, type: 3}
   bookFollowPointPrefab: {fileID: 4233948336606793639, guid: abe1b4bacbb4e47409074e16fc6b20f0, type: 3}
   handedness: 
+  spellCreationPosition: {fileID: 2071523899}
   chargeAnimation: {fileID: 1588200555}
   choosingDuration: 2
   leftPos: {x: -90, y: 90, z: 90}
@@ -10343,7 +10344,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2071523899}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.192, z: 0.444}
+  m_LocalPosition: {x: 0, y: 0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

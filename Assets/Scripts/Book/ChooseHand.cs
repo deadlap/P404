@@ -15,6 +15,8 @@ public class ChooseHand : MonoBehaviour
     GameObject bookFollowPoint;
 
     public string handedness;
+
+    [SerializeField] GameObject spellCreationPosition;
     
     [SerializeField] Image chargeAnimation;
     [SerializeField] float choosingDuration;
@@ -87,6 +89,9 @@ public class ChooseHand : MonoBehaviour
         dominantHand = dominantHandGO;
         SpawnTouchPointManager();
         
+        //Sætter hvilken hånd spells bliver instantiated i
+        spellCreationPosition.transform.SetParent(dominantHandGO.transform);
+
         nonDominantHand = GameObject.Find($"{nonDomHandString}_Palm");
         nonDominantHand.tag = "NonDominantHand";
         

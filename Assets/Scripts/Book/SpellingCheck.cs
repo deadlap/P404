@@ -24,7 +24,7 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
     public void SignedLetterInput(string sign) {
         // Temporary testing ting
         // print("letterindex: "+ letterIndex);
-        // print("Det den tror er ordet: " + spellFloatingText.text); 
+        // print("Det den tror er ordet: " + spellFloatingText.text);
         // print("sign: " + sign);
         // print("current letter: "+ currentWord[letterIndex].ToString());
         // print("virker det?:" + (sign == currentWord[letterIndex].ToString().ToUpper()));

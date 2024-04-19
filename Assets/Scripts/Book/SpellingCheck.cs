@@ -29,15 +29,16 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
     }
 
     public void SignedLetterInput(string _sign) {
-
+        _sign = _sign.ToString().ToUpper()
         if(signedText.text.Length == 0 || currentWord.Length == 0) return;
         
         string sign = _sign;
-        if (_sign == "m" && currentWord[letterIndex] == 'n'){
-            sign = "n";
+        
+        if (_sign == "M" && currentWord[letterIndex].ToString().ToUpper() == "n"){
+            sign = "N";
         }
-        if (_sign == "u" && currentWord[letterIndex] == 'r'){
-            sign = "r";
+        if (_sign == "U" && currentWord[letterIndex].ToString().ToUpper() == 'R'){
+            sign = "R";
         }
 
         if (sign == currentWord[letterIndex].ToString().ToUpper()){
@@ -67,6 +68,7 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
         if (newWord.Length > 0) {
             // Skal enables når alle hand models virker
             // GenerateHandModel(newWord[0].ToString());
+            currentSign.text = currentWord[letterIndex].ToString().ToUpper();
             playerProgress.text = newWord[0].ToString().ToUpper();
             gestures.SetActive(true);
         } else {

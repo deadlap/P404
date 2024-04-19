@@ -158,13 +158,9 @@ public class ChooseHand : MonoBehaviour
     }
     Vector3 BookFollowPointPos(string hand)
     {
-        switch (hand)
-        {
-            case "L_Palm":
-                return leftPos;
-            case "R_Palm":
-                return rightPos;
-        }
-        return new Vector3();
+        if (hand == "L_Palm")
+            return leftPos;
+        else
+            return rightPos;
     }
 }

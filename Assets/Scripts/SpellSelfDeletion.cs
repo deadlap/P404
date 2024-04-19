@@ -20,7 +20,7 @@ public class SpellSelfDeletion : MonoBehaviour {
             this.transform.localScale *= scaleRatio;
         }
         if (currentTime >= deletionTime) {
-            Destroy(this);
+            Destroy(gameObject);
         }
     }
 }

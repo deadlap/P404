@@ -169,6 +169,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87fa6fbe73770124e8ee52da54756a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleRatio: 0.99
+  scaleRatio: 0.996
   deletionTime: 15
   scaleTime: 10

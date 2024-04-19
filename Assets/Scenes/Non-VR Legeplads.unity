@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8475,8 +8475,8 @@ MonoBehaviour:
   spellCreationPosition: {fileID: 2071523899}
   chargeAnimation: {fileID: 1588200555}
   choosingDuration: 2
-  leftPos: {x: -90, y: 90, z: 90}
-  rightPos: {x: -90, y: 90, z: 90}
+  leftPos: {x: 0, y: 90, z: 90}
+  rightPos: {x: 0, y: 90, z: 90}
 --- !u!23 &963803021
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10351,11 +10351,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2820246628681316938, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2820246628681316938, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2820246628681316938, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_LocalRotation.y
@@ -10367,7 +10367,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2820246628681316938, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2820246628681316938, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y

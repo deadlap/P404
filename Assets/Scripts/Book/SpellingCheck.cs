@@ -34,10 +34,10 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
         
         string sign = _sign;
 
-        if (_sign == "M" && currentWord[letterIndex].ToString().ToUpper() == "n"){
+        if (_sign == "M" && currentWord[letterIndex].ToString().ToUpper() == "N"){
             sign = "N";
         }
-        if (_sign == "U" && currentWord[letterIndex].ToString().ToUpper() == 'R'){
+        if (_sign == "U" && currentWord[letterIndex].ToString().ToUpper() == "R"){
             sign = "R";
         }
 

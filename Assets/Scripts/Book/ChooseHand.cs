@@ -90,7 +90,7 @@ public class ChooseHand : MonoBehaviour
         SpawnTouchPointManager();
         
         //Sætter hvilken hånd spells bliver instantiated i
-        spellCreationPosition.transform.SetParent(dominantHandGO.transform);
+        SetSpellCreationPoint(dominantHandGO);
 
         nonDominantHand = GameObject.Find($"{nonDomHandString}_Palm");
         nonDominantHand.tag = "NonDominantHand";
@@ -114,6 +114,21 @@ public class ChooseHand : MonoBehaviour
         GameObject.Find($"{domHandString}_LittleMetacarpal").tag = "FingerTip";
         GameObject.Find($"{domHandString}_ThumbMetacarpal").tag = "FingerTip";
         GameObject.Find($"{domHandString}_Hand").GetComponent<SkinnedMeshRenderer>().enabled = true;
+    }
+
+    void SetSpellCreationPoint(GameObject dominantHandGO)
+    {
+        var domHandPos = dominantHandGO.transform.position;
+        switch (handedness)
+        {
+            case "L":
+                spellCreationPosition.transform.position = new Vector3(domHandPos.x, domHandPos.y - 0.13f,domHandPos.y);
+                break;
+            case "R":
+                spellCreationPosition.transform.position = new Vector3(domHandPos.x, domHandPos.y + 0.13f,domHandPos.y);
+                break;
+        }
+        spellCreationPosition.transform.SetParent(dominantHandGO.transform);
     }
     
     void SpawnTouchPointManager()

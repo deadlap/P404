@@ -11,6 +11,8 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
     [SerializeField] GameObject handModelParent;
     [SerializeField] TMP_Text spellFloatingText;
     [SerializeField] TMP_Text playerProgress;
+    [SerializeField] TMP_Text signedText;
+    
     [SerializeField] TMP_Text currentSign;
 
     void OnEnable() {
@@ -26,14 +28,18 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
         SignedLetterInput(currentSign.text);
     }
 
-    public void SignedLetterInput(string sign) {
-        // Temporary testing ting
-        // print("letterindex: "+ letterIndex);
-        // print("Det den tror er ordet: " + spellFloatingText.text);
-        // print("sign: " + sign);
-        // print("current letter: "+ currentWord[letterIndex].ToString());
-        // print("virker det?:" + (sign == currentWord[letterIndex].ToString().ToUpper()));
+    public void SignedLetterInput(string _sign) {
+
         if(currentSign.text.Length == 0 || currentWord.Length == 0) return;
+        
+        string sign = _sign;
+        if (_sign == "m" && currentWord[letterIndex] == 'n'){
+            sign = "n";
+        }
+        if (_sign == "u" && currentWord[letterIndex] == 'r'){
+            sign = "r";
+        }
+
         if (sign == currentWord[letterIndex].ToString().ToUpper()){
             letterIndex++;
             //kode der genererer det næste sign og giver positiv feedback ting

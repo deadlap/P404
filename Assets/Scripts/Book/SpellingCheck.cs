@@ -29,11 +29,11 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
     }
 
     public void SignedLetterInput(string _sign) {
-        _sign = _sign.ToString().ToUpper()
+        _sign = _sign.ToString().ToUpper();
         if(signedText.text.Length == 0 || currentWord.Length == 0) return;
         
         string sign = _sign;
-        
+
         if (_sign == "M" && currentWord[letterIndex].ToString().ToUpper() == "n"){
             sign = "N";
         }

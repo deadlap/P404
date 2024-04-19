@@ -6,6 +6,6 @@ public class ActivateableSigns : MonoBehaviour {
 
 
     public void EnableSign(string sign){
-        
+        GameObject chosenGO = this.transform.FindChild(sign.ToUpper());
     }
 }

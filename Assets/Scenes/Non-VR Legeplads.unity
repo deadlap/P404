@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9217,7 +9217,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SignText
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9520,13 +9520,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 385549760}
     - target: {fileID: 302346239, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GestureDetectionInterval
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 302346239, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1599921984}
     - target: {fileID: 302346239, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 302346239, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1599921984}
+    - target: {fileID: 302346239, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 402143818, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -9536,13 +9548,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 385549760}
     - target: {fileID: 410344864, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GestureDetectionInterval
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 410344864, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1599921984}
     - target: {fileID: 410344864, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 410344864, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1599921984}
+    - target: {fileID: 410344864, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 427920036, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -9552,41 +9576,89 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 385549760}
     - target: {fileID: 433376230, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GestureDetectionInterval
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 433376230, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1599921984}
     - target: {fileID: 433376230, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 433376230, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1599921984}
+    - target: {fileID: 433376230, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 447467211, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 460296917, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GestureDetectionInterval
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 460296917, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1599921984}
     - target: {fileID: 460296917, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 460296917, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1599921984}
+    - target: {fileID: 460296917, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 528811289, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GestureDetectionInterval
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 528811289, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1599921984}
     - target: {fileID: 528811289, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 528811289, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1599921984}
+    - target: {fileID: 528811289, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 581725382, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GestureDetectionInterval
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 581725382, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1599921984}
     - target: {fileID: 581725382, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 581725382, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1599921984}
+    - target: {fileID: 581725382, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 587900263, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -9604,29 +9676,65 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 385549760}
     - target: {fileID: 665597373, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GestureDetectionInterval
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 665597373, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1599921984}
     - target: {fileID: 665597373, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 665597373, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1599921984}
+    - target: {fileID: 665597373, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 684503801, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GestureDetectionInterval
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 684503801, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1599921984}
     - target: {fileID: 684503801, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 684503801, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1599921984}
+    - target: {fileID: 684503801, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 764213220, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GestureDetectionInterval
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 764213220, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1599921984}
     - target: {fileID: 764213220, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 764213220, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1599921984}
+    - target: {fileID: 764213220, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 814255084, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -9636,13 +9744,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 385549760}
     - target: {fileID: 859786716, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GestureDetectionInterval
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 859786716, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1599921984}
     - target: {fileID: 859786716, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 859786716, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1599921984}
+    - target: {fileID: 859786716, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 859939136, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -9660,13 +9780,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 385549760}
     - target: {fileID: 946458966, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GestureDetectionInterval
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 946458966, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1599921984}
     - target: {fileID: 946458966, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 946458966, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1599921984}
+    - target: {fileID: 946458966, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1023989982, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -9676,29 +9808,65 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 385549760}
     - target: {fileID: 1054876734, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GestureDetectionInterval
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1054876734, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1599921984}
     - target: {fileID: 1054876734, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1054876734, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1599921984}
+    - target: {fileID: 1054876734, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1087877055, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GestureDetectionInterval
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 1087877055, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1599921984}
     - target: {fileID: 1087877055, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1087877055, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1599921984}
+    - target: {fileID: 1087877055, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092827944, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GestureDetectionInterval
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 1092827944, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1599921984}
     - target: {fileID: 1092827944, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092827944, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1599921984}
+    - target: {fileID: 1092827944, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1128000799, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -9716,13 +9884,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 385549760}
     - target: {fileID: 1178460248, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GestureDetectionInterval
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1178460248, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1599921984}
     - target: {fileID: 1178460248, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1178460248, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1599921984}
+    - target: {fileID: 1178460248, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1235720520, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -9740,21 +9920,45 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 385549760}
     - target: {fileID: 1358547613, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GestureDetectionInterval
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1358547613, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1599921984}
     - target: {fileID: 1358547613, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1358547613, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1599921984}
+    - target: {fileID: 1358547613, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413650725, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GestureDetectionInterval
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 1413650725, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1599921984}
     - target: {fileID: 1413650725, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413650725, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1599921984}
+    - target: {fileID: 1413650725, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1444925484, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -9764,37 +9968,85 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 385549760}
     - target: {fileID: 1501478971, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GestureDetectionInterval
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501478971, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1599921984}
     - target: {fileID: 1501478971, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501478971, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1599921984}
+    - target: {fileID: 1501478971, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529119511, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GestureDetectionInterval
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 1529119511, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1599921984}
     - target: {fileID: 1529119511, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529119511, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1599921984}
+    - target: {fileID: 1529119511, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657988281, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GestureDetectionInterval
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 1657988281, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1599921984}
     - target: {fileID: 1657988281, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657988281, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1599921984}
+    - target: {fileID: 1657988281, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1678831514, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GestureDetectionInterval
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 1678831514, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1599921984}
     - target: {fileID: 1678831514, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1678831514, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1599921984}
+    - target: {fileID: 1678831514, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1681981613, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -9828,13 +10080,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 385549760}
     - target: {fileID: 1898440765, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GestureDetectionInterval
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1898440765, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1599921984}
     - target: {fileID: 1898440765, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1898440765, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1599921984}
+    - target: {fileID: 1898440765, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2084564661, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -9844,11 +10108,27 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 385549760}
     - target: {fileID: 2141823585, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GestureDetectionInterval
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2141823585, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1599921984}
     - target: {fileID: 2141823585, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2141823585, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1599921984}
+    - target: {fileID: 2141823585, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1370159007236366452, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: shrek
       value: 
       objectReference: {fileID: 1599921984}
     - target: {fileID: 1370159007236366452, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
@@ -9860,6 +10140,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1370159007236366452, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: currentSign
+      value: 
+      objectReference: {fileID: 1599921984}
+    - target: {fileID: 1370159007236366452, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: handModelParent
       value: 
       objectReference: {fileID: 1911057312}
@@ -9867,6 +10151,18 @@ PrefabInstance:
       propertyPath: spellCreationPosition
       value: 
       objectReference: {fileID: 2071523899}
+    - target: {fileID: 2717816281878531191, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717816281878531191, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4292403811
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717816281878531191, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2820246628681316938, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -9915,9 +10211,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: Book
       objectReference: {fileID: 0}
+    - target: {fileID: 3491088556313874552, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3491088556313874552, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 70.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3491088556313874552, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 72.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3491088556313874555, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3491088556313874555, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3491088557358617709, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7709579099482779468, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7709579099482779468, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 70.899994
+      objectReference: {fileID: 0}
+    - target: {fileID: 7709579099482779468, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 72.300026
       objectReference: {fileID: 0}
     - target: {fileID: 7987047562258346661, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_IsActive

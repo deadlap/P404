@@ -30,7 +30,7 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
 
     public void SignedLetterInput(string _sign) {
 
-        if(currentSign.text.Length == 0 || currentWord.Length == 0) return;
+        if(currentSign.text.Length == 0 || currentWord == null) return;
         
         string sign = _sign;
         if (_sign == "m" && currentWord[letterIndex] == 'n'){

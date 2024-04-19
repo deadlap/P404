@@ -9,9 +9,9 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
     string currentWord;
     int letterIndex;
     [SerializeField] GameObject handModelParent;
-    [SerializeField] TMP_Text spellFloatingText;
+    [SerializeField] TMP_Text spellFloatingText; //Rename
     [SerializeField] TMP_Text playerProgress;
-    [SerializeField] TMP_Text signedText;
+    [SerializeField] TMP_Text signedText; //
     
     [SerializeField] TMP_Text currentSign;
 
@@ -65,15 +65,17 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
         currentWord = newWord;
         letterIndex = 0;
         spellFloatingText.text = newWord;
+        playerProgress.text = "";
+        currentSign.text = "";
         if (newWord.Length > 0) {
             // Skal enables når alle hand models virker
             // GenerateHandModel(newWord[0].ToString());
             currentSign.text = currentWord[letterIndex].ToString().ToUpper();
-            playerProgress.text = newWord[0].ToString().ToUpper();
             gestures.SetActive(true);
         } else {
             gestures.SetActive(false);
             playerProgress.text = "";
+            currentSign.text = currentWord[letterIndex].ToString().ToUpper();
         }
     }
 

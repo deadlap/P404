@@ -25,12 +25,12 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
 
     void Update()
     {
-        SignedLetterInput(currentSign.text);
+        SignedLetterInput(signedText.text);
     }
 
     public void SignedLetterInput(string _sign) {
 
-        if(currentSign.text.Length == 0 || currentWord.Length == 0) return;
+        if(signedText.text.Length == 0 || currentWord.Length == 0) return;
         
         string sign = _sign;
         if (_sign == "m" && currentWord[letterIndex] == 'n'){
@@ -50,7 +50,7 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
                 // DeleteHandModels();
             } else {
                 playerProgress.text += currentWord[letterIndex].ToString().ToUpper();
-                
+                currentSign.text = currentWord[letterIndex].ToString().ToUpper();
                 // Skal enables når alle hand models virker
                 // GenerateHandModel(currentWord[letterIndex].ToString());
             }

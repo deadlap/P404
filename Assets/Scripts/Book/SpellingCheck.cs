@@ -69,18 +69,18 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
         currentSign.text = "";
         if (newWord.Length > 0) {
             // Skal enables når alle hand models virker
-            // GenerateHandModel(newWord[0].ToString());
+            GenerateHandModel(newWord[0].ToString());
             currentSign.text = currentWord[letterIndex].ToString().ToUpper();
             gestures.SetActive(true);
         } else {
             gestures.SetActive(false);
             playerProgress.text = "";
-            currentSign.text = currentWord[letterIndex].ToString().ToUpper();
+            currentSign.text = "";
         }
     }
 
     public void GenerateHandModel(string letter) {
-        GameObject gameobject = Instantiate(Resources.Load("Hands/"+letter.ToUpper()), handModelParent.transform) as GameObject;
+        GameObject gameobject = Instantiate(Resources.Load("Models/Handshapes/"+letter.ToUpper() + "_Handshape"), handModelParent.transform) as GameObject;
     }
 
     void DeleteHandModels(){

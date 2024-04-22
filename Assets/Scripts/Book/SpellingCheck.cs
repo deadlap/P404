@@ -62,6 +62,7 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
     }
 
     public void SetWord(string newWord){
+        DeleteHandModels();
         currentWord = newWord;
         letterIndex = 0;
         spellFloatingText.text = newWord;

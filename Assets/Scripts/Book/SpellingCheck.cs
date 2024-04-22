@@ -53,7 +53,8 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
                 playerProgress.text += currentWord[letterIndex].ToString().ToUpper();
                 currentSign.text = currentWord[letterIndex].ToString().ToUpper();
                 // Skal enables når alle hand models virker
-                // GenerateHandModel(currentWord[letterIndex].ToString());
+                DeleteHandModels();
+                GenerateHandModel(currentWord[letterIndex].ToString());
             }
         } else {
             //Kode der giver error besked fordi brugeren har signed forkert bogstav

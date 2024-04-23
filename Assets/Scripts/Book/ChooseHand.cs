@@ -87,7 +87,8 @@ public class ChooseHand : MonoBehaviour
         handedness = domHandString;
         dominantHandGO.gameObject.tag = "DominantHand";
         dominantHand = dominantHandGO;
-        SpawnTouchPointManager();
+        
+        //SpawnTouchPointManager();
         
         //Sætter hvilken hånd spells bliver instantiated i
         SetSpellCreationPoint(dominantHandGO);
@@ -143,6 +144,7 @@ public class ChooseHand : MonoBehaviour
             touchPointManager = Instantiate(touchPointManagerPrefab, dominantHand.transform.position, Quaternion.identity, dominantHand.transform);
         }
     }
+    
     void SpawnBookPoint(string nonDomHand)
     {
         

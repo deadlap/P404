@@ -44,7 +44,6 @@ public class MovingSignManager : MonoBehaviour
     void Start()
     {
         recognisedSign = GameObject.Find("SpecialSignText").GetComponent<TMP_Text>();
-        handedness = ChooseHand.Instance.handedness;
     }
 
     void Update()
@@ -54,27 +53,27 @@ public class MovingSignManager : MonoBehaviour
         DetectSign(recognisedSign.text);
     }
 
-    void DetectSign(string sign)
+    public void DetectSign(string sign)
     {
         prevRecognisedSign = recognisedSign.text;
         switch (sign)
         {
-            case "A":
+            case "Å":
                 if (signPattern)
                     DestroyPattern();
                 SpawnPattern("Å", "Palm", 0); 
                 break;
-            case "I":
+            case "J":
                 if (signPattern)
                     DestroyPattern();
                 SpawnPattern("J", "LittleTip", 1);
                 break;
-            case "O":
+            case "Ø":
                 if (signPattern)
                     DestroyPattern();
                 SpawnPattern("Ø", "Palm", 2);
                 break;
-            case "X":
+            case "Z":
                 if (signPattern)
                     DestroyPattern();
                 SpawnPattern("Z", "IndexTip", 3);
@@ -87,6 +86,8 @@ public class MovingSignManager : MonoBehaviour
 
     void SpawnPattern(string sign, string spawnpointString, int patternIndex)
     {
+        handedness = ChooseHand.Instance.handedness;
+        
         checkPointReached = startForCheckPoints;
         recognisedMovingSign = sign;
 

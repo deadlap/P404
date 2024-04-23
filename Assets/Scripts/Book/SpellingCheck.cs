@@ -92,6 +92,6 @@ public class SpellingCheck : MonoBehaviour {
     }
 
     void GenerateSpell(){
-        GameObject gameobject = Instantiate(Resources.Load("Spells/" + currentWord), spellCreationPosition.transform) as GameObject;
+        GameObject gameobject = Instantiate(Resources.Load("Spells/" + currentWord), spellCreationPosition.transform, false) as GameObject;
     }
 }

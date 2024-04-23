@@ -120,16 +120,16 @@ public class ChooseHand : MonoBehaviour
     void SetSpellCreationPoint(GameObject dominantHandGO)
     {
         var domHandPos = dominantHandGO.transform.position;
+        spellCreationPosition.transform.SetParent(dominantHandGO.transform);
         switch (handedness)
         {
             case "L":
-                spellCreationPosition.transform.position = new Vector3(domHandPos.x, domHandPos.y - 0.13f,domHandPos.y);
+                spellCreationPosition.transform.localPosition = new Vector3(0, -0.14f, 0.04f);
                 break;
             case "R":
-                spellCreationPosition.transform.position = new Vector3(domHandPos.x, domHandPos.y + 0.13f,domHandPos.y);
+                spellCreationPosition.transform.localPosition = new Vector3(0, -0.14f, 0.04f);
                 break;
         }
-        spellCreationPosition.transform.SetParent(dominantHandGO.transform);
     }
     
     void SpawnTouchPointManager()

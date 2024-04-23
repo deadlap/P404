@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8231,6 +8231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movingSignManager: {fileID: 447280063}
+  currentSign: 
 --- !u!4 &553272516
 Transform:
   m_ObjectHideFlags: 0
@@ -8586,7 +8587,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963803018}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.008, y: 1.272, z: 0.62}
+  m_LocalPosition: {x: -0.008, y: 1.272, z: 0.669}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.0055}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9027,7 +9028,7 @@ MonoBehaviour:
   m_HandMeshMaterial: {fileID: 2100000, guid: 613690cd962241049a0ec289a6ff835e, type: 2}
   m_DrawMeshes: 1
   m_DebugDrawPrefab: {fileID: 6507399986997092475, guid: 254b742d65a15d14b9df756ae77de868, type: 3}
-  m_DebugDrawJoints: 1
+  m_DebugDrawJoints: 0
   m_VelocityPrefab: {fileID: 8538602047018081646, guid: 629fd7882ec6bfc499a5fcf20035282b, type: 3}
   m_VelocityType: 2
 --- !u!1 &1294904614
@@ -9159,6 +9160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   signToActivate: "\xD8"
+  specialSignText: {fileID: 1897272896}
 --- !u!1 &1301523036
 GameObject:
   m_ObjectHideFlags: 0
@@ -9916,19 +9918,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1223355069409145458, guid: f31c9546e07ae4b4884827f59508019f, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1223355069409145458, guid: f31c9546e07ae4b4884827f59508019f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.665
+      value: 0.382
       objectReference: {fileID: 0}
     - target: {fileID: 1223355069409145458, guid: f31c9546e07ae4b4884827f59508019f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.2059956
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1223355069409145458, guid: f31c9546e07ae4b4884827f59508019f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.349
+      value: 2.531
       objectReference: {fileID: 0}
     - target: {fileID: 1223355069409145458, guid: f31c9546e07ae4b4884827f59508019f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10312,7 +10314,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1897272895}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.9162393}
+  m_LocalPosition: {x: 0, y: 0, z: 6.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10321,7 +10323,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.65549046, y: -1.6659957}
+  m_AnchoredPosition: {x: 7.26, y: -1.6659957}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1900703930 stripped

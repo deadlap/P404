@@ -3,17 +3,19 @@ using UnityEngine;
 using TMPro;
 using ElementNameSpace;
 
-public class SpellingCheck : MonoBehaviour { //ændre dens navn?
+public class SpellingCheck : MonoBehaviour {
     [SerializeField] GameObject spellCreationPosition;
     [SerializeField] GameObject gestures;
     string currentWord;
     int letterIndex;
-    [SerializeField] GameObject handModelParent;
-    [SerializeField] TMP_Text spellFloatingText; //Rename
-    [SerializeField] TMP_Text playerProgress;
-    [SerializeField] TMP_Text signedText; //
+
+    [SerializeField] GameObject handModelParent; //Where to spawn the spell
     
-    [SerializeField] TMP_Text currentSign;
+    [SerializeField] TMP_Text bookSpellText; //The spell the user is currently trying to cast
+    [SerializeField] TMP_Text playerProgress; //The letters of the word the user has already performed
+
+    [SerializeField] TMP_Text signedText; //The signed letter the user is currently performing 
+    [SerializeField] TMP_Text currentSign; //The current sign the user needs to perform
 
     void OnEnable() {
         BookEvents.SpellChosen += SetWord;
@@ -47,12 +49,10 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
             if (letterIndex >= currentWord.Length) {
                 GenerateSpell();
                 SetWord("");
-                // Skal enables når alle hand models virker
-                // DeleteHandModels();
+                DeleteHandModels();
             } else {
                 playerProgress.text += currentWord[letterIndex].ToString().ToUpper();
                 currentSign.text = currentWord[letterIndex].ToString().ToUpper();
-                // Skal enables når alle hand models virker
                 DeleteHandModels();
                 GenerateHandModel(currentWord[letterIndex].ToString());
             }
@@ -66,7 +66,7 @@ public class SpellingCheck : MonoBehaviour { //ændre dens navn?
         DeleteHandModels();
         currentWord = newWord;
         letterIndex = 0;
-        spellFloatingText.text = newWord;
+        bookSpellText.text = newWord;
         playerProgress.text = "";
         currentSign.text = "";
         if (newWord.Length > 0) {

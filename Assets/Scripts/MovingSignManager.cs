@@ -43,7 +43,7 @@ public class MovingSignManager : MonoBehaviour
 
     void Start()
     {
-        recognisedSign = GameObject.Find("SignText").GetComponent<TMP_Text>();
+        recognisedSign = GameObject.Find("SpecialSignText").GetComponent<TMP_Text>();
         handedness = ChooseHand.Instance.handedness;
     }
 
@@ -145,6 +145,7 @@ public class MovingSignManager : MonoBehaviour
             print($"{recognisedMovingSign}");
             DestroyPattern();
         }
+        ActivateableSigns.ReceiveSpecialSign(recognisedMovingSign);
         checkPointReached++;
     }
 

@@ -1,11 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class ActivateableSigns : MonoBehaviour {
+    public static event Action<string> SpecialSignEvent;
+    public static void OnSpecialSign(string sign) => SpecialSignEvent?.Invoke(sign);
 
+    public static event Action<string> ReceiveSpecialSignEvent;
+    public static void ReceiveSpecialSign(string sign) => ReceiveSpecialSignEvent?.Invoke(sign);
 
-    public void EnableSign(string sign){
-        GameObject chosenGO = GameObject.Find(sign.ToUpper());
+    public static event Action<string> EnableSpecialSignEvent;
+    public static void OnEnableSpecialSign(string sign) => EnableSpecialSignEvent?.Invoke(sign);
+
+    [SerializeField] public GameObject movingSignManager;
+
+    void OnEnable() {
+        ReceiveSpecialSignEvent += ReceiveSign;
+        EnableSpecialSignEvent += EnableSign;
+    }
+
+    void OnDisable() {
+        ReceiveSpecialSignEvent -= ReceiveSign;
+        EnableSpecialSignEvent -= EnableSign;
+    }
+
+    public void EnableSign(string sign) {
+        string movingSigns = "JZØÅ";
+        print("hej"); print(movingSigns.Contains(sign));
+        if (movingSigns.Contains(sign)) {
+            this.transform.Find(sign.ToUpper()).gameObject.SetActive(true);
+            movingSignManager.SetActive(true);
+            HandModelGenerator.OnCreateHandModel(sign);
+        }
+    }
+
+    public void ReceiveSign(string sign) {
+        foreach (Transform child in this.transform) {
+	        child.gameObject.SetActive(false);
+        }
+        OnSpecialSign(sign.ToUpper());
+        movingSignManager.SetActive(false);
     }
 }

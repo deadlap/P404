@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3097639335215097259}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.93123066, y: -0.5360289, z: -1.4949021}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -121,6 +121,7 @@ GameObject:
   - component: {fileID: 2710837317165532617}
   - component: {fileID: 3969992342750668670}
   - component: {fileID: 8338220298813656969}
+  - component: {fileID: 4896179013930880745}
   m_Layer: 0
   m_Name: Fulmenta
   m_TagString: Lightning
@@ -137,7 +138,7 @@ Transform:
   m_GameObject: {fileID: 6129913086698288329}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2739985594669575296}
@@ -172,3 +173,16 @@ MonoBehaviour:
   scaleRatio: 0.996
   deletionTime: 15
   scaleTime: 10
+--- !u!65 &4896179013930880745
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6129913086698288329}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}

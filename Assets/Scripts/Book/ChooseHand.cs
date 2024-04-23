@@ -124,10 +124,10 @@ public class ChooseHand : MonoBehaviour
         switch (handedness)
         {
             case "L":
-                spellCreationPosition.transform.localPosition = new Vector3(0, -0.14f, 0.04f);
+                spellCreationPosition.transform.localPosition = new Vector3(0, -0.1f, 0.04f);
                 break;
             case "R":
-                spellCreationPosition.transform.localPosition = new Vector3(0, -0.14f, 0.04f);
+                spellCreationPosition.transform.localPosition = new Vector3(0, -0.1f, 0.04f);
                 break;
         }
     }

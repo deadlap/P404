@@ -14,7 +14,7 @@ public class ActivateableSigns : MonoBehaviour {
     public static void OnEnableSpecialSign(string sign) => EnableSpecialSignEvent?.Invoke(sign);
 
     [SerializeField] public GameObject movingSignManager;
-
+    [SerializeField] string currentSign;
     void OnEnable() {
         ReceiveSpecialSignEvent += ReceiveSign;
         EnableSpecialSignEvent += EnableSign;
@@ -26,6 +26,7 @@ public class ActivateableSigns : MonoBehaviour {
     }
 
     public void EnableSign(string sign) {
+        currentSign = sign;
         string movingSigns = "JZØÅ";
         print("hej"); print(movingSigns.Contains(sign));
         if (movingSigns.Contains(sign)) {
@@ -36,10 +37,14 @@ public class ActivateableSigns : MonoBehaviour {
     }
 
     public void ReceiveSign(string sign) {
+        if (currentSign != sign)
+            return;
+        print("succesfully signed special: " + sign);
         foreach (Transform child in this.transform) {
 	        child.gameObject.SetActive(false);
         }
         OnSpecialSign(sign.ToUpper());
         movingSignManager.SetActive(false);
+        HandModelGenerator.OnDeleteHandModel(sign);
     }
 }

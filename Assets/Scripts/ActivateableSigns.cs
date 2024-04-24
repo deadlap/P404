@@ -30,10 +30,10 @@ public class ActivateableSigns : MonoBehaviour {
         string movingSigns = "JZØÅ";
         print("hej"); print(movingSigns.Contains(sign));
         if (movingSigns.Contains(sign)) {
-            this.transform.Find(sign.ToUpper()).gameObject.SetActive(true);
             movingSignManager.SetActive(true);
-            HandModelGenerator.OnCreateHandModel(sign);
         }
+        this.transform.Find(sign.ToUpper()).gameObject.SetActive(true);
+        HandModelGenerator.OnCreateHandModel(sign);
     }
 
     public void ReceiveSign(string sign) {

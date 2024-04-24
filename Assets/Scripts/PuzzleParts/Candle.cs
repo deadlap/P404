@@ -5,10 +5,11 @@ using UnityEngine;
 public class Candle : MonoBehaviour {
     
     [SerializeField] GameObject flame; //VFX flame thing
-    bool isBurning; //Whether the flame should be active or not
-
+    public bool isBurning { get; private set; } //Whether the flame should be active or not
+    [SerializeField] bool startingMode;
+    
     void Start() {
-        isBurning = false;
+        isBurning = startingMode;
         ToggleFlame(isBurning);
     }
 

@@ -58,17 +58,17 @@ public class MovingSignManager : MonoBehaviour
         prevRecognisedSign = recognisedSign.text;
         switch (sign)
         {
-            case "Å":
+            case "A":
                 if (signPattern)
                     DestroyPattern();
                 SpawnPattern("Å", "Palm", 0); 
                 break;
-            case "J":
+            case "I":
                 if (signPattern)
                     DestroyPattern();
                 SpawnPattern("J", "LittleTip", 1);
                 break;
-            case "Ø":
+            case "O":
                 if (signPattern)
                     DestroyPattern();
                 SpawnPattern("Ø", "Palm", 2);

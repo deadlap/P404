@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using TMPro;
 
 public class ActivateableSigns : MonoBehaviour {
     public static event Action<string> SpecialSignEvent;
@@ -15,6 +16,7 @@ public class ActivateableSigns : MonoBehaviour {
 
     [SerializeField] public GameObject movingSignManager;
     [SerializeField] string currentSign;
+    [SerializeField] TMP_Text specialSignedText;
     void OnEnable() {
         ReceiveSpecialSignEvent += ReceiveSign;
         EnableSpecialSignEvent += EnableSign;
@@ -23,6 +25,10 @@ public class ActivateableSigns : MonoBehaviour {
     void OnDisable() {
         ReceiveSpecialSignEvent -= ReceiveSign;
         EnableSpecialSignEvent -= EnableSign;
+    }
+
+    void Update(){
+        ReceiveSign(specialSignedText.text.ToUpper());
     }
 
     public void EnableSign(string sign) {
@@ -37,8 +43,8 @@ public class ActivateableSigns : MonoBehaviour {
     }
 
     public void ReceiveSign(string sign) {
-        if (currentSign != sign)
-            return;
+        if(specialSignedText.text.Length == 0 || currentSign.Length == 0) return;
+        if (currentSign != sign) return;
         print("succesfully signed special: " + sign);
         foreach (Transform child in this.transform) {
 	        child.gameObject.SetActive(false);

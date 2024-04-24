@@ -6,12 +6,10 @@ using TMPro;
 
 public class SpecialSignActivation : MonoBehaviour {
     [SerializeField] string signToActivate;
-    [SerializeField] TMP_Text specialSignText;
-    
+
     void OnTriggerEnter(Collider other){
         if (other.CompareTag("FingerTip")){
             ActivateableSigns.OnEnableSpecialSign(signToActivate);
-            specialSignText.text = signToActivate;
         }
     }
 }

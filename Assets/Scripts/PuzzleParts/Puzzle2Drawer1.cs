@@ -19,7 +19,7 @@ public class Puzzle2Drawer1 : MonoBehaviour {
 
     void ReceiveSign(string sign){
         if (sign == signToOpen) {
-            animator.SetTrigger("open");
+            animator.SetTrigger("Open");
         }
         HandModelGenerator.OnDeleteHandModel(signToOpen);
     }

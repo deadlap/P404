@@ -34,7 +34,6 @@ public class ActivateableSigns : MonoBehaviour {
     public void EnableSign(string sign) {
         currentSign = sign;
         string movingSigns = "JZØÅ";
-        print("hej"); print(movingSigns.Contains(sign));
         if (movingSigns.Contains(sign)) {
             movingSignManager.SetActive(true);
         }
@@ -43,6 +42,7 @@ public class ActivateableSigns : MonoBehaviour {
     }
 
     public void ReceiveSign(string sign) {
+        print("registrere: " + sign);
         if(specialSignedText.text.Length == 0 || currentSign.Length == 0) return;
         if (currentSign != sign) return;
         print("succesfully signed special: " + sign);

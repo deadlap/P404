@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44151145, g: 0.49036998, b: 0.5703816, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -217,6 +217,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 434489940, guid: 5e02425eae6f660429b520e66c3f050a, type: 3}
+      propertyPath: signToGenerate
+      value: "\xD8"
+      objectReference: {fileID: 0}
     - target: {fileID: 8312642951758191697, guid: 5e02425eae6f660429b520e66c3f050a, type: 3}
       propertyPath: m_Name
       value: "\xD8_DoorPortal"
@@ -267,27 +271,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e02425eae6f660429b520e66c3f050a, type: 3}
---- !u!1 &534467822 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8312642951758191697, guid: 5e02425eae6f660429b520e66c3f050a, type: 3}
-  m_PrefabInstance: {fileID: 534467821}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &534467823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534467822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ce2a355403ce244e8c13862afef0ff0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  portalActive: 0
-  doorActive: 0
-  nextLevel: Level2
-  letterToOpen: "\xD8"
 --- !u!1 &642694640
 GameObject:
   m_ObjectHideFlags: 0

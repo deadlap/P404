@@ -29,6 +29,8 @@ public class ChooseHand : MonoBehaviour
     [SerializeField] Vector3 leftPos;
     [SerializeField] Vector3 rightPos;
 
+    [SerializeField] GameObject startPortal;
+
     void Awake()
     {
         Instance = this;
@@ -102,7 +104,7 @@ public class ChooseHand : MonoBehaviour
         
         ShowHand(domHandString, nonDomHandString);
         SpawnBookPoint(nonDomHandString);
-        
+        startPortal.SetActive(true);
         hasChosenHand = false;
     }
 

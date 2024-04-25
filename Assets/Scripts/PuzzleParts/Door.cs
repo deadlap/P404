@@ -8,8 +8,7 @@ public class Door : MonoBehaviour {
     [SerializeField] bool doorActive;
     [SerializeField] string nextLevel;
     [SerializeField] string letterToOpen;
-    // public static event Action OpenDoorEvent;
-    // public static void OnOpenDoor() => OpenDoorEvent?.Invoke();
+    [SerializeField] Animator animator;
     
     void OnEnable() {
         ActivateableSigns.SpecialSignEvent += OpenDoor;
@@ -27,7 +26,7 @@ public class Door : MonoBehaviour {
     void OpenDoor(string input){
         if (letterToOpen == input) {
             portalActive = true;
-            //play open door animation
+            animator.SetTrigger("Open");
         }
     }
 

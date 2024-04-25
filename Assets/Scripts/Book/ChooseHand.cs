@@ -11,6 +11,7 @@ public class ChooseHand : MonoBehaviour
     GameObject touchPointManager;
     
     GameObject nonDominantHand;
+    public SkinnedMeshRenderer nonDomHandMesh;
     [SerializeField] GameObject bookFollowPointPrefab;
     GameObject bookFollowPoint;
 
@@ -23,7 +24,8 @@ public class ChooseHand : MonoBehaviour
     
     bool isChoosingHand;
     bool hasChosenHand;
-    
+
+    float fillThreshold = 0.0001f;
     [SerializeField] Vector3 leftPos;
     [SerializeField] Vector3 rightPos;
 
@@ -37,7 +39,7 @@ public class ChooseHand : MonoBehaviour
         if (isChoosingHand)
         {
             chargeAnimation.fillAmount += Time.deltaTime / choosingDuration;
-            if (Mathf.Abs(chargeAnimation.fillAmount - 1) < 0.0001f)
+            if (Mathf.Abs(chargeAnimation.fillAmount - 1) < fillThreshold)
             {
                 hasChosenHand = true;
                 print("ding done");
@@ -47,6 +49,8 @@ public class ChooseHand : MonoBehaviour
         {
             chargeAnimation.fillAmount -= Time.deltaTime * choosingDuration;
         }
+        if(nonDomHandMesh == null) return;
+        nonDomHandMesh.enabled = false;
     }
 
     void OnTriggerEnter(Collider other)
@@ -104,19 +108,19 @@ public class ChooseHand : MonoBehaviour
 
     void ShowHand(string domHandString, string nonDomHandString)
     {
+        nonDomHandMesh = GameObject.Find($"{nonDomHandString}_Hand").GetComponent<SkinnedMeshRenderer>();
         GameObject.Find($"{nonDomHandString}_IndexTip").tag = "Untagged";
         GameObject.Find($"{nonDomHandString}_MiddleTip").tag = "Untagged";
         GameObject.Find($"{nonDomHandString}_RingTip").tag = "Untagged";
         GameObject.Find($"{nonDomHandString}_LittleTip").tag = "Untagged";
         GameObject.Find($"{nonDomHandString}_ThumbTip").tag = "Untagged";
-        GameObject.Find($"{nonDomHandString}_Hand").GetComponent<SkinnedMeshRenderer>().enabled = false;
         
+        GameObject.Find($"{domHandString}_Hand").GetComponent<SkinnedMeshRenderer>().enabled = true;
         GameObject.Find($"{domHandString}_IndexTip").tag = "FingerTip";
         GameObject.Find($"{domHandString}_MiddleTip").tag = "FingerTip";
         GameObject.Find($"{domHandString}_RingTip").tag = "FingerTip";
         GameObject.Find($"{domHandString}_LittleTip").tag = "FingerTip";
         GameObject.Find($"{domHandString}_ThumbTip").tag = "FingerTip";
-        GameObject.Find($"{domHandString}_Hand").GetComponent<SkinnedMeshRenderer>().enabled = true;
     }
 
     void SetSpellCreationPoint(GameObject dominantHandGO)

@@ -51,7 +51,7 @@ public class SpellingCheck : MonoBehaviour {
                 SetWord("");
                 DeleteHandModels();
             } else {
-                playerProgress.text += currentWord[letterIndex].ToString().ToUpper();
+                playerProgress.text += currentWord[letterIndex-1].ToString().ToUpper();
                 currentSign.text = currentWord[letterIndex].ToString().ToUpper();
                 DeleteHandModels();
                 GenerateHandModel(currentWord[letterIndex].ToString());

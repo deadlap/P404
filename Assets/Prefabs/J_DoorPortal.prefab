@@ -193,6 +193,7 @@ GameObject:
   - component: {fileID: 6597395074035616984}
   - component: {fileID: 2371085768326840369}
   - component: {fileID: 631322536804999533}
+  - component: {fileID: 2960855303394462268}
   m_Layer: 0
   m_Name: J_DoorPortal
   m_TagString: Untagged
@@ -268,6 +269,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2960855303394462268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4889628128730658336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce2a355403ce244e8c13862afef0ff0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portalActive: 0
+  doorActive: 0
+  nextLevel: 
+  letterToOpen: J
+  animator: {fileID: 631322536804999533}
 --- !u!1 &5252012334312985861
 GameObject:
   m_ObjectHideFlags: 0

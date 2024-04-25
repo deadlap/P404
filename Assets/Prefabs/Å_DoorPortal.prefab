@@ -645,6 +645,7 @@ MonoBehaviour:
   doorActive: 0
   nextLevel: Level3
   letterToOpen: "\xC5"
+  animator: {fileID: 8036882022119400064}
 --- !u!95 &8036882022119400064
 Animator:
   serializedVersion: 5

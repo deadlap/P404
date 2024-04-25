@@ -482,6 +482,7 @@ MonoBehaviour:
   doorActive: 0
   nextLevel: Level2
   letterToOpen: "\xD8"
+  animator: {fileID: 7290678793977468819}
 --- !u!1 &8481503410285717727
 GameObject:
   m_ObjectHideFlags: 0

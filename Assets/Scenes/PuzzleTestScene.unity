@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1134,6 +1134,7 @@ MonoBehaviour:
   choosingDuration: 2
   leftPos: {x: 20, y: 0, z: 180}
   rightPos: {x: 20, y: 0, z: 180}
+  startPortal: {fileID: 0}
 --- !u!23 &340221509
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3453,38 +3454,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1421592230, guid: 54c8c28d2f81d5540b658fc93e5f387d, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 1421592230, guid: 54c8c28d2f81d5540b658fc93e5f387d, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 1421592230, guid: 54c8c28d2f81d5540b658fc93e5f387d, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 1421592230, guid: 54c8c28d2f81d5540b658fc93e5f387d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.92387956
-      objectReference: {fileID: 0}
-    - target: {fileID: 1421592230, guid: 54c8c28d2f81d5540b658fc93e5f387d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.38268343
-      objectReference: {fileID: 0}
-    - target: {fileID: 1421592230, guid: 54c8c28d2f81d5540b658fc93e5f387d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 1421592231, guid: 54c8c28d2f81d5540b658fc93e5f387d, type: 3}
-      propertyPath: signToGenerate
-      value: Z
-      objectReference: {fileID: 0}
-    - target: {fileID: 2973717948973436725, guid: 54c8c28d2f81d5540b658fc93e5f387d, type: 3}
-      propertyPath: letterToOpen
-      value: Z
-      objectReference: {fileID: 0}
     - target: {fileID: 8279508868411748081, guid: 54c8c28d2f81d5540b658fc93e5f387d, type: 3}
       propertyPath: m_Name
       value: Z_DoorPortal

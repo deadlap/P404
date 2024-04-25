@@ -1,5 +1,50 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &434489938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 434489939}
+  - component: {fileID: 434489940}
+  m_Layer: 0
+  m_Name: SpawnPointHandModel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &434489939
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434489938}
+  m_LocalRotation: {x: -0, y: -0.06298658, z: -0, w: 0.9980144}
+  m_LocalPosition: {x: -0.006, y: 2.46, z: 0.38}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8653561218763835115}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &434489940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434489938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d52118979fbce547ae1911a50e5edb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signToGenerate: Z
 --- !u!1 &2846045644207918028
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,6 +389,7 @@ GameObject:
   - component: {fileID: 1188537534565090625}
   - component: {fileID: 3646958253499580643}
   - component: {fileID: 7290678793977468819}
+  - component: {fileID: 534467823}
   m_Layer: 0
   m_Name: "\xD8_DoorPortal"
   m_TagString: Untagged
@@ -366,6 +412,7 @@ Transform:
   - {fileID: 6028105445418511494}
   - {fileID: 1379306904830572209}
   - {fileID: 5614120808108931268}
+  - {fileID: 434489939}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -419,6 +466,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &534467823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8312642951758191697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce2a355403ce244e8c13862afef0ff0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portalActive: 0
+  doorActive: 0
+  nextLevel: Level2
+  letterToOpen: "\xD8"
 --- !u!1 &8481503410285717727
 GameObject:
   m_ObjectHideFlags: 0

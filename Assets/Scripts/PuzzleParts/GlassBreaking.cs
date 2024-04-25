@@ -7,8 +7,10 @@ public class GlassBreaking : MonoBehaviour {
     [SerializeField] GameObject brokenGlass;
     [SerializeField] BoxCollider collider;
     [SerializeField] bool isBroken;
-    
+
+    AudioSource audioSource;
     void Start() {
+        audioSource = GetComponent<AudioSource>();
         isBroken = false;
     }
 
@@ -19,6 +21,7 @@ public class GlassBreaking : MonoBehaviour {
             glass.SetActive(false);
             brokenGlass.SetActive(true);
             isBroken = true;
+            audioSource.Play();
             Key.OnActivatePickup();
         }
     }

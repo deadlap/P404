@@ -1,13 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Puzzle1Drawer : MonoBehaviour {
     [SerializeField] Candle candle;
     [SerializeField] Animator animator;
     bool hasPlayed;
-
+    
+    AudioSource audioSource;
     void Start() {
+        audioSource = GetComponent<AudioSource>();
         hasPlayed = false;
     }
 
@@ -15,6 +15,7 @@ public class Puzzle1Drawer : MonoBehaviour {
         if (!hasPlayed && candle.isBurning){
             hasPlayed = true;
             animator.SetTrigger("Open");
+            audioSource.Play();
             Key.OnActivatePickup();
         }
     }

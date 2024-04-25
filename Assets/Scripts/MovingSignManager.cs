@@ -93,7 +93,7 @@ public class MovingSignManager : MonoBehaviour
         switch (handedness)
         {
             case "L":
-                signPattern = Instantiate(signPatterns[patternIndex], spawnpoint.transform.position, Quaternion.Euler(leftHandedRotation) * Quaternion.identity);
+                signPattern = Instantiate(signPatterns[patternIndex], spawnpoint.transform.position, Quaternion.Euler(leftHandedRotation) * Quaternion.identity * spawnpoint.transform.rotation);
                 break;
             case "R":
                 signPattern = Instantiate(signPatterns[patternIndex], spawnpoint.transform.position, Quaternion.Euler(rightHandedRotation) * spawnpoint.transform.rotation);

@@ -10,6 +10,9 @@ public class Door : MonoBehaviour {
     [SerializeField] string letterToOpen;
     [SerializeField] Animator animator;
     bool openDoor;
+
+    AudioSource audioSource;
+    [SerializeField] AudioClip[] audioClips;
     void OnEnable() {
         ActivateableSigns.SpecialSignEvent += OpenDoor;
     }
@@ -18,7 +21,8 @@ public class Door : MonoBehaviour {
         ActivateableSigns.SpecialSignEvent -= OpenDoor;
     }
     
-    void Start(){
+    void Start() {
+        audioSource = GetComponent<AudioSource>();
         portalActive = false;
         doorActive = false;
         openDoor = false;
@@ -33,6 +37,7 @@ public class Door : MonoBehaviour {
         if (letterToOpen == input) {
             portalActive = true;
             openDoor = true;
+            audioSource.PlayOneShot(audioClips[0]);
         }
     }
 
@@ -45,7 +50,7 @@ public class Door : MonoBehaviour {
         if (other.CompareTag("FingerTip") && portalActive) {
             
             //Activate transition screen kode
-            
+            audioSource.PlayOneShot(audioClips[1]);
             SceneChanger.OnChangeScene(nextLevel);
         }
     }

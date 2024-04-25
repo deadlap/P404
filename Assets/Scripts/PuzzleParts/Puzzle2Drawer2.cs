@@ -9,7 +9,9 @@ public class Puzzle2Drawer2 : MonoBehaviour {
     [SerializeField] Animator animator;
     bool hasPlayed;
 
+    AudioSource audioSource;
     void Start() {
+        audioSource = GetComponent<AudioSource>();
         hasPlayed = false;   
     }
 
@@ -18,6 +20,7 @@ public class Puzzle2Drawer2 : MonoBehaviour {
         if (!hasPlayed && (candle1.isBurning && candle2.isBurning && !candle3.isBurning)){
             hasPlayed = true;
             animator.SetTrigger("Open");
+            audioSource.Play();
             Key.OnActivatePickup();
         }
         

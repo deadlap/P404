@@ -54,7 +54,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Color: {r: 0.47380012, g: 0.054901958, b: 0.7647059, a: 0}
+    - _Color: {r: 0.42486554, g: 1.8539587, b: 0, a: 0}
     - _Dissolve: {r: -1.13, g: 0, b: 0, a: 0}
     - _Power_scale: {r: 6.08, g: 0, b: 0, a: 0}
     - _Twirl_form: {r: 10, g: 0, b: 0, a: 0}

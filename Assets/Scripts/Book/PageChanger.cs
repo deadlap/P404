@@ -37,7 +37,7 @@ public class PageChanger : MonoBehaviour
             prevArrow.enabled = true;
             nextArrow.enabled = false;
         }
-        else
+        else if(BookPageHandler.Instance.currentPageIndex != BookPageHandler.Instance.firstPageIndex && BookPageHandler.Instance.currentPageIndex != BookPageHandler.Instance.bookLeftPages.Count)
         {
             prevArrow.enabled = true;
             nextArrow.enabled = true;

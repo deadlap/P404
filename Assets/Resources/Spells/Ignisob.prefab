@@ -160,8 +160,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaleRatio: 0.996
-  deletionTime: 200
-  scaleTime: 200
+  deletionTime: 15
+  scaleTime: 10
 --- !u!65 &3716156053143772367
 BoxCollider:
   m_ObjectHideFlags: 0

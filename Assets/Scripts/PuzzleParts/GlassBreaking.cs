@@ -13,6 +13,7 @@ public class GlassBreaking : MonoBehaviour {
     }
 
     void OnTriggerEnter(Collider other){
+        SpellingCheck.OnDeleteSpells();
         if (other.CompareTag("Earth") && !isBroken) {
             collider.enabled = false;
             glass.SetActive(false);

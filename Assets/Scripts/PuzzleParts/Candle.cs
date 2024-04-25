@@ -16,9 +16,11 @@ public class Candle : MonoBehaviour {
     void OnTriggerEnter(Collider other){
         if (other.CompareTag("Water") && isBurning) {
             ToggleFlame(false);
+            SpellingCheck.OnDeleteSpells();
         }
         if (other.CompareTag("Fire") && !isBurning) {
             ToggleFlame(true);
+            SpellingCheck.OnDeleteSpells();
         }
     }
 

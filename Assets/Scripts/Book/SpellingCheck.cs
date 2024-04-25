@@ -16,13 +16,16 @@ public class SpellingCheck : MonoBehaviour {
 
     [SerializeField] TMP_Text signedText; //The signed letter the user is currently performing 
     [SerializeField] TMP_Text currentSign; //The current sign the user needs to perform
-
+    public static event Action DeleteSpellsEvent;
+    public static void OnDeleteSpells() => DeleteSpellsEvent?.Invoke();
     void OnEnable() {
         BookEvents.SpellChosen += SetWord;
+        DeleteSpellsEvent += DeleteSpells;
     }
 
     void OnDisable() {
         BookEvents.SpellChosen -= SetWord;
+        DeleteSpellsEvent -= DeleteSpells;
     }
 
     void Update()
@@ -90,8 +93,15 @@ public class SpellingCheck : MonoBehaviour {
 	        GameObject.Destroy(child.gameObject);
         }
     }
+    
+    void DeleteSpells(){
+        foreach (Transform child in spellCreationPosition.transform) {
+	        GameObject.Destroy(child.gameObject);
+        }
+    }
 
     void GenerateSpell(){
+        DeleteSpells();
         GameObject gameobject = Instantiate(Resources.Load("Spells/" + currentWord), spellCreationPosition.transform, false) as GameObject;
     }
 }

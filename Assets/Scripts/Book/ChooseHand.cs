@@ -98,6 +98,8 @@ public class ChooseHand : MonoBehaviour
         
         ShowHand(domHandString, nonDomHandString);
         SpawnBookPoint(nonDomHandString);
+        
+        hasChosenHand = false;
     }
 
     void ShowHand(string domHandString, string nonDomHandString)

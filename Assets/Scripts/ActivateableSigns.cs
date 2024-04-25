@@ -13,10 +13,14 @@ public class ActivateableSigns : MonoBehaviour {
 
     public static event Action<string> EnableSpecialSignEvent;
     public static void OnEnableSpecialSign(string sign) => EnableSpecialSignEvent?.Invoke(sign);
+    string movingSigns;
 
     [SerializeField] public GameObject movingSignManager;
     [SerializeField] string currentSign;
     [SerializeField] TMP_Text specialSignedText;
+    void Start(){
+        movingSigns = "JZØÅ";
+    }
     void OnEnable() {
         ReceiveSpecialSignEvent += ReceiveSign;
         EnableSpecialSignEvent += EnableSign;
@@ -28,12 +32,13 @@ public class ActivateableSigns : MonoBehaviour {
     }
 
     void Update(){
-        ReceiveSign(specialSignedText.text.ToUpper());
+        if (!movingSigns.Contains(specialSignedText.text.ToUpper())){
+            ReceiveSign(specialSignedText.text.ToUpper());
+        }
     }
 
     public void EnableSign(string sign) {
         currentSign = sign;
-        string movingSigns = "JZØÅ";
         if (movingSigns.Contains(sign)) {
             movingSignManager.SetActive(true);
         }
@@ -50,5 +55,6 @@ public class ActivateableSigns : MonoBehaviour {
         OnSpecialSign(sign.ToUpper());
         movingSignManager.SetActive(false);
         HandModelGenerator.OnDeleteHandModel(sign);
+        currentSign = "";
     }
 }

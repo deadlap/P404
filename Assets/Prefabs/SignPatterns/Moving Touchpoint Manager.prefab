@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1223355069409145455}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.665, y: 1.509, z: 1.349}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -103,7 +103,8 @@ MonoBehaviour:
   - {fileID: 5670262892100661534, guid: 0ae7b66e458bd604ebde65b66c2f887d, type: 3}
   - {fileID: 8418730966275955179, guid: 81f145dfec881be4bb1b3c8f991fba2a, type: 3}
   - {fileID: 6240074538631047619, guid: dff4783a84655eb4ab6507c07a162898, type: 3}
-  recognisedSign: {fileID: 0}
+  leftHandedRotation: {x: 0, y: 180, z: 90}
+  rightHandedRotation: {x: 0, y: 0, z: 90}
 --- !u!135 &3556981755811434512
 SphereCollider:
   m_ObjectHideFlags: 0

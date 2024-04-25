@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class MovingSignManager : MonoBehaviour
 {
-    public static MovingSignManager Instance;
     [SerializeField] List<GameObject> signPatterns;
 
     //[SerializeField] TMP_Text currentSign;
@@ -20,7 +19,8 @@ public class MovingSignManager : MonoBehaviour
 
     float timeLimit = 2f;
 
-    Vector3 leftHandedRotation = new (0, 180, 0);
+    [SerializeField] Vector3 leftHandedRotation;
+    [SerializeField] Vector3 rightHandedRotation;
 
     TMP_Text recognisedSign;
     string prevRecognisedSign;
@@ -35,11 +35,6 @@ public class MovingSignManager : MonoBehaviour
 
 
     Coroutine coroutineTimer;
-
-    void Awake()
-    {
-        Instance = this;
-    }
 
     void Start()
     {
@@ -98,10 +93,10 @@ public class MovingSignManager : MonoBehaviour
         switch (handedness)
         {
             case "L":
-                signPattern = Instantiate(signPatterns[patternIndex], spawnpoint.transform.position, Quaternion.Euler(leftHandedRotation));
+                signPattern = Instantiate(signPatterns[patternIndex], spawnpoint.transform.position, Quaternion.Euler(leftHandedRotation) * Quaternion.identity);
                 break;
             case "R":
-                signPattern = Instantiate(signPatterns[patternIndex], spawnpoint.transform.position, Quaternion.identity);
+                signPattern = Instantiate(signPatterns[patternIndex], spawnpoint.transform.position, Quaternion.Euler(rightHandedRotation) * spawnpoint.transform.rotation);
                 break;
         }
         patternChildCount = signPatterns[patternIndex].transform.childCount;
@@ -140,13 +135,13 @@ public class MovingSignManager : MonoBehaviour
     {
         Destroy(GameObject.Find(checkPointReached.ToString()));
         StartTimer(timeLimit);
-        if (checkPointReached >= patternChildCount)
+        if (checkPointReached >= patternChildCount - 1) //The arrows are also children of the prefab. This regulates the child count.
         {
             recognisedSign.text = recognisedMovingSign;
             print($"{recognisedMovingSign}");
             DestroyPattern();
+            ActivateableSigns.ReceiveSpecialSign(recognisedMovingSign);
         }
-        ActivateableSigns.ReceiveSpecialSign(recognisedMovingSign);
         checkPointReached++;
     }
 

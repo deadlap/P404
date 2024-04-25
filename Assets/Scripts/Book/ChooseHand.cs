@@ -104,7 +104,8 @@ public class ChooseHand : MonoBehaviour
         
         ShowHand(domHandString, nonDomHandString);
         SpawnBookPoint(nonDomHandString);
-        startPortal.SetActive(true);
+        if(startPortal)
+            startPortal.SetActive(true);
         hasChosenHand = false;
     }
 

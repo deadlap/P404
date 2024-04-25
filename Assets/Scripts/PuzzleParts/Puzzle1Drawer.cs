@@ -15,6 +15,7 @@ public class Puzzle1Drawer : MonoBehaviour {
         if (!hasPlayed && candle.isBurning){
             hasPlayed = true;
             animator.SetTrigger("Open");
+            Key.OnActivatePickup();
         }
     }
 }

@@ -13,6 +13,7 @@ TagManager:
   - NonDominantHand
   - MovingTouchPoint
   - FingerTip
+  - Key
   layers:
   - Default
   - TransparentFX

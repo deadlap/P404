@@ -18,6 +18,7 @@ public class Puzzle2Drawer2 : MonoBehaviour {
         if (!hasPlayed && (candle1.isBurning && candle2.isBurning && !candle3.isBurning)){
             hasPlayed = true;
             animator.SetTrigger("Open");
+            Key.OnActivatePickup();
         }
         
     }

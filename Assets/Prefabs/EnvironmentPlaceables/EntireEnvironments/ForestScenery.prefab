@@ -1463,6 +1463,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 5610670928439842599, guid: ade0300c33f4b444e9040bcc49325ec8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5617131414230759538, guid: ade0300c33f4b444e9040bcc49325ec8, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1845,6 +1849,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 158c0128455f87d4daf0461480214e5f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 158c0128455f87d4daf0461480214e5f, type: 3}
 --- !u!4 &5548462817047236116 stripped
@@ -1926,6 +1934,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 342e5373d262266488f652a52b0ddd84, type: 3}
       propertyPath: m_Name
       value: Rock5 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 342e5373d262266488f652a52b0ddd84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 342e5373d262266488f652a52b0ddd84, type: 3}
@@ -2337,6 +2349,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock5 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 342e5373d262266488f652a52b0ddd84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 342e5373d262266488f652a52b0ddd84, type: 3}
 --- !u!4 &5548462816547754520 stripped
@@ -2743,6 +2759,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock4
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 57d8a86254902e047a240f13a08e7f34, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57d8a86254902e047a240f13a08e7f34, type: 3}
 --- !u!4 &5548462816308405606 stripped
@@ -2988,6 +3008,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 23c2ae0fe582a484192e02474e5dbdb0, type: 3}
       propertyPath: m_Name
       value: Rock6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 23c2ae0fe582a484192e02474e5dbdb0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23c2ae0fe582a484192e02474e5dbdb0, type: 3}
@@ -3317,6 +3341,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock5
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 342e5373d262266488f652a52b0ddd84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 342e5373d262266488f652a52b0ddd84, type: 3}
 --- !u!4 &5548462816053673271 stripped
@@ -3398,6 +3426,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1329f07e5b156b841aba180308d02245, type: 3}
       propertyPath: m_Name
       value: Rock3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1329f07e5b156b841aba180308d02245, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1329f07e5b156b841aba180308d02245, type: 3}
@@ -4289,6 +4321,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 158c0128455f87d4daf0461480214e5f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 158c0128455f87d4daf0461480214e5f, type: 3}
 --- !u!4 &5548462815561385903 stripped
@@ -4535,6 +4571,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 441c5ffaf94d394429e6a88b1ed90501, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 441c5ffaf94d394429e6a88b1ed90501, type: 3}
 --- !u!4 &5548462815537378516 stripped
@@ -4616,6 +4656,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 158c0128455f87d4daf0461480214e5f, type: 3}
       propertyPath: m_Name
       value: Rock2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 158c0128455f87d4daf0461480214e5f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 158c0128455f87d4daf0461480214e5f, type: 3}
@@ -4699,6 +4743,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock5 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 342e5373d262266488f652a52b0ddd84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 342e5373d262266488f652a52b0ddd84, type: 3}
 --- !u!4 &5548462815454420923 stripped
@@ -4781,6 +4829,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 441c5ffaf94d394429e6a88b1ed90501, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 441c5ffaf94d394429e6a88b1ed90501, type: 3}
 --- !u!4 &5548462815424719173 stripped
@@ -4862,6 +4914,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 23c2ae0fe582a484192e02474e5dbdb0, type: 3}
       propertyPath: m_Name
       value: Rock6 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 23c2ae0fe582a484192e02474e5dbdb0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23c2ae0fe582a484192e02474e5dbdb0, type: 3}
@@ -5104,6 +5160,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 57d8a86254902e047a240f13a08e7f34, type: 3}
       propertyPath: m_Name
       value: Rock4 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 57d8a86254902e047a240f13a08e7f34, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57d8a86254902e047a240f13a08e7f34, type: 3}
@@ -5424,6 +5484,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 441c5ffaf94d394429e6a88b1ed90501, type: 3}
       propertyPath: m_Name
       value: Rock1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 441c5ffaf94d394429e6a88b1ed90501, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 441c5ffaf94d394429e6a88b1ed90501, type: 3}

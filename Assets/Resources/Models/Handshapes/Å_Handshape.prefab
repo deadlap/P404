@@ -938,7 +938,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7145156292856412296}
   m_Layer: 0
-  m_Name: "\xC5_Handshape 1"
+  m_Name: "\xC5_Handshape"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

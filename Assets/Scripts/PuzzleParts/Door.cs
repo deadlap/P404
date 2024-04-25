@@ -9,7 +9,7 @@ public class Door : MonoBehaviour {
     [SerializeField] string nextLevel;
     [SerializeField] string letterToOpen;
     [SerializeField] Animator animator;
-    
+    bool openDoor;
     void OnEnable() {
         ActivateableSigns.SpecialSignEvent += OpenDoor;
     }
@@ -21,12 +21,18 @@ public class Door : MonoBehaviour {
     void Start(){
         portalActive = false;
         doorActive = false;
+        openDoor = false;
     }
-    
+    void Update(){
+        if (openDoor){
+            openDoor = !openDoor;
+            animator.SetTrigger("Open");
+        }
+    }
     void OpenDoor(string input){
         if (letterToOpen == input) {
             portalActive = true;
-            animator.SetTrigger("Open");
+            openDoor = true;
         }
     }
 

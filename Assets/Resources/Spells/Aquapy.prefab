@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 3986088739649655638}
   - component: {fileID: -5464745258185354552}
   - component: {fileID: -4934091271434890246}
+  - component: {fileID: -2864777269688375359}
   m_Layer: 0
   m_Name: Aquapy
   m_TagString: Water
@@ -200,7 +201,7 @@ AudioSource:
   m_GameObject: {fileID: 8265014758464820803}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 1fb90daa202bb5646a54eb3125e1d96e, type: 2}
   m_audioClip: {fileID: 8300000, guid: 0dcf45c10555ee943b10c474b1d1fee2, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.3
@@ -341,3 +342,51 @@ MonoBehaviour:
     MidiByte:
       m_PersistentCalls:
         m_Calls: []
+--- !u!114 &-2864777269688375359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265014758464820803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b1e8c997df241c1a67045eeac79b41b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_System: {fileID: 0}
+  m_MoveSpeed: 1
+  m_EnableStrafe: 1
+  m_EnableFly: 0
+  m_UseGravity: 1
+  m_GravityApplicationMode: 0
+  m_ForwardSource: {fileID: 0}
+  m_LeftHandMoveAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Left Hand Move
+      m_Type: 0
+      m_ExpectedControlType: Vector2
+      m_Id: 6018f31d-52e1-46de-948e-9e016f1f2891
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  m_RightHandMoveAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Right Hand Move
+      m_Type: 0
+      m_ExpectedControlType: Vector2
+      m_Id: 87a3ebf7-6a48-4741-8978-9f2b4c76d8e1
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  m_HeadTransform: {fileID: 0}
+  m_LeftControllerTransform: {fileID: 0}
+  m_RightControllerTransform: {fileID: 0}
+  m_LeftHandMovementDirection: 0
+  m_RightHandMovementDirection: 0

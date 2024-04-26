@@ -1313,7 +1313,7 @@ MonoBehaviour:
   m_UseOptimizedControls: 0
   m_LeftHandMesh: {fileID: 2774281470704913537}
   m_RightHandMesh: {fileID: 522722999235299937}
-  m_HandMeshMaterial: {fileID: 2100000, guid: 613690cd962241049a0ec289a6ff835e, type: 2}
+  m_HandMeshMaterial: {fileID: 2100000, guid: 5e640f83d337aa049ac8a3b8882723d8, type: 2}
   m_DrawMeshes: 1
   m_DebugDrawPrefab: {fileID: 6507399986997092475, guid: 254b742d65a15d14b9df756ae77de868, type: 3}
   m_DebugDrawJoints: 0

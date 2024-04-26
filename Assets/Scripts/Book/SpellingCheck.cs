@@ -18,6 +18,12 @@ public class SpellingCheck : MonoBehaviour {
     [SerializeField] TMP_Text currentSign; //The current sign the user needs to perform
     public static event Action DeleteSpellsEvent;
     public static void OnDeleteSpells() => DeleteSpellsEvent?.Invoke();
+
+    void Start()
+    {
+        gestures.SetActive(true);
+    }
+
     void OnEnable() {
         BookEvents.SpellChosen += SetWord;
         DeleteSpellsEvent += DeleteSpells;
@@ -76,9 +82,9 @@ public class SpellingCheck : MonoBehaviour {
             // Skal enables når alle hand models virker
             GenerateHandModel(newWord[0].ToString());
             currentSign.text = currentWord[letterIndex].ToString().ToUpper();
-            gestures.SetActive(true);
+            //gestures.SetActive(true);
         } else {
-            gestures.SetActive(false);
+            //gestures.SetActive(false);
             playerProgress.text = "";
             currentSign.text = "";
         }

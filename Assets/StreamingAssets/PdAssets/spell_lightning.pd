@@ -27,7 +27,7 @@
 #X msg 322 37 66.33;
 #X msg 502 37 60;
 #X obj 414 5 loadbang;
-#X obj 243 393 *~ 2;
+#X obj 243 393 *~ 0.6;
 #X connect 0 0 5 0;
 #X connect 0 0 6 0;
 #X connect 1 0 2 0;

@@ -574,8 +574,6 @@ GameObject:
   - component: {fileID: 3187842203328176177}
   - component: {fileID: 355610428}
   - component: {fileID: 355610429}
-  - component: {fileID: 8449752190984732177}
-  - component: {fileID: 6524833100461625053}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -616,30 +614,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &355610429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3187842203328176176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d2806054b48766498f584072a17feb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &8449752190984732177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3187842203328176176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b622344742059664897d1c13cc7b3059, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &6524833100461625053
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3327,6 +3301,26 @@ PrefabInstance:
     - target: {fileID: 1223355069409145452, guid: f31c9546e07ae4b4884827f59508019f, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1223355069409145454, guid: f31c9546e07ae4b4884827f59508019f, type: 3}
+      propertyPath: leftHandedRotation.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1223355069409145454, guid: f31c9546e07ae4b4884827f59508019f, type: 3}
+      propertyPath: leftHandedRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1223355069409145454, guid: f31c9546e07ae4b4884827f59508019f, type: 3}
+      propertyPath: rightHandedRotation.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1223355069409145454, guid: f31c9546e07ae4b4884827f59508019f, type: 3}
+      propertyPath: rightHandedRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1223355069409145454, guid: f31c9546e07ae4b4884827f59508019f, type: 3}
+      propertyPath: rightHandedRotation.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1223355069409145455, guid: f31c9546e07ae4b4884827f59508019f, type: 3}
       propertyPath: m_Name

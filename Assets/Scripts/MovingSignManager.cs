@@ -20,7 +20,6 @@ public class MovingSignManager : MonoBehaviour
     float timeLimit = 2f;
 
     [SerializeField] Vector3 leftHandedRotation;
-    [SerializeField] Vector3 rightHandedRotation;
 
     TMP_Text recognisedSign;
     string prevRecognisedSign;
@@ -35,6 +34,7 @@ public class MovingSignManager : MonoBehaviour
 
 
     Coroutine coroutineTimer;
+    [SerializeField] GameObject head;
 
     void Start()
     {
@@ -48,6 +48,14 @@ public class MovingSignManager : MonoBehaviour
         DetectSign(recognisedSign.text);
     }
 
+    float WrapHeadAngle(float angle)
+    {
+        angle %= 360;
+        if (angle > 180)
+            return angle - 360;
+            
+        return angle;
+    }
     public void DetectSign(string sign)
     {
         prevRecognisedSign = recognisedSign.text;
@@ -93,10 +101,12 @@ public class MovingSignManager : MonoBehaviour
         switch (handedness)
         {
             case "L":
-                signPattern = Instantiate(signPatterns[patternIndex], spawnpoint.transform.position, Quaternion.Euler(leftHandedRotation) * Quaternion.identity * spawnpoint.transform.rotation);
+                var lRot = new Vector3(leftHandedRotation.x, leftHandedRotation.y + WrapHeadAngle(head.transform.eulerAngles.y), leftHandedRotation.z);
+                signPattern = Instantiate(signPatterns[patternIndex], spawnpoint.transform.position, Quaternion.Euler(lRot));
                 break;
             case "R":
-                signPattern = Instantiate(signPatterns[patternIndex], spawnpoint.transform.position, Quaternion.Euler(rightHandedRotation) * spawnpoint.transform.rotation);
+                var rRot = new Vector3(0, WrapHeadAngle(head.transform.eulerAngles.y), 0);
+                signPattern = Instantiate(signPatterns[patternIndex], spawnpoint.transform.position, Quaternion.Euler(rRot));
                 break;
         }
         patternChildCount = signPatterns[patternIndex].transform.childCount;

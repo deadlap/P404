@@ -51,7 +51,7 @@ namespace UnityEngine.XR.Hands.Samples.GestureSample
                 m_HandPose.relativeOrientation.targetTransform = m_TargetTransform;
         }
 
-        void OnDisable() => m_HandTrackingEvents.jointsUpdated.RemoveListener(OnJointsUpdated);
+        //void OnDisable() => m_HandTrackingEvents.jointsUpdated.RemoveListener(OnJointsUpdated);
 
         void OnJointsUpdated(XRHandJointsUpdatedEventArgs eventArgs)
         {

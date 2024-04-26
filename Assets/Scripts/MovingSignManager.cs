@@ -38,6 +38,7 @@ public class MovingSignManager : MonoBehaviour
 
     void Start()
     {
+        handedness = ChooseHand.Instance.handedness;
         recognisedSign = GameObject.Find("SpecialSignText").GetComponent<TMP_Text>();
     }
 
@@ -89,8 +90,6 @@ public class MovingSignManager : MonoBehaviour
 
     void SpawnPattern(string sign, string spawnpointString, int patternIndex)
     {
-        handedness = ChooseHand.Instance.handedness;
-        
         checkPointReached = startForCheckPoints;
         recognisedMovingSign = sign;
 

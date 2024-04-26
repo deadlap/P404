@@ -17,7 +17,7 @@ public class ChooseHand : MonoBehaviour
 
     public string handedness;
 
-    [SerializeField] GameObject spellCreationPosition;
+    GameObject spellCreationPosition;
     
     [SerializeField] Image chargeAnimation;
     [SerializeField] float choosingDuration;
@@ -60,6 +60,7 @@ public class ChooseHand : MonoBehaviour
         if (other.gameObject.name != "L_Palm" && other.gameObject.name != "R_Palm") return;
         isChoosingHand = true;
         hasChosenHand = false;
+        spellCreationPosition = GameObject.Find("SpellCreationPoint");
     }
 
     void OnTriggerStay(Collider other)
@@ -114,16 +115,16 @@ public class ChooseHand : MonoBehaviour
         nonDomHandMesh = GameObject.Find($"{nonDomHandString}_Hand").GetComponent<SkinnedMeshRenderer>();
         GameObject.Find($"{nonDomHandString}_IndexTip").tag = "Untagged";
         GameObject.Find($"{nonDomHandString}_MiddleTip").tag = "Untagged";
-        GameObject.Find($"{nonDomHandString}_RingTip").tag = "Untagged";
-        GameObject.Find($"{nonDomHandString}_LittleTip").tag = "Untagged";
-        GameObject.Find($"{nonDomHandString}_ThumbTip").tag = "Untagged";
+        //GameObject.Find($"{nonDomHandString}_RingTip").tag = "Untagged";
+        //GameObject.Find($"{nonDomHandString}_LittleTip").tag = "Untagged";
+        //GameObject.Find($"{nonDomHandString}_ThumbTip").tag = "Untagged";
         
         GameObject.Find($"{domHandString}_Hand").GetComponent<SkinnedMeshRenderer>().enabled = true;
         GameObject.Find($"{domHandString}_IndexTip").tag = "FingerTip";
         GameObject.Find($"{domHandString}_MiddleTip").tag = "FingerTip";
-        GameObject.Find($"{domHandString}_RingTip").tag = "FingerTip";
-        GameObject.Find($"{domHandString}_LittleTip").tag = "FingerTip";
-        GameObject.Find($"{domHandString}_ThumbTip").tag = "FingerTip";
+        //GameObject.Find($"{domHandString}_RingTip").tag = "FingerTip";
+        //GameObject.Find($"{domHandString}_LittleTip").tag = "FingerTip";
+        //GameObject.Find($"{domHandString}_ThumbTip").tag = "FingerTip";
     }
 
     void SetSpellCreationPoint(GameObject dominantHandGO)

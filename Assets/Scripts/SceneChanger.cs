@@ -7,7 +7,15 @@ public class SceneChanger : MonoBehaviour {
 
     public static event Action<string> ChangeSceneEvent;
     public static void OnChangeScene(string scene) => ChangeSceneEvent?.Invoke(scene);
-    
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            ReloadScene();
+        }
+    }
+
     void OnEnable() {
         ChangeSceneEvent += ChangeScene;;
     }
@@ -18,5 +26,11 @@ public class SceneChanger : MonoBehaviour {
 
     void ChangeScene(string scene) {
         SceneManager.LoadScene(scene);
+    }
+
+    void ReloadScene()
+    {
+        var currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
     }
 }

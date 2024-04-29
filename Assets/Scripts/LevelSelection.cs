@@ -48,7 +48,7 @@ public class LevelSelection : MonoBehaviour {
         foreach (Transform child in gameObject.transform) {
 	        GameObject.Destroy(child.gameObject);
         }
-        var newObject = Instantiate(levels[i], gameObject.transform);
+        var newObject = Instantiate(levels[levelNumber], gameObject.transform);
         newObject.SetActive(true);
         PlayerSpawnPoint.Instance.ResetPlayerPos();
     }

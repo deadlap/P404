@@ -38,7 +38,6 @@ public class MovingSignManager : MonoBehaviour
 
     void Start()
     {
-        handedness = ChooseHand.Instance.handedness;
         recognisedSign = GameObject.Find("SpecialSignText").GetComponent<TMP_Text>();
     }
 
@@ -59,6 +58,7 @@ public class MovingSignManager : MonoBehaviour
     }
     public void DetectSign(string sign)
     {
+        handedness = ChooseHand.Instance.handedness;
         prevRecognisedSign = recognisedSign.text;
         switch (sign)
         {

@@ -56,6 +56,7 @@ public class MovingSignManager : MonoBehaviour
             
         return angle;
     }
+    
     public void DetectSign(string sign)
     {
         handedness = ChooseHand.Instance.handedness;

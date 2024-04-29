@@ -113,6 +113,7 @@ public class ChooseHand : MonoBehaviour
     void ShowHand(string domHandString, string nonDomHandString)
     {
         nonDomHandMesh = GameObject.Find($"{nonDomHandString}_Hand").GetComponent<SkinnedMeshRenderer>();
+        GameObject.Find($"{domHandString}_Hand").GetComponent<SkinnedMeshRenderer>().enabled = false;
         GameObject.Find($"{nonDomHandString}_IndexTip").tag = "Untagged";
         GameObject.Find($"{nonDomHandString}_MiddleTip").tag = "Untagged";
         //GameObject.Find($"{nonDomHandString}_RingTip").tag = "Untagged";
@@ -160,7 +161,8 @@ public class ChooseHand : MonoBehaviour
         
         if (bookFollowPoint)
         {
-            Destroy(bookFollowPoint);
+            Destroy(GameObject.Find("Non-Dominant Hand Book Slot(Clone)"));
+            print("bog");
             bookFollowPoint = Instantiate(bookFollowPointPrefab, nonDominantHand.transform.position, nonDominantHand.transform.rotation * Quaternion.Euler(BookFollowPointPos(nonDomHand)), nonDominantHand.transform);
         }
         else

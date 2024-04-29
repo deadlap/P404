@@ -11,7 +11,6 @@ public class ChooseHand : MonoBehaviour
     GameObject touchPointManager;
     
     GameObject nonDominantHand;
-    public SkinnedMeshRenderer nonDomHandMesh;
     [SerializeField] GameObject bookFollowPointPrefab;
     GameObject bookFollowPoint;
 
@@ -30,10 +29,12 @@ public class ChooseHand : MonoBehaviour
     [SerializeField] Vector3 rightPos;
 
     [SerializeField] GameObject startPortal;
+    AudioSource audioSource;
 
     void Awake()
     {
         Instance = this;
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -41,6 +42,7 @@ public class ChooseHand : MonoBehaviour
         if (isChoosingHand)
         {
             chargeAnimation.fillAmount += Time.deltaTime / choosingDuration;
+            audioSource.pitch = chargeAnimation.fillAmount + 1;
             if (Mathf.Abs(chargeAnimation.fillAmount - 1) < fillThreshold)
             {
                 hasChosenHand = true;
@@ -50,9 +52,8 @@ public class ChooseHand : MonoBehaviour
         else
         {
             chargeAnimation.fillAmount -= Time.deltaTime * choosingDuration;
+            audioSource.pitch = chargeAnimation.fillAmount + 1;
         }
-        if(nonDomHandMesh == null) return;
-        nonDomHandMesh.enabled = false;
     }
 
     void OnTriggerEnter(Collider other)
@@ -112,8 +113,7 @@ public class ChooseHand : MonoBehaviour
 
     void ShowHand(string domHandString, string nonDomHandString)
     {
-        nonDomHandMesh = GameObject.Find($"{nonDomHandString}_Hand").GetComponent<SkinnedMeshRenderer>();
-        GameObject.Find($"{domHandString}_Hand").GetComponent<SkinnedMeshRenderer>().enabled = false;
+        GameObject.Find($"{nonDomHandString}_Hand").GetComponent<SkinnedMeshRenderer>().enabled = false;
         GameObject.Find($"{nonDomHandString}_IndexTip").tag = "Untagged";
         GameObject.Find($"{nonDomHandString}_MiddleTip").tag = "Untagged";
         //GameObject.Find($"{nonDomHandString}_RingTip").tag = "Untagged";

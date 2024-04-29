@@ -8467,7 +8467,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -9005767513493786472, guid: ee13277caa7e788479a38b37b1de07c6, type: 3}
       propertyPath: m_Volume
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 2710837317165532617, guid: ee13277caa7e788479a38b37b1de07c6, type: 3}
       propertyPath: m_RootOrder
@@ -8562,7 +8562,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -5464745258185354552, guid: 417bd2d45d518ee4db7a1c55eb74e1cf, type: 3}
       propertyPath: m_Volume
-      value: 0.5
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2017265965934681274, guid: 417bd2d45d518ee4db7a1c55eb74e1cf, type: 3}
       propertyPath: m_RootOrder
@@ -10071,7 +10071,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ventush
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 741e3770d6b909d4ca666e1ef5167a1c, type: 3}
 --- !u!1 &1866718439
 GameObject:
@@ -10348,7 +10349,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ignisob
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: c98e8502f28f305418cf753a03a9291d, type: 3}
 --- !u!114 &1965078997 stripped
 MonoBehaviour:

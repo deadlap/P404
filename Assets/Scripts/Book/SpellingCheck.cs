@@ -38,6 +38,7 @@ public class SpellingCheck : MonoBehaviour {
     }
 
     public void SignedLetterInput(string _sign) {
+        if(currentWord == null) return;
         if(signedText.text.Length == 0 || currentWord.Length == 0) return;
         _sign = _sign.ToUpper();
         

@@ -18,6 +18,10 @@ public class LevelSelection : MonoBehaviour {
         levelCount = 0;
     }
 
+    void Start(){
+        ReloadLevel();
+    }
+
     void OnEnable() {
         NextLevelEvent += NextLevel;;
         SceneManager.sceneLoaded += ReloadLevel;
@@ -41,11 +45,11 @@ public class LevelSelection : MonoBehaviour {
     }
 
     void ChangeLevel(int levelNumber) {
-        for (var i = 0; i < levels.Count; i++) {
-            levels[i].SetActive(false);
-            if (i == levelNumber)
-                levels[i].SetActive(true);
+        foreach (Transform child in gameObject.transform) {
+	        GameObject.Destroy(child.gameObject);
         }
+        var newObject = Instantiate(levels[i], gameObject.transform);
+        newObject.SetActive(true);
         PlayerSpawnPoint.Instance.ResetPlayerPos();
     }
 

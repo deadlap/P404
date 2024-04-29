@@ -18,8 +18,7 @@ public class SpellingCheck : MonoBehaviour {
     public static event Action DeleteSpellsEvent;
     public static void OnDeleteSpells() => DeleteSpellsEvent?.Invoke();
 
-    void Start()
-    {
+    void Start() {
         gestures.SetActive(true);
     }
 
@@ -33,10 +32,9 @@ public class SpellingCheck : MonoBehaviour {
         DeleteSpellsEvent -= DeleteSpells;
     }
 
-    void Update()
-    {
+    void Update() {
         SignedLetterInput(signedText.text);
-        print(signedText.text);
+        // print(signedText.text);
     }
 
     public void SignedLetterInput(string _sign) {
@@ -45,10 +43,10 @@ public class SpellingCheck : MonoBehaviour {
         
         string sign = _sign;
 
-        if (_sign == "M" && currentWord[letterIndex].ToString().ToUpper() == "N"){
+        if (_sign == "M" && currentWord[letterIndex].ToString().ToUpper() == "N") {
             sign = "N";
         }
-        if (_sign == "U" && currentWord[letterIndex].ToString().ToUpper() == "R"){
+        if (_sign == "U" && currentWord[letterIndex].ToString().ToUpper() == "R") {
             sign = "R";
         }
 

@@ -19,8 +19,8 @@ public class SoundHandler : MonoBehaviour {
     }
 
     void SoundLevel() {
-        effectMixer.SetFloat(masterVolumeName, Mathf.Log10(0.001+(float)Int32.Parse(masterText.text)/100f)*20);
-        effectMixer.SetFloat(musicVolumeName, Mathf.Log10(0.001+(float)Int32.Parse(musicText.text)/100f)*20);
+        effectMixer.SetFloat(masterVolumeName, Mathf.Log10(0.001f+(float)Int32.Parse(masterText.text)/100f)*20);
+        effectMixer.SetFloat(musicVolumeName, Mathf.Log10(0.001f+(float)Int32.Parse(musicText.text)/100f)*20);
     }
 
     public void ChangeText(string change){

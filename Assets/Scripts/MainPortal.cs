@@ -15,7 +15,7 @@ public class MainPortal : MonoBehaviour
     void OnTriggerEnter(Collider other) {
         if (other.CompareTag("FingerTip")) {
 
-            LevelSelection.OnNextLevel();
+            LevelSelection.OnChangeLevel(1);
             // SceneChanger.OnChangeScene("Level1");
             audioSource.Play();
         }

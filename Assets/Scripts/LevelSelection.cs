@@ -8,11 +8,11 @@ public class LevelSelection : MonoBehaviour {
     public static event Action<int> ChangeLevelEvent;
     public static void OnChangeLevel(int level) => ChangeLevelEvent?.Invoke(level);
 
-    public static event Action NextLevelEvent;
-    public static void OnNextLevel() => NextLevelEvent?.Invoke();
+    // public static event Action NextLevelEvent;
+    // public static void OnNextLevel() => NextLevelEvent?.Invoke();
 
     public static event Action ReloadLevelEvent;
-    public static void OnReloadLevel() => ReloadLevelEvent?.Invoke();
+    public static void  OnReloadLevel () => ReloadLevelEvent?.Invoke();
 
     [SerializeField] List<GameObject> levels;
     [SerializeField] int levelCount; //which level we are on
@@ -26,13 +26,13 @@ public class LevelSelection : MonoBehaviour {
     }
 
     void OnEnable() {
-        NextLevelEvent += NextLevel;
+        ChangeLevelEvent += ChangeLevel;
         ReloadLevelEvent += ReloadLevel;
         SceneManager.sceneLoaded += ReloadLevel;
     }
 
     void OnDisable() {
-        NextLevelEvent -= NextLevel;
+        ChangeLevelEvent -= ChangeLevel;
         ReloadLevelEvent -= ReloadLevel;
         SceneManager.sceneLoaded -= ReloadLevel;
     }
@@ -44,12 +44,15 @@ public class LevelSelection : MonoBehaviour {
         ChangeLevel(levelCount);
     }
 
-    void NextLevel(){
-        levelCount++;
-        ChangeLevel(levelCount);
-    }
+    // void NextLevel(){
+    //     levelCount++;
+    //     ChangeLevel(levelCount);
+    // }
 
     void ChangeLevel(int levelNumber) {
+        if (levelCount < levelNumber)
+            levelCount = levelNumber;
+            
         foreach (Transform child in gameObject.transform) {
 	        GameObject.Destroy(child.gameObject);
         }

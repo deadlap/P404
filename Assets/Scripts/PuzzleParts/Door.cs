@@ -3,7 +3,7 @@ using UnityEngine;
 public class Door : MonoBehaviour {
     [SerializeField] bool portalActive;
     [SerializeField] bool doorActive;
-    [SerializeField] string nextLevel;
+    [SerializeField] int nextLevel;
     [SerializeField] string letterToOpen;
     [SerializeField] Animator animator;
     bool openDoor;
@@ -48,7 +48,7 @@ public class Door : MonoBehaviour {
             
             //Activate transition screen kode
             audioSource.PlayOneShot(audioClips[1]);
-            LevelSelection.OnNextLevel();
+            LevelSelection.OnChangeLevel(nextLevel);
         }
     }
 }

@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
+using RenderPipeline = UnityEngine.Rendering.RenderPipelineManager;
 
 public class PortalCamMove : MonoBehaviour
 {
@@ -17,6 +20,8 @@ public class PortalCamMove : MonoBehaviour
     [SerializeField] private Shader portalShader;
     private Material portalMat;
 
+    private MeshRenderer endRenderFace;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +36,7 @@ public class PortalCamMove : MonoBehaviour
             if (renderPortal.GetChild(i).name == "PortalViewQuad")
             {
                 portalQuad = renderPortal.GetChild(i);
+                endRenderFace = portalQuad.GetComponent<MeshRenderer>();
                 break;
             }
         }
@@ -45,8 +51,25 @@ public class PortalCamMove : MonoBehaviour
         portalQuad.GetComponent<MeshRenderer>().material = portalMat;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
+    {
+        RenderPipeline.beginCameraRendering += UpdateCamera;
+    }
+
+    private void OnDisable()
+    {
+        RenderPipeline.beginCameraRendering -= UpdateCamera;
+    }
+
+    private void UpdateCamera(ScriptableRenderContext SRC, Camera camera)
+    {
+        if (endRenderFace.isVisible)
+        {
+            RenderCamera(SRC);
+        }
+    }
+
+    private void RenderCamera(ScriptableRenderContext SRC)
     {
         Vector3 targetPosition = renderPortal.worldToLocalMatrix.MultiplyPoint3x4(mainCam.position);
 
@@ -58,6 +81,9 @@ public class PortalCamMove : MonoBehaviour
         transform.LookAt(myRelativePortal);
         myCam.nearClipPlane = transform.localPosition.magnitude;
         myCam.fieldOfView = FOVFromDistance(transform.localPosition.magnitude, camFieldHeight);
+
+        // Render the camera to its render target.
+        UniversalRenderPipeline.RenderSingleCamera(SRC, myCam);
     }
 
     private float FOVFromDistance(float distance, float height)

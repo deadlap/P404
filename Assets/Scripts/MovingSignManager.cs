@@ -43,25 +43,11 @@ public class MovingSignManager : MonoBehaviour
 
     void Update()
     {
-        KeepNonDomHandDisabled();
         if(recognisedSign == null) return;
         if(prevRecognisedSign == recognisedSign.text) return;
         DetectSign(recognisedSign.text);
     }
 
-    void KeepNonDomHandDisabled()
-    {
-        switch (handedness)
-        {
-            case "L":
-                GameObject.Find($"R_Hand").GetComponent<SkinnedMeshRenderer>().enabled = false;
-                break;
-            case "R":
-                GameObject.Find($"R_Hand").GetComponent<SkinnedMeshRenderer>().enabled = false;
-                break;
-        }
-    }
-    
     float WrapHeadAngle(float angle)
     {
         angle %= 360;

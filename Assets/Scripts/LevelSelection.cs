@@ -52,10 +52,15 @@ public class LevelSelection : MonoBehaviour {
     void ChangeLevel(int levelNumber) {
         if (levelCount < levelNumber)
             levelCount = levelNumber;
-            
+        
         foreach (Transform child in gameObject.transform) {
 	        GameObject.Destroy(child.gameObject);
         }
+        
+        var key = GameObject.FindGameObjectWithTag("Key");
+        if (key != null)
+            GameObject.Destroy(key);
+        
         var newObject = Instantiate(levels[levelNumber], gameObject.transform);
         newObject.SetActive(true);
         PlayerSpawnPoint.Instance.ResetPlayerPos();

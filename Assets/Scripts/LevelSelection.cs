@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using System;
 public class LevelSelection : MonoBehaviour {
@@ -13,22 +14,30 @@ public class LevelSelection : MonoBehaviour {
     [SerializeField] List<GameObject> levels;
     [SerializeField] int levelCount; //which level we are on
 
-    void Start(){
+    void Awake(){
         levelCount = 0;
     }
 
     void OnEnable() {
         NextLevelEvent += NextLevel;;
+        SceneManager.sceneLoaded += ReloadLevel;
     }
 
     void OnDisable() {
         NextLevelEvent -= NextLevel;
+       SceneManager.sceneLoaded -= ReloadLevel;
+    }
+
+    void ReloadLevel(Scene scene, LoadSceneMode mode){
+        ChangeLevel(levelCount);
+    }
+    void ReloadLevel(){
+        ChangeLevel(levelCount);
     }
 
     void NextLevel(){
         levelCount++;
         ChangeLevel(levelCount);
-
     }
 
     void ChangeLevel(int levelNumber) {

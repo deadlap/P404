@@ -1,30 +1,16 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
+public class RestartScene : MonoBehaviour {
 
-public class RestartScene : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    void ReloadScene() { //Does not actually reload scene but calls reload level
+        LevelSelection.OnReloadLevel();
+        // var currentScene = SceneManager.GetActiveScene();
+        // SceneManager.LoadScene(currentScene.name);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
-    void ReloadScene()
-    {
-        var currentScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(currentScene.name);
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("FingerTip"))
-        {
+    void OnTriggerEnter(Collider other) {
+        if (other.CompareTag("FingerTip")) {
             ReloadScene();
         }
     }

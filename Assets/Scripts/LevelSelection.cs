@@ -11,6 +11,9 @@ public class LevelSelection : MonoBehaviour {
     public static event Action NextLevelEvent;
     public static void OnNextLevel() => NextLevelEvent?.Invoke();
 
+    public static event Action ReloadLevelEvent;
+    public static void OnReloadLevel() => ReloadLevelEvent?.Invoke();
+
     [SerializeField] List<GameObject> levels;
     [SerializeField] int levelCount; //which level we are on
 
@@ -23,13 +26,15 @@ public class LevelSelection : MonoBehaviour {
     }
 
     void OnEnable() {
-        NextLevelEvent += NextLevel;;
+        NextLevelEvent += NextLevel;
+        ReloadLevelEvent += ReloadLevel;
         SceneManager.sceneLoaded += ReloadLevel;
     }
 
     void OnDisable() {
         NextLevelEvent -= NextLevel;
-       SceneManager.sceneLoaded -= ReloadLevel;
+        ReloadLevelEvent -= ReloadLevel;
+        SceneManager.sceneLoaded -= ReloadLevel;
     }
 
     void ReloadLevel(Scene scene, LoadSceneMode mode){

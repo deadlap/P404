@@ -48,7 +48,7 @@ public class Door : MonoBehaviour {
             
             //Activate transition screen kode
             audioSource.PlayOneShot(audioClips[1]);
-            SceneChanger.OnChangeScene(nextLevel);
+            LevelSelection.OnNextLevel();
         }
     }
 }

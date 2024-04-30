@@ -65,7 +65,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 1
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 6394727570329333305}
   - component: {fileID: 6394727570329333308}
   - component: {fileID: 6394727570329333307}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PortalViewQuad
   m_TagString: Untagged
   m_Icon: {fileID: 0}

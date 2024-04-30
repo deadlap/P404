@@ -43,7 +43,7 @@ public class PortalCamMove : MonoBehaviour
         }
         myCam = GetComponent<Camera>();
         camFieldDimensions = new Vector2(Mathf.Abs(portalQuad.localScale.x), Mathf.Abs(portalQuad.localScale.y));
-        Debug.Log($"{name} carries a camFieldDimensions of {camFieldDimensions}");
+        //Debug.Log($"{name} carries a camFieldDimensions of {camFieldDimensions}");
 
         myTexture = new RenderTexture(Mathf.RoundToInt(1024 * camFieldDimensions.x), Mathf.RoundToInt(1024 * camFieldDimensions.y), 24);
 

@@ -14,7 +14,8 @@ public class PortalCamMove : MonoBehaviour
     private Transform portalQuad;
 
     private Camera myCam;
-    private float camFieldHeight;
+    private RenderTexture myTexture;
+    private Vector2 camFieldDimensions;
 
     // Create the rendermaterial at runtime
     [SerializeField] private Shader portalShader;
@@ -41,13 +42,14 @@ public class PortalCamMove : MonoBehaviour
             }
         }
         myCam = GetComponent<Camera>();
-        camFieldHeight = Mathf.Abs(portalQuad.localScale.y);
-        Debug.Log($"{name} carries a camFieldHeight of {camFieldHeight}");
+        camFieldDimensions = new Vector2(Mathf.Abs(portalQuad.localScale.x), Mathf.Abs(portalQuad.localScale.y));
+        Debug.Log($"{name} carries a camFieldDimensions of {camFieldDimensions}");
 
-        myCam.targetTexture = new RenderTexture(Mathf.RoundToInt(1024 * Mathf.Abs(portalQuad.localScale.x)), Mathf.RoundToInt(1024 * camFieldHeight), 24);
+        myTexture = new RenderTexture(Mathf.RoundToInt(1024 * camFieldDimensions.x), Mathf.RoundToInt(1024 * camFieldDimensions.y), 24);
 
         portalMat = new Material(portalShader);
-        portalMat.mainTexture = myCam.targetTexture;
+        myCam.targetTexture = myTexture;
+        portalMat.mainTexture = myTexture;
         portalQuad.GetComponent<MeshRenderer>().material = portalMat;
     }
 
@@ -61,6 +63,7 @@ public class PortalCamMove : MonoBehaviour
         RenderPipeline.beginCameraRendering -= UpdateCamera;
     }
 
+    // Make camera only record while it's being rendered
     private void UpdateCamera(ScriptableRenderContext SRC, Camera camera)
     {
         if (endRenderFace.isVisible)
@@ -75,12 +78,16 @@ public class PortalCamMove : MonoBehaviour
 
         targetPosition = new Vector3(-targetPosition.x, targetPosition.y, -targetPosition.z);
 
+        Vector2 angleMultiplier = new Vector2(Mathf.Cos(Mathf.Deg2Rad * Vector3.Angle(Vector3.zero, new Vector3(targetPosition.x, 0f, targetPosition.z))), Mathf.Cos(Mathf.Deg2Rad * Vector3.Angle(Vector3.zero, new Vector3(0f, targetPosition.y, targetPosition.z))));
+
+        myCam.aspect = camFieldDimensions.x * angleMultiplier.x / camFieldDimensions.y * angleMultiplier.y;
+
         transform.localPosition = targetPosition;
 
         // Make camera always look at portal and clip to fit the size the player sees the portal as
         transform.LookAt(myRelativePortal);
         myCam.nearClipPlane = transform.localPosition.magnitude;
-        myCam.fieldOfView = FOVFromDistance(transform.localPosition.magnitude, camFieldHeight);
+        myCam.fieldOfView = FOVFromDistance(transform.localPosition.magnitude, camFieldDimensions.y * angleMultiplier.y);
 
         // Render the camera to its render target.
         UniversalRenderPipeline.RenderSingleCamera(SRC, myCam);

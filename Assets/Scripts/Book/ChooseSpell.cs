@@ -17,8 +17,7 @@ public class ChooseSpell : MonoBehaviour
     {
         if (other.CompareTag("FingerTip") && !onCooldown)
         {
-            GameObject.Find("Non-Dominant Hand Book Slot(Clone)").GetComponentInParent<SkinnedMeshRenderer>().enabled =
-                false;
+            
             BookEvents.OnSpellChosen(elementType);
             onCooldown = true;
             Invoke(nameof(ResetCooldown), cooldownTime);

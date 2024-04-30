@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 870473227}
-  m_IndirectSpecularColor: {r: 0.20167544, g: 0.350867, b: 0.4674041, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1594,7 +1594,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Plac\xE9r domiant h\xE5nd\ni portalen"
+  m_text: "Plac\xE9r din dominante h\xE5nd\ni portalen"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 149ce5d09e4d89846b0ef7cdf107bc08, type: 2}
   m_sharedMaterial: {fileID: 7890344804004080623, guid: 149ce5d09e4d89846b0ef7cdf107bc08, type: 2}
@@ -1621,8 +1621,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 2
-  m_fontSizeBase: 2
+  m_fontSize: 1.59
+  m_fontSizeBase: 1.59
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2393,8 +2393,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.65, z: 22.87}
-  m_Center: {x: -0.0000000020231496, y: 0, z: -11.54249}
+  m_Size: {x: 0.65, y: 0.65, z: 97.96}
+  m_Center: {x: -0, y: 0, z: 25}
 --- !u!54 &1029352597
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2424,7 +2424,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   touchPointManagerPrefab: {fileID: 1223355069409145455, guid: f31c9546e07ae4b4884827f59508019f, type: 3}
-  nonDomHandMesh: {fileID: 0}
   bookFollowPointPrefab: {fileID: 4233948336606793639, guid: abe1b4bacbb4e47409074e16fc6b20f0, type: 3}
   handedness: 
   chargeAnimation: {fileID: 1767208431}

@@ -6,7 +6,7 @@ using UnityEngine.XR.Hands;
 public class ChooseHand : MonoBehaviour
 {
     public static ChooseHand Instance;
-    GameObject dominantHand; 
+    GameObject dominantHand;
     [SerializeField] GameObject touchPointManagerPrefab; 
     GameObject touchPointManager;
     
@@ -28,6 +28,9 @@ public class ChooseHand : MonoBehaviour
     [SerializeField] Vector3 leftPos;
     [SerializeField] Vector3 rightPos;
 
+    GameObject rightHandMesh;
+    GameObject leftHandMesh;
+    
     [SerializeField] GameObject startPortal;
     AudioSource audioSource;
 
@@ -35,7 +38,10 @@ public class ChooseHand : MonoBehaviour
     {
         Instance = this;
         audioSource = GetComponent<AudioSource>();
+        rightHandMesh = GameObject.Find("R_Hand");
+        leftHandMesh = GameObject.Find("L_Hand");
     }
+
 
     void Update()
     {
@@ -113,14 +119,27 @@ public class ChooseHand : MonoBehaviour
 
     void ShowHand(string domHandString, string nonDomHandString)
     {
-        GameObject.Find($"{nonDomHandString}_Hand").GetComponent<SkinnedMeshRenderer>().enabled = false;
+        switch (domHandString)
+        {
+            case "R":
+                rightHandMesh.SetActive(true);
+                leftHandMesh.SetActive(false);
+                break;
+            case "L":
+                rightHandMesh.SetActive(false);
+                leftHandMesh.SetActive(true);
+                break;
+        }
+    //        if(GameObject.Find($"{nonDomHandString}_Hand") == null) return;
+        //GameObject.Find($"{nonDomHandString}_Hand").GetComponent<SkinnedMeshRenderer>().enabled = false;
         GameObject.Find($"{nonDomHandString}_IndexTip").tag = "Untagged";
         GameObject.Find($"{nonDomHandString}_MiddleTip").tag = "Untagged";
         //GameObject.Find($"{nonDomHandString}_RingTip").tag = "Untagged";
         //GameObject.Find($"{nonDomHandString}_LittleTip").tag = "Untagged";
         //GameObject.Find($"{nonDomHandString}_ThumbTip").tag = "Untagged";
         
-        GameObject.Find($"{domHandString}_Hand").GetComponent<SkinnedMeshRenderer>().enabled = true;
+      //      if(GameObject.Find($"{domHandString}_Hand") == null) return;
+        //GameObject.Find($"{domHandString}_Hand").GetComponent<SkinnedMeshRenderer>().enabled = true;
         GameObject.Find($"{domHandString}_IndexTip").tag = "FingerTip";
         GameObject.Find($"{domHandString}_MiddleTip").tag = "FingerTip";
         //GameObject.Find($"{domHandString}_RingTip").tag = "FingerTip";

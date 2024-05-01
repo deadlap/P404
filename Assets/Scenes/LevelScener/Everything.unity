@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 870473227}
-  m_IndirectSpecularColor: {r: 0.191991, g: 0.5946723, b: 0.7773275, a: 1}
+  m_IndirectSpecularColor: {r: 0.19022748, g: 0.5924103, b: 0.7732436, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2661,7 +2661,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -9003920172004352368, guid: 634003dc51447ba4ab254927f8ab2fb4, type: 3}
+  - {fileID: 2100000, guid: aa21ee7cbcf25fb408047fd6b734ba1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3942,7 +3942,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1712874196
 Transform:
   m_ObjectHideFlags: 0
@@ -4927,7 +4927,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: dfafe351d49d14441be704f3f7981f2e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 5e640f83d337aa049ac8a3b8882723d8, type: 2}
+      objectReference: {fileID: 2100000, guid: fb8c1b8719fe0b34aba59cdb15ddaaea, type: 2}
     - target: {fileID: 919132149155446097, guid: dfafe351d49d14441be704f3f7981f2e, type: 3}
       propertyPath: m_Name
       value: RockHandSwitch

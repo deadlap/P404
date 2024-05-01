@@ -13,7 +13,7 @@ public class MainPortal : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider other) {
-        if (other.CompareTag("FingerTip")) {
+        if (other.CompareTag("NonDominantHand") || other.CompareTag("DominantHand")) {
 
             audioSource.Play();
             LevelSelection.OnChangeLevel(1);

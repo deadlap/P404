@@ -44,7 +44,7 @@ public class Door : MonoBehaviour {
             doorActive = true;
             ActivateableSigns.OnEnableSpecialSign(letterToOpen);
         }
-        if (other.CompareTag("FingerTip") && portalActive) {
+        if ((other.CompareTag("NonDominantHand") || other.CompareTag("DominantHand")) && portalActive) {
             
             //Activate transition screen kode
             audioSource.PlayOneShot(audioClips[1]);

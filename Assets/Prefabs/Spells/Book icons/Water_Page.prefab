@@ -400,7 +400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: AQUAPY
-  cooldownTime: 1
+  cooldownTime: 2
 --- !u!222 &4753204492537047342
 CanvasRenderer:
   m_ObjectHideFlags: 0

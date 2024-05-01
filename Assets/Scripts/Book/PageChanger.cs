@@ -5,7 +5,8 @@ using UnityEngine.UI;
 public class PageChanger : MonoBehaviour
 {
     [SerializeField] string pageType;
-    [SerializeField] float durationTime;
+    [SerializeField] float pageFlipDuration;
+    [SerializeField] float cooldownTime;
 
     [SerializeField] Image nextArrow;
     [SerializeField] Image prevArrow;
@@ -58,7 +59,7 @@ public class PageChanger : MonoBehaviour
                 }
                 BookEvents.OnPageTurning();
                 BookEvents.OnSpellChosen("");
-                Invoke(nameof(NextPage), durationTime);
+                Invoke(nameof(NextPage), pageFlipDuration);
                 break;
             case "prev":
                 if (BookPageHandler.Instance.currentPageIndex == BookPageHandler.Instance.firstPageIndex)
@@ -69,7 +70,7 @@ public class PageChanger : MonoBehaviour
                 }
                 BookEvents.OnPageTurning();
                 BookEvents.OnSpellChosen("");
-                Invoke(nameof(PrevPage), durationTime);
+                Invoke(nameof(PrevPage), pageFlipDuration);
                 break;
         }
     }
@@ -77,19 +78,17 @@ public class PageChanger : MonoBehaviour
     void NextPage()
     {
         BookEvents.OnNextPage();
-        onCooldown = false;
     }
 
     void PrevPage()
     {
         BookEvents.OnPrevPage();
-        onCooldown = false;
     }
 
     void PageTurning()
     {
         onCooldown = true;
-        Invoke(nameof(ResetCooldown), durationTime);
+        Invoke(nameof(ResetCooldown), cooldownTime);
     }
     
     void ResetCooldown()

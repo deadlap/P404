@@ -1970,10 +1970,38 @@ PrefabInstance:
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 3187842205126607894}
-    - target: {fileID: 302346239, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_text
+    - target: {fileID: 335086313, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 335086313, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.02745098
+      objectReference: {fileID: 0}
+    - target: {fileID: 335086313, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.20784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 335086313, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 7890344804004080623, guid: 149ce5d09e4d89846b0ef7cdf107bc08, type: 2}
+    - target: {fileID: 335086313, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278191925
+      objectReference: {fileID: 0}
+    - target: {fileID: 335086314, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 335086314, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 7890344804004080623, guid: 149ce5d09e4d89846b0ef7cdf107bc08, type: 2}
+    - target: {fileID: 335086314, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 469965eaec0eb3f4c84684199370a708, type: 2}
     - target: {fileID: 410344864, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1982,10 +2010,6 @@ PrefabInstance:
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 3187842205126607894}
-    - target: {fileID: 410344864, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_text
-      objectReference: {fileID: 0}
     - target: {fileID: 433376230, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1994,10 +2018,6 @@ PrefabInstance:
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 3187842205126607894}
-    - target: {fileID: 433376230, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_text
-      objectReference: {fileID: 0}
     - target: {fileID: 460296917, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2006,10 +2026,6 @@ PrefabInstance:
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 3187842205126607894}
-    - target: {fileID: 460296917, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_text
-      objectReference: {fileID: 0}
     - target: {fileID: 528811289, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2018,10 +2034,6 @@ PrefabInstance:
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 3187842205126607894}
-    - target: {fileID: 528811289, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_text
-      objectReference: {fileID: 0}
     - target: {fileID: 581725382, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2030,10 +2042,6 @@ PrefabInstance:
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 3187842205126607894}
-    - target: {fileID: 581725382, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_text
-      objectReference: {fileID: 0}
     - target: {fileID: 665597373, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2042,10 +2050,6 @@ PrefabInstance:
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 3187842205126607894}
-    - target: {fileID: 665597373, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_text
-      objectReference: {fileID: 0}
     - target: {fileID: 684503801, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2054,10 +2058,6 @@ PrefabInstance:
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 3187842205126607894}
-    - target: {fileID: 684503801, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_text
-      objectReference: {fileID: 0}
     - target: {fileID: 764213220, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2066,10 +2066,6 @@ PrefabInstance:
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 3187842205126607894}
-    - target: {fileID: 764213220, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_text
-      objectReference: {fileID: 0}
     - target: {fileID: 859786716, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2078,9 +2074,9 @@ PrefabInstance:
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 3187842205126607894}
-    - target: {fileID: 859786716, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_text
+    - target: {fileID: 876786300, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_Name
+      value: Line
       objectReference: {fileID: 0}
     - target: {fileID: 946458966, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2090,10 +2086,6 @@ PrefabInstance:
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 3187842205126607894}
-    - target: {fileID: 946458966, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_text
-      objectReference: {fileID: 0}
     - target: {fileID: 1054876734, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2102,10 +2094,6 @@ PrefabInstance:
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 3187842205126607894}
-    - target: {fileID: 1054876734, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_text
-      objectReference: {fileID: 0}
     - target: {fileID: 1087877055, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2114,10 +2102,6 @@ PrefabInstance:
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 3187842205126607894}
-    - target: {fileID: 1087877055, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_text
-      objectReference: {fileID: 0}
     - target: {fileID: 1092827944, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2126,10 +2110,6 @@ PrefabInstance:
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 3187842205126607894}
-    - target: {fileID: 1092827944, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_text
-      objectReference: {fileID: 0}
     - target: {fileID: 1178460248, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2138,10 +2118,6 @@ PrefabInstance:
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 3187842205126607894}
-    - target: {fileID: 1178460248, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_text
-      objectReference: {fileID: 0}
     - target: {fileID: 1358547613, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2150,10 +2126,6 @@ PrefabInstance:
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 3187842205126607894}
-    - target: {fileID: 1358547613, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_text
-      objectReference: {fileID: 0}
     - target: {fileID: 1413650725, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2162,10 +2134,6 @@ PrefabInstance:
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 3187842205126607894}
-    - target: {fileID: 1413650725, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_text
-      objectReference: {fileID: 0}
     - target: {fileID: 1501478971, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2174,10 +2142,6 @@ PrefabInstance:
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 3187842205126607894}
-    - target: {fileID: 1501478971, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_text
-      objectReference: {fileID: 0}
     - target: {fileID: 1529119511, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2186,10 +2150,6 @@ PrefabInstance:
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 3187842205126607894}
-    - target: {fileID: 1529119511, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_text
-      objectReference: {fileID: 0}
     - target: {fileID: 1657988281, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2198,10 +2158,6 @@ PrefabInstance:
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 3187842205126607894}
-    - target: {fileID: 1657988281, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_text
-      objectReference: {fileID: 0}
     - target: {fileID: 1678831514, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2210,9 +2166,45 @@ PrefabInstance:
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 3187842205126607894}
-    - target: {fileID: 1678831514, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_text
+    - target: {fileID: 1776372179, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 26.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776372179, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -25.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776372179, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9830956
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776372179, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.18309344
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776372179, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -20.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776372179, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 21.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776372180, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776372180, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.02745098
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776372180, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.20784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776372180, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278191925
       objectReference: {fileID: 0}
     - target: {fileID: 1898440765, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2222,10 +2214,6 @@ PrefabInstance:
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 3187842205126607894}
-    - target: {fileID: 1898440765, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_text
-      objectReference: {fileID: 0}
     - target: {fileID: 2141823585, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2234,10 +2222,6 @@ PrefabInstance:
       propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 3187842205126607894}
-    - target: {fileID: 2141823585, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-      propertyPath: m_GesturePerformed.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_text
-      objectReference: {fileID: 0}
     - target: {fileID: 1370159007236366452, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: signedText
       value: 
@@ -2294,9 +2278,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Book
       objectReference: {fileID: 0}
-    - target: {fileID: 7987047562258346661, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+    - target: {fileID: 3491088556678638959, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: cooldownTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3491088557759963396, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: cooldownTime
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}

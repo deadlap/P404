@@ -181,7 +181,6 @@ public class ChooseHand : MonoBehaviour
         if (bookFollowPoint)
         {
             Destroy(GameObject.Find("Non-Dominant Hand Book Slot(Clone)"));
-            print("bog");
             bookFollowPoint = Instantiate(bookFollowPointPrefab, nonDominantHand.transform.position, nonDominantHand.transform.rotation * Quaternion.Euler(BookFollowPointPos(nonDomHand)), nonDominantHand.transform);
         }
         else

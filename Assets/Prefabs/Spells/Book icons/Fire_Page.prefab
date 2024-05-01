@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: IGNISOB
-  cooldownTime: 1
+  cooldownTime: 2
 --- !u!222 &6482602502991075593
 CanvasRenderer:
   m_ObjectHideFlags: 0

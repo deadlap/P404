@@ -34,12 +34,12 @@ public class SpellingCheck : MonoBehaviour {
 
     void Update() {
         SignedLetterInput(signedText.text);
-        // print(signedText.text);
     }
 
     public void SignedLetterInput(string _sign) {
         if(currentWord == null) return;
         if(signedText.text.Length == 0 || currentWord.Length == 0) return;
+        playerProgress.fontSize = bookSpellText.fontSize;
         _sign = _sign.ToUpper();
         
         string sign = _sign;
@@ -78,7 +78,6 @@ public class SpellingCheck : MonoBehaviour {
         playerProgress.text = "";
         currentSign.text = "";
         if (newWord.Length > 0) {
-            print("halolo=?=??=");
             // Skal enables når alle hand models virker
             GenerateHandModel(newWord[0].ToString());
             currentSign.text = currentWord[letterIndex].ToString().ToUpper();

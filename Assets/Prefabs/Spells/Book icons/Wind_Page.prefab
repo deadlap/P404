@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: VENTUSH
-  cooldownTime: 1
+  cooldownTime: 2
 --- !u!222 &5240880208143394415
 CanvasRenderer:
   m_ObjectHideFlags: 0

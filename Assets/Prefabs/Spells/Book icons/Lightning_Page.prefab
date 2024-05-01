@@ -400,7 +400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: FULMENTA
-  cooldownTime: 1
+  cooldownTime: 2
 --- !u!222 &5273946243543196807
 CanvasRenderer:
   m_ObjectHideFlags: 0

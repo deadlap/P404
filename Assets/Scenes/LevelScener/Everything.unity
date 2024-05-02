@@ -995,7 +995,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &394778714
 Transform:
   m_ObjectHideFlags: 0
@@ -3483,7 +3483,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1316190859}
   m_LocalRotation: {x: -0.0058513726, y: -0.05268844, z: -0.99713254, w: 0.054003276}
-  m_LocalPosition: {x: 0, y: 0, z: -0.01236}
+  m_LocalPosition: {x: 0, y: 0, z: -0.01238}
   m_LocalScale: {x: 0.009726681, y: 0.009726674, z: 0.009726677}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3492,7 +3492,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -173.932, y: -179.656, z: 6.182007}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0015, y: -0.00372}
+  m_AnchoredPosition: {x: -0.00153, y: -0.00346}
   m_SizeDelta: {x: 2.165852, y: 1.213508}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1316190861
@@ -3515,10 +3515,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "- Find ignisob magien i din bog\n- Tryk p\xE5 symbolet og stav ordet\n-
-    T\xE6nd sterinlyset med magien\n- Saml n\xF8lgen op og l\xE5s d\xF8ren op\n-
-    Lav h\xE5ndformen mod d\xF8ren for at lukke den op.\n*hints kan blive fundet
-    i skuffer med bogstaver p\xE5 h\xE5ndtaget"
+  m_text: "- Find ignisob magien i din bog og \nbrug den til at t\xE6nde stearinlyset\n-
+    Tryk p\xE5 symbolet og stav ordet ved hj\xE6lp af h\xE5ndalfabetet\n* Alle h\xE5ndtegn
+    du bliver vist er spejlvendt af hvordan du skal tegne dem\n- L\xE5s d\xF8ren
+    op med n\xF8glen og lav tegnet som d\xF8ren viser for at \xE5bne den\n*hints
+    kan blive fundet i skuffer med bogstaver p\xE5 h\xE5ndtaget"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 149ce5d09e4d89846b0ef7cdf107bc08, type: 2}
   m_sharedMaterial: {fileID: 7890344804004080623, guid: 149ce5d09e4d89846b0ef7cdf107bc08, type: 2}
@@ -3545,8 +3546,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 1.2
-  m_fontSizeBase: 1.2
+  m_fontSize: 1
+  m_fontSizeBase: 1
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4849,7 +4850,7 @@ PrefabInstance:
       objectReference: {fileID: 24300002, guid: 1fb90daa202bb5646a54eb3125e1d96e, type: 2}
     - target: {fileID: 4779532306343555552, guid: 2138443b7bff7e948ae1598c8ea2b886, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8937930098102812400, guid: 2138443b7bff7e948ae1598c8ea2b886, type: 3}
       propertyPath: m_Name

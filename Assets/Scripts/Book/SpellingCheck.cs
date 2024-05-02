@@ -17,7 +17,7 @@ public class SpellingCheck : MonoBehaviour {
     [SerializeField] TMP_Text currentSign; //The current sign the user needs to perform
     public static event Action DeleteSpellsEvent;
     public static void OnDeleteSpells() => DeleteSpellsEvent?.Invoke();
-
+    string previousSign;
     void Start() {
         gestures.SetActive(true);
     }
@@ -34,11 +34,14 @@ public class SpellingCheck : MonoBehaviour {
 
     void Update() {
         SignedLetterInput(signedText.text);
+        previousSign = signedText.text;
     }
 
     public void SignedLetterInput(string _sign) {
         if(currentWord == null) return;
         if(signedText.text.Length == 0 || currentWord.Length == 0) return;
+        if(signedText.text == previousSign) return;
+
         playerProgress.fontSize = bookSpellText.fontSize;
         _sign = _sign.ToUpper();
         

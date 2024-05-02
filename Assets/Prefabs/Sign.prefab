@@ -702,8 +702,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 1}
-  m_Center: {x: 0, y: 1.5784614, z: -0.02327963}
+  m_Size: {x: 2, y: 2, z: 2.611138}
+  m_Center: {x: 0.0000053928557, y: 1.5784616, z: 0.7822886}
 --- !u!54 &314889161
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1091,8 +1091,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 1}
-  m_Center: {x: 0, y: 1.5784614, z: -0.02327963}
+  m_Size: {x: 2, y: 2, z: 2.611138}
+  m_Center: {x: 0.0000053928557, y: 1.5784616, z: 0.7822886}
 --- !u!54 &100895685
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1337,6 +1337,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectMixer: {fileID: 24100000, guid: 1fb90daa202bb5646a54eb3125e1d96e, type: 2}
+  masterVolumeName: 
+  musicVolumeName: 
   masterText: {fileID: 1978109184}
   musicText: {fileID: 4434395}
   audioChange: 10
@@ -1803,8 +1805,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 1}
-  m_Center: {x: 0, y: 1.5784614, z: -0.02327963}
+  m_Size: {x: 2, y: 2, z: 2.611138}
+  m_Center: {x: 0.0000053928557, y: 1.5784616, z: 0.7822886}
 --- !u!54 &1513057672
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3277,8 +3279,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 1}
-  m_Center: {x: 0, y: 1.5784614, z: -0.02327963}
+  m_Size: {x: 2, y: 2, z: 2.611138}
+  m_Center: {x: 0.0000053928557, y: 1.5784616, z: 0.7822886}
 --- !u!54 &885944798
 Rigidbody:
   m_ObjectHideFlags: 0

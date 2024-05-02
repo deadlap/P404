@@ -44,13 +44,8 @@ public class LevelSelection : MonoBehaviour {
         ChangeLevel(levelCount);
     }
 
-    // void NextLevel(){
-    //     levelCount++;
-    //     ChangeLevel(levelCount);
-    // }
-
     void ChangeLevel(int levelNumber) {
-        if (levelCount < levelNumber)
+        if (levelCount < levelNumber || levelCount > levelNumber)
             levelCount = levelNumber;
         
         foreach (Transform child in gameObject.transform) {

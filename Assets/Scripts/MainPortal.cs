@@ -14,7 +14,6 @@ public class MainPortal : MonoBehaviour
 
     void OnTriggerEnter(Collider other) {
         if (other.CompareTag("NonDominantHand") || other.CompareTag("DominantHand")) {
-
             audioSource.Play();
             LevelSelection.OnChangeLevel(1);
             // SceneChanger.OnChangeScene("Level1");

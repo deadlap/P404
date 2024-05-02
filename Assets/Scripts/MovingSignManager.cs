@@ -17,7 +17,7 @@ public class MovingSignManager : MonoBehaviour
     
     GameObject signPattern;
 
-    float timeLimit = 2f;
+    float timeLimit = 5f;
 
     [SerializeField] Vector3 leftHandedRotation;
 

@@ -6,6 +6,7 @@ using System;
 
 public class LevelSelection : MonoBehaviour
 {
+    public static LevelSelection Instance;
     public static event Action<int> ChangeLevelEvent;
     public static void OnChangeLevel(int level) => ChangeLevelEvent?.Invoke(level);
 
@@ -24,6 +25,7 @@ public class LevelSelection : MonoBehaviour
     
     void Awake()
     {
+        Instance = this;
         levelCount = 0;
         animator = GetComponent<Animator>();
     }
@@ -59,18 +61,18 @@ public class LevelSelection : MonoBehaviour
 
     void BeginLevelChange(int levelNumber)
     {
-        if(isLoading) return;
-        isLoading = true;
         currentLevel = levelNumber;
         if (levelCount < levelNumber || levelCount > levelNumber)
             levelCount = levelNumber;
-        if (gameLoaded || levelCount != 0)
-            animator.SetTrigger("FadeLevel");
-        if (levelCount == 0)
+        if (levelNumber > 0)
+        {
+            LoadingScreen.Instance.PlayAnimation();
+        }
+        if (!gameLoaded)
             ChangeLevel();
     }
 
-    public void ChangeLevel()       //accessed by animator
+    public void ChangeLevel()
     {
         foreach (Transform child in gameObject.transform)
         {
@@ -85,6 +87,5 @@ public class LevelSelection : MonoBehaviour
         newObject.SetActive(true);
         PlayerSpawnPoint.Instance.ResetPlayerPos();
         gameLoaded = true;
-        isLoading = false;
     }
 }

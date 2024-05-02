@@ -34,8 +34,11 @@ public class ChooseHand : MonoBehaviour
     [SerializeField] GameObject startPortal;
     AudioSource audioSource;
 
+    public float handednessScale;
+
     void Awake()
     {
+        handednessScale = 1.0f;
         Instance = this;
         audioSource = GetComponent<AudioSource>();
         rightHandMesh = GameObject.Find("R_Hand");
@@ -103,7 +106,16 @@ public class ChooseHand : MonoBehaviour
         dominantHand = dominantHandGO;
         
         //SpawnTouchPointManager();
-        
+        switch (domHandString) {
+            case "R":
+                handednessScale = 1.0f;
+                break;
+            case "L":
+                handednessScale = -1.0f;
+                break;
+        }
+
+
         //Sætter hvilken hånd spells bliver instantiated i
         SetSpellCreationPoint(dominantHandGO);
 
@@ -181,6 +193,7 @@ public class ChooseHand : MonoBehaviour
         if (bookFollowPoint)
         {
             Destroy(GameObject.Find("Non-Dominant Hand Book Slot(Clone)"));
+            print("bog");
             bookFollowPoint = Instantiate(bookFollowPointPrefab, nonDominantHand.transform.position, nonDominantHand.transform.rotation * Quaternion.Euler(BookFollowPointPos(nonDomHand)), nonDominantHand.transform);
         }
         else

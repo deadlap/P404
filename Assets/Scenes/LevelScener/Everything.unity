@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 870473227}
-  m_IndirectSpecularColor: {r: 0.19022748, g: 0.5924103, b: 0.7732436, a: 1}
+  m_IndirectSpecularColor: {r: 0.19023407, g: 0.59241986, b: 0.7722832, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2641,6 +2641,7 @@ MonoBehaviour:
   leftPos: {x: 20, y: 0, z: 180}
   rightPos: {x: 20, y: 0, z: 180}
   startPortal: {fileID: 232766589}
+  handednessScale: 0
 --- !u!23 &1029352599
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3942,7 +3943,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1712874196
 Transform:
   m_ObjectHideFlags: 0

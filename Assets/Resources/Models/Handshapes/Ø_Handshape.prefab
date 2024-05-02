@@ -295,6 +295,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3390000565121502088}
+  - component: {fileID: 5755049951608914142}
   m_Layer: 0
   m_Name: "\xD8_Handshape"
   m_TagString: Untagged
@@ -321,6 +322,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -90}
+--- !u!114 &5755049951608914142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2612196777440350514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2862d13fb4fb3e4aa769b5539868130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2700939878610494439
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,7 +731,6 @@ GameObject:
   - component: {fileID: 6155511774025680373}
   - component: {fileID: 4725698734980988869}
   - component: {fileID: 5685054432950743736}
-  - component: {fileID: 7951573283469999492}
   - component: {fileID: 2506495049307901323}
   m_Layer: 0
   m_Name: mesh.014
@@ -792,18 +804,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7951573283469999492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6795315220249686856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2862d13fb4fb3e4aa769b5539868130, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &2506495049307901323
 Animator:
   serializedVersion: 5
@@ -1091,11 +1091,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f5f425914066c1c4f81ad805dcfe4f51, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.99
+      value: -1.88
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f5f425914066c1c4f81ad805dcfe4f51, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.25
+      value: 7.55
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f5f425914066c1c4f81ad805dcfe4f51, type: 3}
       propertyPath: m_LocalRotation.w

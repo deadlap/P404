@@ -3482,17 +3482,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1316190859}
-  m_LocalRotation: {x: -0.0038263798, y: -0.04286383, z: -0.9976151, w: 0.053964537}
-  m_LocalPosition: {x: 0, y: 0, z: -0.0122305555}
+  m_LocalRotation: {x: -0.0043289852, y: -0.052178383, z: -0.9971699, w: 0.053953044}
+  m_LocalPosition: {x: 0, y: 0, z: -0.01228}
   m_LocalScale: {x: 0.008333543, y: 0.008343406, z: 0.009985236}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2122638656}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 2, y: -141.8, z: 0.04}
+  m_LocalEulerAnglesHint: {x: -174, y: -179.827, z: 6.1849976}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0011290312, y: -0.003164053}
+  m_AnchoredPosition: {x: -0.00117, y: -0.00275}
   m_SizeDelta: {x: 4, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1316190861
@@ -3520,7 +3520,8 @@ MonoBehaviour:
     symbolet og stav ordet ved hj\xE6lp af  h\xE5ndalfabetet.\n- L\xE5s d\xF8ren
     op med n\xF8glen og lav tegnet som d\xF8ren viser for \nat \xE5bne den.\n* Hints
     kan blive fundet i skuffer med bogstaver p\xE5 h\xE5ndtaget.\n* Lydniveauet kan
-    justeres p\xE5 skiltet samt at genstarte banen.\n"
+    justeres p\xE5 skiltet samt at genstarte banen.\n* Potalerne kan interageres
+    med ved brug af h\xE6nderne.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 149ce5d09e4d89846b0ef7cdf107bc08, type: 2}
   m_sharedMaterial: {fileID: 7890344804004080623, guid: 149ce5d09e4d89846b0ef7cdf107bc08, type: 2}
@@ -4340,17 +4341,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1800968044}
-  m_LocalRotation: {x: 0.011858463, y: -0.042024452, z: -0.99758124, w: 0.05408392}
-  m_LocalPosition: {x: 0, y: 0, z: -0.011635862}
+  m_LocalRotation: {x: 0.011249715, y: -0.05302583, z: -0.9970738, w: 0.053903487}
+  m_LocalPosition: {x: 0, y: 0, z: -0.01165}
   m_LocalScale: {x: 0.008333841, y: 0.00834341, z: 0.0099848015}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2122638656}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 2, y: -140, z: 0.04}
+  m_LocalEulerAnglesHint: {x: -174, y: -181.622, z: 6.274002}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00018203259, y: -0.01051724}
+  m_AnchoredPosition: {x: -0.00052, y: -0.01059}
   m_SizeDelta: {x: 1.00219, y: 0.2702}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1800968046

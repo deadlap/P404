@@ -5,6 +5,7 @@ public class LoadingScreen : MonoBehaviour
 {
     public static LoadingScreen Instance;
     Animator animator;
+    bool isPlaying;
     void Awake()
     {
         Instance = this;
@@ -18,11 +19,16 @@ public class LoadingScreen : MonoBehaviour
 
     public void PlayAnimation()
     {
-        animator.SetTrigger("FadeLevel");
+        if (!isPlaying)
+        {
+            animator.SetTrigger("FadeLevel");
+            isPlaying = true;
+        }
     }
 
     public void LoadLevel() //accessed by animator
     {
         LevelSelection.Instance.ChangeLevel();
+        isPlaying = false;
     }
 }

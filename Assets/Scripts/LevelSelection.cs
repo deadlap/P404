@@ -32,7 +32,7 @@ public class LevelSelection : MonoBehaviour
 
     void Start()
     {
-        ReloadLevel();
+        //ReloadLevel();
     }
 
     void OnEnable()
@@ -64,10 +64,8 @@ public class LevelSelection : MonoBehaviour
         currentLevel = levelNumber;
         if (levelCount < levelNumber || levelCount > levelNumber)
             levelCount = levelNumber;
-        if (levelNumber > 0)
-        {
+        if (gameLoaded || levelNumber > 0) 
             LoadingScreen.Instance.PlayAnimation();
-        }
         if (!gameLoaded)
             ChangeLevel();
     }

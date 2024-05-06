@@ -6,6 +6,7 @@ using System;
 public class MainPortal : MonoBehaviour
 {
     AudioSource audioSource;
+    bool usingPortal;
 
     void Start()
     {
@@ -13,9 +14,10 @@ public class MainPortal : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider other) {
-        if (other.CompareTag("NonDominantHand") || other.CompareTag("DominantHand")) {
+        if (other.CompareTag("NonDominantHand") || other.CompareTag("DominantHand") && !usingPortal) {
             audioSource.Play();
             LevelSelection.OnChangeLevel(1);
+            usingPortal = true;
             // SceneChanger.OnChangeScene("Level1");
         }
     }

@@ -7,7 +7,7 @@ public class Door : MonoBehaviour {
     [SerializeField] string letterToOpen;
     [SerializeField] Animator animator;
     bool openDoor;
-
+    bool usingPortal;
     AudioSource audioSource;
     [SerializeField] AudioClip[] audioClips;
     void OnEnable() {
@@ -44,11 +44,12 @@ public class Door : MonoBehaviour {
             doorActive = true;
             ActivateableSigns.OnEnableSpecialSign(letterToOpen);
         }
-        if ((other.CompareTag("NonDominantHand") || other.CompareTag("DominantHand")) && portalActive) {
+        if ((other.CompareTag("NonDominantHand") || other.CompareTag("DominantHand")) && portalActive && !usingPortal) {
             
             //Activate transition screen kode
             audioSource.PlayOneShot(audioClips[1]);
             LevelSelection.OnChangeLevel(nextLevel);
+            usingPortal = true;
         }
     }
 }

@@ -1048,35 +1048,35 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 391097432548773753, guid: 09a3cba41a6f9704fb55f2daf9e658aa, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1549380811376470267, guid: 09a3cba41a6f9704fb55f2daf9e658aa, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1549380811465060898, guid: 09a3cba41a6f9704fb55f2daf9e658aa, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1549380811952917857, guid: 09a3cba41a6f9704fb55f2daf9e658aa, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1549380812036467983, guid: 09a3cba41a6f9704fb55f2daf9e658aa, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1549380812371127357, guid: 09a3cba41a6f9704fb55f2daf9e658aa, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1549380812473514831, guid: 09a3cba41a6f9704fb55f2daf9e658aa, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1549380812996741051, guid: 09a3cba41a6f9704fb55f2daf9e658aa, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3997803896802901090, guid: 09a3cba41a6f9704fb55f2daf9e658aa, type: 3}
       propertyPath: m_Name
@@ -1482,7 +1482,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &450693634
 Transform:
   m_ObjectHideFlags: 0
@@ -6069,6 +6069,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1038025191}
     m_Modifications:
+    - target: {fileID: 217661976280956293, guid: 0e65392e67a2f5a4398812c5b8dff74c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 328748578125408849, guid: 0e65392e67a2f5a4398812c5b8dff74c, type: 3}
       propertyPath: m_LocalScale.x
       value: 2

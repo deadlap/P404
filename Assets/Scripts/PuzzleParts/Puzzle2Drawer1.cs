@@ -6,11 +6,10 @@ using UnityEngine;
 public class Puzzle2Drawer1 : MonoBehaviour {
     [SerializeField] string signToOpen;
     [SerializeField] Animator animator;
-    
+    [SerializeField] bool hasKey;
     AudioSource audioSource;
 
-    void Start()
-    {
+    void Start() {
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -22,14 +21,13 @@ public class Puzzle2Drawer1 : MonoBehaviour {
         ActivateableSigns.SpecialSignEvent -= ReceiveSign;
     }
 
-    void Update() {
-        
-    }
-
     void ReceiveSign(string sign){
         if (sign == signToOpen) {
             animator.SetTrigger("Open");
-            audioSource.Play();
+            if (audioSource != null)
+                audioSource.Play();
+            if (hasKey) {}
+                Key.OnActivatePickup();
         }
         HandModelGenerator.OnDeleteHandModel(signToOpen);
     }

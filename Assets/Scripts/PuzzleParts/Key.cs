@@ -33,6 +33,7 @@ public class Key : MonoBehaviour {
         if (other.CompareTag("DominantHand") && canBePickedUp && !pickedUp) {
             pickedUp = true;
             gameObject.transform.SetParent(other.transform);
+            gameObject.transform.position = pickupPosition;
             // var copy = Instantiate(gameObject, other.gameObject.transform, true);
             // Destroy(gameObject);
         }

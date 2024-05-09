@@ -273,10 +273,10 @@ AudioSource:
   m_GameObject: {fileID: 5482567445913336891}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 1fb90daa202bb5646a54eb3125e1d96e, type: 2}
   m_audioClip: {fileID: 8300000, guid: c7d72524f8922ea4787cc4c7e5f2b7cf, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -374,6 +374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   signToOpen: W
   animator: {fileID: 5802491673017357054}
+  hasKey: 0
 --- !u!95 &5802491673017357054 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 6839537935375654197, guid: a78a17a33136ee44db3dc44360845ef6, type: 3}
@@ -426,20 +427,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   signToActivate: W
---- !u!114 &5319299825871821105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7680160512243947675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 550a2b6849840094c97dbbdd80221e09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  signToOpen: W
-  animator: {fileID: 5802491673017357054}
 --- !u!4 &9001536690345007257 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8252737472806229842, guid: a78a17a33136ee44db3dc44360845ef6, type: 3}
@@ -722,15 +709,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6a059e586ed47184a90a574095b73f6d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.6249998
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6a059e586ed47184a90a574095b73f6d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.6249999
+      value: 0.42424244
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6a059e586ed47184a90a574095b73f6d, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.5000002
+      value: 0.40404043
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6a059e586ed47184a90a574095b73f6d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -771,6 +758,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 6a059e586ed47184a90a574095b73f6d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6a059e586ed47184a90a574095b73f6d, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6a059e586ed47184a90a574095b73f6d, type: 3}
       propertyPath: m_Name

@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GlassBreaking : MonoBehaviour {
+public class Glass2 : MonoBehaviour {
     [SerializeField] GameObject glass;
     [SerializeField] GameObject brokenGlass;
     [SerializeField] BoxCollider collider;
     [SerializeField] bool isBroken;
+    [SerializeField] BoxCollider vaseCollider;
 
     AudioSource audioSource;
     void Start() {
@@ -22,7 +23,7 @@ public class GlassBreaking : MonoBehaviour {
             brokenGlass.SetActive(true);
             isBroken = true;
             audioSource.Play();
-            Key.OnActivatePickup();
+            vaseCollider.enabled = true;
         }
     }
 }

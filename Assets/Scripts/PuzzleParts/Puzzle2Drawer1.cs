@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Puzzle2Drawer1 : MonoBehaviour {
+public class Puzzle2Drawer1 : MonoBehaviour { //Should probably have been named hint drawer or something
     [SerializeField] string signToOpen;
     [SerializeField] Animator animator;
     [SerializeField] bool hasKey;

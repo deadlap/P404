@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 870473227}
-  m_IndirectSpecularColor: {r: 0.191991, g: 0.5946723, b: 0.7773275, a: 1}
+  m_IndirectSpecularColor: {r: 0.19022748, g: 0.5924103, b: 0.7732436, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4442,6 +4442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   touchPointManagerPrefab: {fileID: 1223355069409145455, guid: f31c9546e07ae4b4884827f59508019f, type: 3}
   bookFollowPointPrefab: {fileID: 4233948336606793639, guid: abe1b4bacbb4e47409074e16fc6b20f0, type: 3}
+  book: {fileID: 3199904229107605744, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
   handedness: 
   chargeAnimation: {fileID: 1767208431}
   choosingDuration: 2

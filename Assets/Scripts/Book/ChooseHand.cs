@@ -12,7 +12,9 @@ public class ChooseHand : MonoBehaviour
     
     GameObject nonDominantHand;
     [SerializeField] GameObject bookFollowPointPrefab;
+    [SerializeField] GameObject book;
     GameObject bookFollowPoint;
+    GameObject bookSpawnGraphic;
 
     public string handedness;
 
@@ -23,8 +25,9 @@ public class ChooseHand : MonoBehaviour
     
     bool isChoosingHand;
     bool hasChosenHand;
+    bool doneChoosing;
 
-    float fillThreshold = 0.0001f;
+    float fillThreshold = 0.001f;
     [SerializeField] Vector3 leftPos;
     [SerializeField] Vector3 rightPos;
 
@@ -35,7 +38,7 @@ public class ChooseHand : MonoBehaviour
     AudioSource audioSource;
 
     public float handednessScale;
-
+    
     void Awake()
     {
         handednessScale = 1.0f;
@@ -94,16 +97,21 @@ public class ChooseHand : MonoBehaviour
         if (other.gameObject.name is "L_Palm" or "R_Palm")
         {
             isChoosingHand = false;
+            hasChosenHand = false;
+            doneChoosing = false;
         }
     }
 
     void HandChosen(GameObject dominantHandGO, string domHandString, string nonDomHandString)
     {
         if(!hasChosenHand) return;
-        
+        if(doneChoosing) return;
+
         handedness = domHandString;
         dominantHandGO.gameObject.tag = "DominantHand";
         dominantHand = dominantHandGO;
+        nonDominantHand = GameObject.Find($"{nonDomHandString}_Palm");
+        nonDominantHand.tag = "NonDominantHand";
         
         //SpawnTouchPointManager();
         switch (domHandString) {
@@ -118,15 +126,14 @@ public class ChooseHand : MonoBehaviour
 
         //Sætter hvilken hånd spells bliver instantiated i
         SetSpellCreationPoint(dominantHandGO);
-
-        nonDominantHand = GameObject.Find($"{nonDomHandString}_Palm");
-        nonDominantHand.tag = "NonDominantHand";
         
         ShowHand(domHandString, nonDomHandString);
-        SpawnBookPoint(nonDomHandString);
+        
+        var delay = 0.1f; //small delay to make sure other functions are loaded completely before calling
+        Invoke(nameof(SpawnBookGraphic), delay);
         if(startPortal)
             startPortal.SetActive(true);
-        hasChosenHand = false;
+        doneChoosing = true;
     }
 
     void ShowHand(string domHandString, string nonDomHandString)
@@ -142,21 +149,11 @@ public class ChooseHand : MonoBehaviour
                 leftHandMesh.SetActive(true);
                 break;
         }
-    //        if(GameObject.Find($"{nonDomHandString}_Hand") == null) return;
-        //GameObject.Find($"{nonDomHandString}_Hand").GetComponent<SkinnedMeshRenderer>().enabled = false;
         GameObject.Find($"{nonDomHandString}_IndexTip").tag = "Untagged";
         GameObject.Find($"{nonDomHandString}_MiddleTip").tag = "Untagged";
-        //GameObject.Find($"{nonDomHandString}_RingTip").tag = "Untagged";
-        //GameObject.Find($"{nonDomHandString}_LittleTip").tag = "Untagged";
-        //GameObject.Find($"{nonDomHandString}_ThumbTip").tag = "Untagged";
         
-      //      if(GameObject.Find($"{domHandString}_Hand") == null) return;
-        //GameObject.Find($"{domHandString}_Hand").GetComponent<SkinnedMeshRenderer>().enabled = true;
         GameObject.Find($"{domHandString}_IndexTip").tag = "FingerTip";
         GameObject.Find($"{domHandString}_MiddleTip").tag = "FingerTip";
-        //GameObject.Find($"{domHandString}_RingTip").tag = "FingerTip";
-        //GameObject.Find($"{domHandString}_LittleTip").tag = "FingerTip";
-        //GameObject.Find($"{domHandString}_ThumbTip").tag = "FingerTip";
     }
 
     void SetSpellCreationPoint(GameObject dominantHandGO)
@@ -186,26 +183,28 @@ public class ChooseHand : MonoBehaviour
             touchPointManager = Instantiate(touchPointManagerPrefab, dominantHand.transform.position, Quaternion.identity, dominantHand.transform);
         }
     }
-    
-    void SpawnBookPoint(string nonDomHand)
+
+    void SpawnBookGraphic()
     {
-        
         if (bookFollowPoint)
         {
             Destroy(GameObject.Find("Non-Dominant Hand Book Slot(Clone)"));
-            print("bog");
-            bookFollowPoint = Instantiate(bookFollowPointPrefab, nonDominantHand.transform.position, nonDominantHand.transform.rotation * Quaternion.Euler(BookFollowPointPos(nonDomHand)), nonDominantHand.transform);
+            Destroy(GameObject.Find("Book(Clone)"));
         }
-        else
-        {
-            bookFollowPoint = Instantiate(bookFollowPointPrefab, nonDominantHand.transform.position, nonDominantHand.transform.rotation * Quaternion.Euler(BookFollowPointPos(nonDomHand)), nonDominantHand.transform);
-        }
+        Instantiate(book, dominantHand.transform.position, dominantHand.transform.rotation);
+        Invoke(nameof(SpawnBookPoint), 1f);
     }
-    Vector3 BookFollowPointPos(string hand)
+
+    void SpawnBookPoint()
     {
-        if (hand == "L_Palm")
-            return leftPos;
-        else
+        bookFollowPoint = Instantiate(bookFollowPointPrefab, nonDominantHand.transform.position, nonDominantHand.transform.rotation * Quaternion.Euler(BookFollowPointPos()), nonDominantHand.transform);
+    }
+    Vector3 BookFollowPointPos()
+    {
+        if (handedness == "L")
+        {
             return rightPos;
+        }
+        return leftPos;
     }
 }

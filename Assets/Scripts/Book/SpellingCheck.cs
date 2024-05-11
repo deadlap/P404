@@ -20,6 +20,8 @@ public class SpellingCheck : MonoBehaviour {
     string previousSign;
     void Start() {
         gestures.SetActive(true);
+        signedText = GameObject.Find("SignText").GetComponent<TMP_Text>();
+        spellCreationPosition = GameObject.Find("SpellCreationPoint");
     }
 
     void OnEnable() {

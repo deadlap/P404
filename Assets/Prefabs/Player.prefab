@@ -2633,6 +2633,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Book
       objectReference: {fileID: 0}
+    - target: {fileID: 3199904229107605744, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3491088556678638959, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: cooldownTime
       value: 0.5

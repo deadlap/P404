@@ -74,6 +74,7 @@ public class PlayerHint : MonoBehaviour
     public void ResetTimer()
     {
         isPalmFacingPlayer = false;
+        hintText.text = "";
         time = 0;
         print("reset time");
         if(coroutineTimer != null)

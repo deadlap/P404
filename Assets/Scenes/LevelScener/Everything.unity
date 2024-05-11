@@ -789,7 +789,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &224075975
 Transform:
   m_ObjectHideFlags: 0
@@ -3783,7 +3783,7 @@ VFXRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1116072276}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -4017,7 +4017,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1303266546000997737, guid: 63022071709517845b3e6cfbce10d241, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1303266546000997737, guid: 63022071709517845b3e6cfbce10d241, type: 3}
       propertyPath: m_LocalScale.x
@@ -4734,11 +4734,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &1335442389 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 1335442389, guid: e9faa256fa0811b40b4929a59281c8a3, type: 3}
-  m_PrefabInstance: {fileID: 585161362640667587}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1398800881
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5097,6 +5092,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1718842442 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 585161363459121720, guid: e9faa256fa0811b40b4929a59281c8a3, type: 3}
+  m_PrefabInstance: {fileID: 585161362640667587}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1758969622
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5572,35 +5572,35 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 391097432548773753, guid: 09a3cba41a6f9704fb55f2daf9e658aa, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1549380811376470267, guid: 09a3cba41a6f9704fb55f2daf9e658aa, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1549380811465060898, guid: 09a3cba41a6f9704fb55f2daf9e658aa, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1549380811952917857, guid: 09a3cba41a6f9704fb55f2daf9e658aa, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1549380812036467983, guid: 09a3cba41a6f9704fb55f2daf9e658aa, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1549380812371127357, guid: 09a3cba41a6f9704fb55f2daf9e658aa, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1549380812473514831, guid: 09a3cba41a6f9704fb55f2daf9e658aa, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1549380812996741051, guid: 09a3cba41a6f9704fb55f2daf9e658aa, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3997803896802901090, guid: 09a3cba41a6f9704fb55f2daf9e658aa, type: 3}
       propertyPath: m_Name
@@ -6671,7 +6671,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4215461713806627810, guid: d41a97188075f5e40a6a61bf8104a0a1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7941078951842140667, guid: d41a97188075f5e40a6a61bf8104a0a1, type: 3}
       propertyPath: hasKey
@@ -6740,7 +6740,7 @@ PrefabInstance:
     - target: {fileID: 1335442392, guid: e9faa256fa0811b40b4929a59281c8a3, type: 3}
       propertyPath: animator
       value: 
-      objectReference: {fileID: 1335442389}
+      objectReference: {fileID: 0}
     - target: {fileID: 585161362468045996, guid: e9faa256fa0811b40b4929a59281c8a3, type: 3}
       propertyPath: m_Name
       value: Puzzle4
@@ -6789,6 +6789,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 585161363459121717, guid: e9faa256fa0811b40b4929a59281c8a3, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1718842442}
     - target: {fileID: 3260986985696623468, guid: e9faa256fa0811b40b4929a59281c8a3, type: 3}
       propertyPath: canBePickedUp
       value: 0

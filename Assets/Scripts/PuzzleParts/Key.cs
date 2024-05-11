@@ -8,6 +8,7 @@ public class Key : MonoBehaviour {
     [SerializeField] bool pickedUp;
     [SerializeField] bool canBePickedUp;
     [SerializeField] Vector3 pickupPosition;
+    [SerializeField] Vector3 scaleOnPickup;
 
     public static event Action ActivatePickup;
     public static void OnActivatePickup() => ActivatePickup?.Invoke();
@@ -32,10 +33,12 @@ public class Key : MonoBehaviour {
     void OnTriggerEnter(Collider other) {
         if (other.CompareTag("DominantHand") && canBePickedUp && !pickedUp) {
             pickedUp = true;
-            gameObject.transform.position = pickupPosition;
-            gameObject.transform.SetParent(other.transform);
-            // var copy = Instantiate(gameObject, other.gameObject.transform, true);
-            // Destroy(gameObject);
+            // gameObject.transform.position = pickupPosition;
+            // gameObject.transform.SetParent(other.transform);
+            var copy = Instantiate(gameObject, other.gameObject.transform, true);
+            copy.transform.localScale = scaleOnPickup;
+            Destroy(gameObject);
+
         }
     }
 }

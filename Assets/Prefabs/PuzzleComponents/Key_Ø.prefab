@@ -113,3 +113,4 @@ MonoBehaviour:
   pickedUp: 0
   canBePickedUp: 0
   pickupPosition: {x: 0, y: 0, z: 0}
+  scaleOnPickup: {x: 0.09, y: 0.09, z: 0.09}

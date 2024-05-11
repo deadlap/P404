@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HandTrackingEvents: {fileID: 4458964597673814741}
-  m_HandShapeOrPose: {fileID: 11400000, guid: c1e2a9868684fde43b2b9f22cba914d7, type: 2}
+  m_HandShapeOrPose: {fileID: 11400000, guid: 5d38a3fa7e5b18942b68eb3dfaf473ca, type: 2}
   m_TargetTransform: {fileID: 0}
   m_GesturePerformed:
     m_PersistentCalls:
@@ -2645,7 +2645,7 @@ PrefabInstance:
     - target: {fileID: 3055187893561816984, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_HandShapeOrPose
       value: 
-      objectReference: {fileID: 11400000, guid: 5d38a3fa7e5b18942b68eb3dfaf473ca, type: 2}
+      objectReference: {fileID: 11400000, guid: 5db2da5276b75ce47bd79251755d7e6b, type: 2}
     - target: {fileID: 3055187893561816984, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
       propertyPath: m_GestureEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

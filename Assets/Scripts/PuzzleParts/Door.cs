@@ -21,7 +21,6 @@ public class Door : MonoBehaviour {
     void Start() {
         audioSource = GetComponent<AudioSource>();
         portalActive = false;
-        doorActive = false;
         openDoor = false;
     }
     void Update(){
@@ -39,9 +38,8 @@ public class Door : MonoBehaviour {
     }
 
     void OnTriggerEnter(Collider other) {
-        if (other.CompareTag("Key") && !doorActive) {
+        if (other.CompareTag("Key")) {
             Destroy(other.gameObject);
-            doorActive = true;
             ActivateableSigns.OnEnableSpecialSign(letterToOpen);
         }
         if ((other.CompareTag("NonDominantHand") || other.CompareTag("DominantHand")) && portalActive && !usingPortal) {

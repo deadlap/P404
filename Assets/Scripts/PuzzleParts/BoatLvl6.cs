@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BoatLvl6 : MonoBehaviour {
     [SerializeField] Candle candle;
-    [SerializeField] Animator animator;
-    [SerializeField] bool IsSailing;
+    public Animator animator;
+    public bool IsSailing;
     void Update() {
         animator.SetBool("fire", candle.isBurning);
     }

@@ -21,10 +21,10 @@ public class Key : MonoBehaviour {
         ActivatePickup -= MakeInteractible;
     }
 
-    void Start() {
-        pickedUp = false;
-        canBePickedUp = false;
-    }
+    // void Start() {
+    //     pickedUp = false;
+    //     canBePickedUp = false;
+    // }
 
     void MakeInteractible(){
         canBePickedUp = true;

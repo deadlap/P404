@@ -13,6 +13,7 @@ public class PlayerHint : MonoBehaviour
     [SerializeField] float timeBeforeHint;
     [SerializeField] float resetTime;
     Camera camera;
+    public bool isPalmFacingPlayer;
 
     void Start()
     {
@@ -23,10 +24,17 @@ public class PlayerHint : MonoBehaviour
     void Update()
     {
         transform.LookAt(camera.transform);
+        BeginCounting();
     }
 
     public void PalmFacingPlayer()
     {
+        isPalmFacingPlayer = true;
+    }
+    
+    void BeginCounting()
+    {
+        if(!isPalmFacingPlayer) return;
         print("palm facing player");
         time += Time.deltaTime;
         if (time > timeBeforeHint)
@@ -65,6 +73,7 @@ public class PlayerHint : MonoBehaviour
 
     public void ResetTimer()
     {
+        isPalmFacingPlayer = false;
         time = 0;
         print("reset time");
         if(coroutineTimer != null)

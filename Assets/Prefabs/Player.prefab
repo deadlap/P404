@@ -158,6 +158,7 @@ MonoBehaviour:
   hintText: {fileID: 871088439902812917}
   timeBeforeHint: 2
   resetTime: 10
+  isPalmFacingPlayer: 0
 --- !u!1 &3187842203090640788
 GameObject:
   m_ObjectHideFlags: 0

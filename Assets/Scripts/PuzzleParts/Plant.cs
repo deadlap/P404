@@ -9,6 +9,12 @@ public class Plant : MonoBehaviour {
     [SerializeField] Animator animator;
     public static event Action GrowPlantEvent;
     public static void OnGrowPlant() => GrowPlantEvent?.Invoke();
+    [SerializeField] AudioClip[] audioClips;
+    AudioSource audioSource;
+
+    void Start() {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     void OnEnable() {
         GrowPlantEvent += Grow;
@@ -21,6 +27,7 @@ public class Plant : MonoBehaviour {
         if (other.CompareTag("Fire") && grown && !burnt) {
             SpellingCheck.OnDeleteSpells();
             animator.SetTrigger("Burn");
+            audioSource.PlayOneShot(audioClips[1]);
             burnt = true;
         }
     }
@@ -29,6 +36,7 @@ public class Plant : MonoBehaviour {
         if (!burnt && !grown){
             SpellingCheck.OnDeleteSpells();
             animator.SetTrigger("Grow");
+            audioSource.PlayOneShot(audioClips[0]);
             grown = true;
         }
     }

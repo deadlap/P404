@@ -249,6 +249,18 @@ MonoBehaviour:
   m_GestureEnded:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 7676966743491526709}
+        m_TargetAssemblyTypeName: PlayerHint, Assembly-CSharp
+        m_MethodName: ResetTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 3187842205126607894}
         m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
         m_MethodName: set_text
@@ -288,7 +300,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2671942351201385848}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.838, z: 2.154}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -317,8 +329,8 @@ MonoBehaviour:
   - "H\xE5ndtegnstip #6"
   - "H\xE5ndtegnstip #7"
   hintText: {fileID: 6293749660563463177}
-  timeBeforeHint: 15
-  resetTime: 30
+  timeBeforeHint: 2
+  resetTime: 10
 --- !u!1 &3187842203090640788
 GameObject:
   m_ObjectHideFlags: 0

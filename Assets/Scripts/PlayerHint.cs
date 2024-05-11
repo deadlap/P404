@@ -12,10 +12,17 @@ public class PlayerHint : MonoBehaviour
     Coroutine coroutineTimer;
     [SerializeField] float timeBeforeHint;
     [SerializeField] float resetTime;
+    Camera camera;
 
     void Start()
     {
         hintText.text = "";
+        camera = Camera.main;
+    }
+
+    void Update()
+    {
+        transform.LookAt(camera.transform);
     }
 
     public void PalmFacingPlayer()
@@ -32,7 +39,7 @@ public class PlayerHint : MonoBehaviour
     
     void GiveHint()
     {
-        if (hintCount > hints.Length)
+        if (hintCount >= hints.Length)
         {
             hintCount = 0;
         }
@@ -52,11 +59,14 @@ public class PlayerHint : MonoBehaviour
     IEnumerator TimeLimit(float time)
     {
         yield return new WaitForSeconds(time);
+        
         ResetTimer();
     }
 
-    void ResetTimer()
+    public void ResetTimer()
     {
+        time = 0;
+        print("reset time");
         if(coroutineTimer != null)
             StopCoroutine(coroutineTimer);
         coroutineTimer = null;

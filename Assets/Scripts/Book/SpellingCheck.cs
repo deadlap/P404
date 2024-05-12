@@ -18,10 +18,18 @@ public class SpellingCheck : MonoBehaviour {
     public static event Action DeleteSpellsEvent;
     public static void OnDeleteSpells() => DeleteSpellsEvent?.Invoke();
     string previousSign;
+
+    AudioSource audioSource;
+    [SerializeField] AudioClip[] terrackClips;
+    [SerializeField] AudioClip[] ignisobClips;
+    [SerializeField] AudioClip[] fulmentaClips;
+    [SerializeField] AudioClip[] aquapyClips;
+    [SerializeField] AudioClip[] ventushClips;
     void Start() {
         gestures.SetActive(true);
         signedText = GameObject.Find("SignText").GetComponent<TMP_Text>();
         spellCreationPosition = GameObject.Find("SpellCreationPoint");
+        audioSource = GetComponent<AudioSource>();
     }
 
     void OnEnable() {
@@ -57,6 +65,7 @@ public class SpellingCheck : MonoBehaviour {
         }
 
         if (sign == currentWord[letterIndex].ToString().ToUpper()){
+            AudioFeedback(currentWord);
             letterIndex++;
             //kode der genererer det næste sign og giver positiv feedback ting
             if (letterIndex >= currentWord.Length) {
@@ -114,4 +123,28 @@ public class SpellingCheck : MonoBehaviour {
         DeleteSpells();
         GameObject gameobject = Instantiate(Resources.Load("Spells/" + currentWord), spellCreationPosition.transform, false) as GameObject;
     }
+
+    void AudioFeedback(string word)
+    {
+        switch (word.ToLower())
+        {
+            case "terrack":
+                audioSource.PlayOneShot(terrackClips[letterIndex]);
+                break;
+            case "ignisob":
+                audioSource.PlayOneShot(ignisobClips[letterIndex]);
+                break;
+            case "fulmenta":
+                audioSource.PlayOneShot(fulmentaClips[letterIndex]);
+                break;
+            case "aquapy":
+                audioSource.PlayOneShot(aquapyClips[letterIndex]);
+                break;
+            case "ventush":
+                audioSource.PlayOneShot(ventushClips[letterIndex]);
+                break;
+        }
+    }
+    
+    
 }

@@ -100,7 +100,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Portalerne kan interageres med ved brug af h\xE6nderne."
+  m_text: "Portalerne interageres med ved brug af h\xE6nderne."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 149ce5d09e4d89846b0ef7cdf107bc08, type: 2}
   m_sharedMaterial: {fileID: 7890344804004080623, guid: 149ce5d09e4d89846b0ef7cdf107bc08, type: 2}
@@ -445,7 +445,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Alle h\xE5ndtegn af bogstaverne er vist spejlvendt af hvordan du skal
-    ud\xF8ve dem."
+    lave dem."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 149ce5d09e4d89846b0ef7cdf107bc08, type: 2}
   m_sharedMaterial: {fileID: 7890344804004080623, guid: 149ce5d09e4d89846b0ef7cdf107bc08, type: 2}
@@ -1382,6 +1382,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a871e98fbe20268438376a9e9f86612a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0722d669602f316488f4f5c1eeb8f57e, type: 2}
     - target: {fileID: 919132149155446097, guid: a871e98fbe20268438376a9e9f86612a, type: 3}
       propertyPath: m_Name
       value: "H\xE5ndtegn"

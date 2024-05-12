@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minTime: 2
-  maxTime: 30
+  maxTime: 50
   audioClips:
   - {fileID: 8300000, guid: d85f9c68b8a4b62489f0e5b9404b9783, type: 3}
   - {fileID: 8300000, guid: b33abff67c105d940936dae20455a128, type: 3}
@@ -100,7 +100,7 @@ AudioSource:
   m_GameObject: {fileID: 4642766789368928522}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 1fb90daa202bb5646a54eb3125e1d96e, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.65
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minTime: 2
-  maxTime: 30
+  maxTime: 50
   audioClips:
   - {fileID: 8300000, guid: d85f9c68b8a4b62489f0e5b9404b9783, type: 3}
   - {fileID: 8300000, guid: b33abff67c105d940936dae20455a128, type: 3}
@@ -248,7 +248,7 @@ AudioSource:
   m_GameObject: {fileID: 4717811008172955395}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 1fb90daa202bb5646a54eb3125e1d96e, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.65
@@ -1838,7 +1838,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minTime: 2
-  maxTime: 30
+  maxTime: 50
   audioClips:
   - {fileID: 8300000, guid: d85f9c68b8a4b62489f0e5b9404b9783, type: 3}
   - {fileID: 8300000, guid: b33abff67c105d940936dae20455a128, type: 3}
@@ -1853,7 +1853,7 @@ AudioSource:
   m_GameObject: {fileID: 6771521227959234418}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 1fb90daa202bb5646a54eb3125e1d96e, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.65

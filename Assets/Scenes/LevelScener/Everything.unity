@@ -7327,6 +7327,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3126878977057627164, guid: 09a3cba41a6f9704fb55f2daf9e658aa, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 1fb90daa202bb5646a54eb3125e1d96e, type: 2}
     - target: {fileID: 3997803896802901090, guid: 09a3cba41a6f9704fb55f2daf9e658aa, type: 3}
       propertyPath: m_Name
       value: TowerScenery

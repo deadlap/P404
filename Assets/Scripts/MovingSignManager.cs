@@ -39,6 +39,7 @@ public class MovingSignManager : MonoBehaviour
     void Start()
     {
         recognisedSign = GameObject.Find("SpecialSignText").GetComponent<TMP_Text>();
+        head = GameObject.Find("Main Camera");
     }
 
     void Update()

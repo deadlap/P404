@@ -444,8 +444,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Alle h\xE5ndtegn (bogstaver) er vist spejlvendt af hvordan du skal tegne
-    dem."
+  m_text: "Alle h\xE5ndtegn af bogstaverne er vist spejlvendt af hvordan du skal
+    ud\xF8ve dem."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 149ce5d09e4d89846b0ef7cdf107bc08, type: 2}
   m_sharedMaterial: {fileID: 7890344804004080623, guid: 149ce5d09e4d89846b0ef7cdf107bc08, type: 2}

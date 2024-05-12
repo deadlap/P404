@@ -83,11 +83,13 @@ public class ChooseHand : MonoBehaviour
         {
             case "L_Palm":
                 HandChosen(other.gameObject, "L", "R");
-                GameObject.Find("Hand Gesture Detection").GetComponent<XRHandTrackingEvents>().handedness = Handedness.Left;
+                if(GameObject.Find("Hand Gesture Detection") != null)
+                    GameObject.Find("Hand Gesture Detection").GetComponent<XRHandTrackingEvents>().handedness = Handedness.Left;
                 break;
             case "R_Palm":
                 HandChosen(other.gameObject, "R", "L");
-                GameObject.Find("Hand Gesture Detection").GetComponent<XRHandTrackingEvents>().handedness = Handedness.Right;
+                if(GameObject.Find("Hand Gesture Detection") != null)
+                    GameObject.Find("Hand Gesture Detection").GetComponent<XRHandTrackingEvents>().handedness = Handedness.Right;
                 break;
         }
     }

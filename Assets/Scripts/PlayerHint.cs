@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerHint : MonoBehaviour
 {
     [SerializeField] [TextArea] string[] hints;
-    [SerializeField] TMP_Text hintText;
+    public TMP_Text hintText;
     int hintCount;
     float time;
     Coroutine coroutineTimer;
@@ -17,6 +17,7 @@ public class PlayerHint : MonoBehaviour
 
     void Start()
     {
+        hintText = GameObject.Find("HintText").GetComponent<TMP_Text>();
         hintText.text = "";
         camera = Camera.main;
     }

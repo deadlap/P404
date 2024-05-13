@@ -583,6 +583,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4896179013930880745, guid: ee13277caa7e788479a38b37b1de07c6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6129913086698288329, guid: ee13277caa7e788479a38b37b1de07c6, type: 3}
       propertyPath: m_Name
       value: Fulmenta
@@ -594,6 +598,14 @@ PrefabInstance:
     - target: {fileID: 6485984090359589958, guid: ee13277caa7e788479a38b37b1de07c6, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8338220298813656969, guid: ee13277caa7e788479a38b37b1de07c6, type: 3}
+      propertyPath: scaleTime
+      value: 4050
+      objectReference: {fileID: 0}
+    - target: {fileID: 8338220298813656969, guid: ee13277caa7e788479a38b37b1de07c6, type: 3}
+      propertyPath: deletionTime
+      value: 4000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee13277caa7e788479a38b37b1de07c6, type: 3}

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 870473227}
-  m_IndirectSpecularColor: {r: 0.19023407, g: 0.59241986, b: 0.7722832, a: 1}
+  m_IndirectSpecularColor: {r: 0.19046018, g: 0.592424, b: 0.77137715, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2119,7 +2119,7 @@ PrefabInstance:
     - target: {fileID: 2960855303394462268, guid: 2eedff21038ba544383740e769c0c8a5, type: 3}
       propertyPath: audioClips.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: cebb76bcd4a4a344490b6e3a26dffcea, type: 3}
+      objectReference: {fileID: 8300000, guid: fd387d93f721b094aa9d7bacaf4b5d94, type: 3}
     - target: {fileID: 4889628128730658336, guid: 2eedff21038ba544383740e769c0c8a5, type: 3}
       propertyPath: m_Name
       value: J_DoorPortal
@@ -7356,6 +7356,10 @@ PrefabInstance:
     - target: {fileID: 1549380812996741051, guid: 09a3cba41a6f9704fb55f2daf9e658aa, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3126878977057627164, guid: 09a3cba41a6f9704fb55f2daf9e658aa, type: 3}
+      propertyPath: m_Volume
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3126878977057627164, guid: 09a3cba41a6f9704fb55f2daf9e658aa, type: 3}
       propertyPath: OutputAudioMixerGroup

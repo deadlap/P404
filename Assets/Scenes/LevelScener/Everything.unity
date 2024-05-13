@@ -1963,6 +1963,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 158c0128455f87d4daf0461480214e5f, type: 3}
   m_PrefabInstance: {fileID: 419842069}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &422892298 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7051970823815944216, guid: efdca8b047c48c14898d5289f77ba3d9, type: 3}
+  m_PrefabInstance: {fileID: 243694909}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &425877989
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4743,6 +4748,11 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1058699785 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8242087014733688233, guid: efdca8b047c48c14898d5289f77ba3d9, type: 3}
+  m_PrefabInstance: {fileID: 243694909}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1066293456 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 534521498064303027, guid: 9e30d6d61e546ff4a9456f0b1c99f2c5, type: 3}
@@ -7880,6 +7890,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b894f8201064d984f9a9be1710900a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restartText: {fileID: 422892298}
+  restartLevel: {fileID: 1058699785}
   levels:
   - {fileID: 1712874195}
   - {fileID: 394778713}

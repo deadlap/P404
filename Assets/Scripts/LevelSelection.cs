@@ -9,9 +9,8 @@ public class LevelSelection : MonoBehaviour
     public static LevelSelection Instance;
     public static event Action<int> ChangeLevelEvent;
     public static void OnChangeLevel(int level) => ChangeLevelEvent?.Invoke(level);
-
-    // public static event Action NextLevelEvent;
-    // public static void OnNextLevel() => NextLevelEvent?.Invoke();
+    [SerializeField] GameObject restartText;
+    [SerializeField] GameObject restartLevel;
 
     public static event Action ReloadLevelEvent;
     public static void OnReloadLevel() => ReloadLevelEvent?.Invoke();
@@ -85,5 +84,12 @@ public class LevelSelection : MonoBehaviour
         newObject.SetActive(true);
         PlayerSpawnPoint.Instance.ResetPlayerPos();
         gameLoaded = true;
+        if (levelCount == 0) {
+            restartText.SetActive(false);
+            restartLevel.SetActive(false);
+        } else {
+            restartText.SetActive(true);
+            restartLevel.SetActive(true);
+        }
     }
 }

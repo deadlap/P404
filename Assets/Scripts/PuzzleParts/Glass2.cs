@@ -6,7 +6,7 @@ public class Glass2 : MonoBehaviour {
     [SerializeField] GameObject glass;
     [SerializeField] GameObject brokenGlass;
     [SerializeField] BoxCollider collider;
-    [SerializeField] bool isBroken;
+    [SerializeField] public bool isBroken;
     [SerializeField] BoxCollider vaseCollider;
 
     AudioSource audioSource;

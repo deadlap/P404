@@ -11,7 +11,7 @@ public class Plant : MonoBehaviour {
     public static void OnGrowPlant() => GrowPlantEvent?.Invoke();
     [SerializeField] AudioClip[] audioClips;
     AudioSource audioSource;
-
+    [SerializeField] Glass2 glass;
     void Start() {
         audioSource = GetComponent<AudioSource>();
     }
@@ -33,7 +33,7 @@ public class Plant : MonoBehaviour {
     }
 
     void Grow(){
-        if (!burnt && !grown){
+        if (!burnt && !grown && glass.isBroken){
             SpellingCheck.OnDeleteSpells();
             animator.SetTrigger("Grow");
             audioSource.PlayOneShot(audioClips[0]);

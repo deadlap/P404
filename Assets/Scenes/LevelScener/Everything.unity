@@ -4458,7 +4458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   touchPointManagerPrefab: {fileID: 1223355069409145455, guid: f31c9546e07ae4b4884827f59508019f, type: 3}
   bookFollowPointPrefab: {fileID: 4233948336606793639, guid: abe1b4bacbb4e47409074e16fc6b20f0, type: 3}
-  book: {fileID: 3199904229107605744, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
+  bookPrefab: {fileID: 3199904229107605744, guid: 38e3ae7b19718a145b835705427fedd4, type: 3}
   handedness: 
   chargeAnimation: {fileID: 1767208431}
   choosingDuration: 2
@@ -4545,7 +4545,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 1fb90daa202bb5646a54eb3125e1d96e, type: 2}
   m_audioClip: {fileID: 8300000, guid: 0b79f0997bb2c2e49bd32915d8ca0a75, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0

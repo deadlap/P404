@@ -12,9 +12,9 @@ public class ChooseHand : MonoBehaviour
     
     GameObject nonDominantHand;
     [SerializeField] GameObject bookFollowPointPrefab;
-    [SerializeField] GameObject book;
+    [SerializeField] GameObject bookPrefab;
     GameObject bookFollowPoint;
-    GameObject bookSpawnGraphic;
+    GameObject book;
 
     public string handedness;
 
@@ -190,10 +190,11 @@ public class ChooseHand : MonoBehaviour
     {
         if (bookFollowPoint)
         {
-            Destroy(GameObject.Find("Non-Dominant Hand Book Slot(Clone)"));
+            //BookPageHandler.Instance.DestroyBook();
             Destroy(GameObject.Find("Book(Clone)"));
+            Destroy(GameObject.Find("Non-Dominant Hand Book Slot(Clone)"));
         }
-        Instantiate(book, dominantHand.transform.position, dominantHand.transform.rotation);
+        book = Instantiate(bookPrefab, dominantHand.transform.position, dominantHand.transform.rotation);
         Invoke(nameof(SpawnBookPoint), 1f);
     }
 

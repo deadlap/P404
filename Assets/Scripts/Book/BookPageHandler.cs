@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,6 +15,8 @@ public class BookPageHandler : MonoBehaviour
 
     void Awake()
     {
+        if(Instance != null)
+            Destroy(Instance);
         Instance = this;
     }
 
@@ -31,6 +34,11 @@ public class BookPageHandler : MonoBehaviour
 
     void Start()
     {
+        SetPages();
+    }
+
+    void SetPages()
+    {
         for (int i = 0; i < bookLeftPages.Count; i++)
         {
             bookLeftPages[i].SetActive(false);
@@ -40,7 +48,6 @@ public class BookPageHandler : MonoBehaviour
         bookLeftPages[firstPageIndex].SetActive(true);
         bookRightPages[firstPageIndex].SetActive(true);
     }
-    
 
     void NextPage()
     {
@@ -63,5 +70,10 @@ public class BookPageHandler : MonoBehaviour
         currentPageIndex--;
         bookLeftPages[currentPageIndex].SetActive(true);
         bookRightPages[currentPageIndex].SetActive(true);
+    }
+
+    public void DestroyBook()
+    {
+        print("HM");
     }
 }

@@ -102,7 +102,7 @@ public class MovingSignManager : MonoBehaviour
         switch (handedness)
         {
             case "L":
-                var lRot = new Vector3(leftHandedRotation.x, leftHandedRotation.y + WrapHeadAngle(head.transform.eulerAngles.y), leftHandedRotation.z);
+                var lRot = new Vector3(0, leftHandedRotation.y + WrapHeadAngle(head.transform.eulerAngles.y), 0);
                 signPattern = Instantiate(signPatterns[patternIndex], spawnpoint.transform.position, Quaternion.Euler(lRot));
                 break;
             case "R":

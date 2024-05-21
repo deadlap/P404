@@ -8398,11 +8398,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1223355069409145454, guid: f31c9546e07ae4b4884827f59508019f, type: 3}
       propertyPath: leftHandedRotation.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1223355069409145454, guid: f31c9546e07ae4b4884827f59508019f, type: 3}
       propertyPath: leftHandedRotation.z
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1223355069409145454, guid: f31c9546e07ae4b4884827f59508019f, type: 3}
       propertyPath: rightHandedRotation.x

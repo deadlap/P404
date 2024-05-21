@@ -124,7 +124,7 @@ public class MovingSignManager : MonoBehaviour
         if(recognisedMovingSign == "Å" || checkPointReached == 2) return; 
         if (int.TryParse(other.gameObject.name, out var checkPointName) && checkPointName > checkPointReached)
         {
-            MovingSignFailed();
+            DestroyPattern();
         }
     }
 
@@ -156,16 +156,8 @@ public class MovingSignManager : MonoBehaviour
         checkPointReached++;
     }
 
-    //debug funktion - ersat med DestroyPattern()
-    void MovingSignFailed()
-    {
-        DestroyPattern();
-        print("YOU FAILED BITCH");
-    }
-    
     void DestroyPattern()
     {
-        
         if(coroutineTimer != null)
             StopCoroutine(coroutineTimer);
         coroutineTimer = null;
